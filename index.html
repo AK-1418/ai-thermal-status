@@ -217,14 +217,15 @@
           <p>Read-only Snapshot · Snapshot from Local Virtual Office</p>
         </div>
         <div class="top-actions">
-          <span id="last-synced" class="badge">Last synced: loading</span>
-          <span id="status-age" class="badge">Status age: loading</span>
+          <span id="current-viewer-time" class="badge">Current viewer time: loading</span>
+          <span id="last-synced" class="badge">Last snapshot synced: loading</span>
+          <span id="status-age" class="badge">Snapshot age: loading</span>
           <span id="next-refresh" class="badge">Next display refresh: 02:00</span>
           <span id="health-badge" class="badge">Checking</span>
           <button id="refresh-display" type="button">Refresh Display</button>
         </div>
       </header>
-      <div class="read-only-note">Refresh Display only. Local PC publishes every 2 minutes. Display refreshes every 2 minutes. Status is considered stale after 6 minutes. GitHub Pages cannot control the local PC, call a local backend, or write state.</div>
+      <div class="read-only-note">Refresh Display only. Local PC publishes every 2 minutes when public state meaningfully changes. Current viewer time updates in the browser and is not a heartbeat push. Display refreshes every 2 minutes. Status is considered stale after 6 minutes. GitHub Pages cannot control the local PC, call a local backend, or write state.</div>
       <main class="grid">
         <aside class="panel" id="metrics"></aside>
         <section class="office">
@@ -270,6 +271,7 @@
       let refreshIntervalSeconds = 120;
       let countdownRemaining = refreshIntervalSeconds;
       let latestSnapshot = null;
+      let latestStaleAfterMinutes = 6;
 
       const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
         "&": "&amp;",
@@ -339,6 +341,17 @@
         return { totalSeconds, label: `${minutes} min ${seconds} sec` };
       }
 
+      function updateTimeDisplays() {
+        document.getElementById("current-viewer-time").textContent = `Current viewer time: ${formatTaipei(Date.now())}`;
+        if (!latestSnapshot) return;
+        const age = statusAge(latestSnapshot.generated_at_epoch_ms);
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_stale === true;
+        document.getElementById("last-synced").textContent = `Last snapshot synced: ${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
+        document.getElementById("status-age").textContent = `Snapshot age: ${age.label}`;
+        document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
+        document.getElementById("health-badge").textContent = isStale ? "stale" : "healthy";
+      }
+
       function formatCountdown(seconds) {
         const safeSeconds = Math.max(0, Number(seconds) || 0);
         const minutes = String(Math.floor(safeSeconds / 60)).padStart(2, "0");
@@ -361,11 +374,9 @@
         refreshIntervalSeconds = Number(snapshot.viewer?.refresh_interval_seconds) || 120;
         const age = statusAge(snapshot.generated_at_epoch_ms);
         const staleAfterMinutes = Number(snapshot.health?.stale_after_minutes) || 15;
+        latestStaleAfterMinutes = staleAfterMinutes;
         const isStale = (age.totalSeconds / 60) > staleAfterMinutes || snapshot.health?.is_stale === true;
-        document.getElementById("last-synced").textContent = `Last synced: ${formatTaipei(snapshot.generated_at_epoch_ms)}`;
-        document.getElementById("status-age").textContent = `Status age: ${age.label}`;
-        document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
-        document.getElementById("health-badge").textContent = isStale ? "stale" : "healthy";
+        updateTimeDisplays();
         document.getElementById("publisher-mode").textContent = `${snapshot.publisher?.mode || "unknown"} · local publisher ${snapshot.publisher?.interval_minutes || "?"} min · viewer ${refreshIntervalSeconds} sec`;
 
         const summary = snapshot.summary || {};
@@ -417,7 +428,7 @@
         document.getElementById("notice").innerHTML = [
           card("Read-only Snapshot", "This page only fetches status_snapshot.json with cache busting. It cannot trigger local export, git push, backend calls, or local state writes.", "read-only"),
           card("Refresh Display button", "Manual display refresh only. Local PC publishes every 2 minutes. Display refreshes every 2 minutes. Status is considered stale after 6 minutes.", "120 sec"),
-          card("Time source", "Last synced and status age use generated_at_epoch_ms rendered in Asia/Taipei.", snapshot.timezone || TAIPEI_TIMEZONE),
+          card("Time semantics", "Current viewer time uses the browser clock. Last snapshot synced and snapshot age use generated_at_epoch_ms rendered in Asia/Taipei. This is not a heartbeat push.", snapshot.timezone || TAIPEI_TIMEZONE),
         ].join("");
       }
 
@@ -431,6 +442,7 @@
       }
 
       function tickCountdown() {
+        updateTimeDisplays();
         countdownRemaining = Math.max(0, countdownRemaining - 1);
         document.getElementById("next-refresh").textContent = `Next display refresh: ${formatCountdown(countdownRemaining)}`;
         if (countdownRemaining <= 0) {
