@@ -1,5 +1,7 @@
 {
-  "generated_at": "2026-06-30T13:42:36+08:00",
+  "generated_at": "2026-06-30T23:15:35+08:00",
+  "generated_at_epoch_ms": 1782832535000,
+  "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
   "mode": "read_only_snapshot",
@@ -7,6 +9,11 @@
     "mode": "local_auto_publish",
     "interval_minutes": 5,
     "last_export_status": "success"
+  },
+  "viewer": {
+    "refresh_interval_seconds": 120,
+    "animation_enabled": true,
+    "animation_version": "phase1.15-v1"
   },
   "health": {
     "status_age_minutes": 0,
@@ -21,21 +28,33 @@
   "agents": [
     {
       "name": "ALAN_AI",
+      "role": "Lead Integrator",
+      "room": "Manager Room",
+      "avatar": "AI",
       "status": "reviewing",
       "current_task": "Phase 1 acceptance review"
     },
     {
       "name": "Thermal 大師",
+      "role": "Thermal / Control",
+      "room": "Thermal Desk",
+      "avatar": "TH",
       "status": "assigned",
-      "current_task": "Review thermal summaries"
+      "current_task": "Review thermal contexts"
     },
     {
       "name": "程式大師",
+      "role": "Code / QA",
+      "room": "Coding Desk",
+      "avatar": "CD",
       "status": "working",
       "current_task": "State flow polling verification"
     },
     {
       "name": "簡報大師",
+      "role": "Report / Deck",
+      "room": "Presentation Room",
+      "avatar": "PR",
       "status": "available",
       "current_task": "Report template classification"
     }
@@ -95,24 +114,30 @@
   "warnings": [],
   "agent_state_notes": [
     {
+      "file": ".agents/state/current-task.md",
       "summary": "Current Task State",
       "content_scope": "current_virtual_office",
       "semantic_status": "current",
       "related_case_type": "virtual_office",
+      "active_truth_source": "collaboration/task_board/tasks.json",
       "warnings": []
     },
     {
+      "file": ".agents/state/project-status.md",
       "summary": "Project Status",
       "content_scope": "project_reference",
       "semantic_status": "current",
       "related_case_type": "knowledge_management",
+      "active_truth_source": "collaboration/task_board/tasks.json",
       "warnings": []
     },
     {
+      "file": ".agents/state/handoff-log.md",
       "summary": "Handoff Log",
       "content_scope": "project_reference",
       "semantic_status": "current",
       "related_case_type": "agent_workflow",
+      "active_truth_source": "collaboration/task_board/tasks.json",
       "warnings": []
     }
   ],
@@ -177,5 +202,5 @@
     "lesson_count": 3,
     "artifact_count": 7
   },
-  "content_hash": "8b04f6a920fe6661"
+  "content_hash": "35bf90c64a8c5210"
 }
