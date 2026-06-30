@@ -12,6 +12,9 @@ Safety rules:
 
 - Local Virtual Office remains the live source of truth.
 - GitHub Pages displays a sanitized snapshot only.
+- Local PC publishes every 2 minutes.
+- Display refreshes every 2 minutes.
+- Status is considered stale after 6 minutes.
 - Refresh Display only reloads `status_snapshot.json`.
 - No remote control.
 - No write-back to the local PC.

@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-30T23:15:35+08:00",
-  "generated_at_epoch_ms": 1782832535000,
+  "generated_at": "2026-06-30T23:46:56+08:00",
+  "generated_at_epoch_ms": 1782834416000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
   "mode": "read_only_snapshot",
   "publisher": {
     "mode": "local_auto_publish",
-    "interval_minutes": 5,
+    "interval_minutes": 2,
     "last_export_status": "success"
   },
   "viewer": {
@@ -17,7 +17,7 @@
   },
   "health": {
     "status_age_minutes": 0,
-    "stale_after_minutes": 15,
+    "stale_after_minutes": 6,
     "is_stale": false
   },
   "case": {

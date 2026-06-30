@@ -224,7 +224,7 @@
           <button id="refresh-display" type="button">Refresh Display</button>
         </div>
       </header>
-      <div class="read-only-note">Refresh Display only. Local PC publishes status separately every 5 minutes. GitHub Pages cannot control the local PC, call a local backend, or write state.</div>
+      <div class="read-only-note">Refresh Display only. Local PC publishes every 2 minutes. Display refreshes every 2 minutes. Status is considered stale after 6 minutes. GitHub Pages cannot control the local PC, call a local backend, or write state.</div>
       <main class="grid">
         <aside class="panel" id="metrics"></aside>
         <section class="office">
@@ -265,7 +265,7 @@
       </footer>
     </div>
     <script>
-      const staleMessage = "Status may be stale. Local PC may be offline, rebooting, sleeping, or unable to push.";
+      const staleMessage = "Status may be stale. Local PC may be offline, rebooting, sleeping, unable to push, or GitHub Pages may be delayed.";
       const TAIPEI_TIMEZONE = "Asia/Taipei";
       let refreshIntervalSeconds = 120;
       let countdownRemaining = refreshIntervalSeconds;
@@ -416,7 +416,7 @@
         document.getElementById("lessons").innerHTML = [...noteCards, ...lessonCards].join("") || card("No lessons", "No lesson or note summary.");
         document.getElementById("notice").innerHTML = [
           card("Read-only Snapshot", "This page only fetches status_snapshot.json with cache busting. It cannot trigger local export, git push, backend calls, or local state writes.", "read-only"),
-          card("Refresh Display button", "Manual display refresh only. Local PC publishes status separately.", "120 sec"),
+          card("Refresh Display button", "Manual display refresh only. Local PC publishes every 2 minutes. Display refreshes every 2 minutes. Status is considered stale after 6 minutes.", "120 sec"),
           card("Time source", "Last synced and status age use generated_at_epoch_ms rendered in Asia/Taipei.", snapshot.timezone || TAIPEI_TIMEZONE),
         ].join("");
       }
