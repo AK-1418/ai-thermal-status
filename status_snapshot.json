@@ -1,0 +1,181 @@
+{
+  "generated_at": "2026-06-30T13:42:36+08:00",
+  "source": "local_virtual_office",
+  "source_mode": "api",
+  "mode": "read_only_snapshot",
+  "publisher": {
+    "mode": "local_auto_publish",
+    "interval_minutes": 5,
+    "last_export_status": "success"
+  },
+  "health": {
+    "status_age_minutes": 0,
+    "stale_after_minutes": 15,
+    "is_stale": false
+  },
+  "case": {
+    "case_id": "CASE-2026-0001",
+    "title": "Rebuild Codex multi-agent virtual office",
+    "status": "active"
+  },
+  "agents": [
+    {
+      "name": "ALAN_AI",
+      "status": "reviewing",
+      "current_task": "Phase 1 acceptance review"
+    },
+    {
+      "name": "Thermal 大師",
+      "status": "assigned",
+      "current_task": "Review thermal summaries"
+    },
+    {
+      "name": "程式大師",
+      "status": "working",
+      "current_task": "State flow polling verification"
+    },
+    {
+      "name": "簡報大師",
+      "status": "available",
+      "current_task": "Report template classification"
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "TASK-2026-0001",
+      "title": "Create folder structure",
+      "status": "ready_for_review",
+      "primary_agent": "程式大師",
+      "progress": 100
+    },
+    {
+      "task_id": "TASK-2026-0002",
+      "title": "Migrate existing Codex projects into cases",
+      "status": "testing",
+      "primary_agent": "ALAN_AI",
+      "progress": 80
+    },
+    {
+      "task_id": "TASK-2026-0003",
+      "title": "Create context-first rules",
+      "status": "reviewing",
+      "primary_agent": "ALAN_AI",
+      "progress": 90
+    },
+    {
+      "task_id": "TASK-2026-0004",
+      "title": "Build virtual office mock UI",
+      "status": "ready_for_review",
+      "primary_agent": "程式大師",
+      "progress": 95
+    },
+    {
+      "task_id": "TASK-2026-0005",
+      "title": "Create lesson learned and case memory system",
+      "status": "testing",
+      "primary_agent": "ALAN_AI",
+      "progress": 85
+    },
+    {
+      "task_id": "TASK-2026-0006",
+      "title": "Review thermal-related context packages",
+      "status": "assigned",
+      "primary_agent": "Thermal 大師",
+      "progress": 35
+    }
+  ],
+  "reviews": [
+    {
+      "review_id": "REVIEW-2026-0001",
+      "task_id": "TASK-2026-0001",
+      "reviewer": "ALAN_AI",
+      "status": "review_passed"
+    }
+  ],
+  "warnings": [],
+  "agent_state_notes": [
+    {
+      "summary": "Current Task State",
+      "content_scope": "current_virtual_office",
+      "semantic_status": "current",
+      "related_case_type": "virtual_office",
+      "warnings": []
+    },
+    {
+      "summary": "Project Status",
+      "content_scope": "project_reference",
+      "semantic_status": "current",
+      "related_case_type": "knowledge_management",
+      "warnings": []
+    },
+    {
+      "summary": "Handoff Log",
+      "content_scope": "project_reference",
+      "semantic_status": "current",
+      "related_case_type": "agent_workflow",
+      "warnings": []
+    }
+  ],
+  "artifacts": [
+    {
+      "artifact_id": "ART-MIGRATION-REPORT",
+      "type": "report",
+      "status": "created"
+    },
+    {
+      "artifact_id": "ART-FILE-INVENTORY",
+      "type": "inventory",
+      "status": "created"
+    },
+    {
+      "artifact_id": "ART-VIRTUAL-OFFICE-UI",
+      "type": "ui",
+      "status": "ready_for_review"
+    },
+    {
+      "artifact_id": "ART-REVIEW-GATE-LOGIC",
+      "type": "backend",
+      "status": "ready_for_review"
+    },
+    {
+      "artifact_id": "ART-CONTEXT-PACKAGES",
+      "type": "context",
+      "status": "created"
+    },
+    {
+      "artifact_id": "ART-CASE-MEMORY",
+      "type": "memory",
+      "status": "created"
+    },
+    {
+      "artifact_id": "ART-PHASE1-FOLDER-STRUCTURE",
+      "type": "scaffold",
+      "status": "ready_for_review"
+    }
+  ],
+  "lessons": [
+    {
+      "lesson_id": "LESSON-2026-0001",
+      "title": "ready_for_review is not done",
+      "stage": "rule"
+    },
+    {
+      "lesson_id": "LESSON-2026-0002",
+      "title": "Unregistered output is treated as non-existent",
+      "stage": "checklist"
+    },
+    {
+      "lesson_id": "LESSON-2026-0003",
+      "title": "Use polling before realtime transport in Phase 1.5",
+      "stage": "raw"
+    }
+  ],
+  "summary": {
+    "task_count": 6,
+    "pending_review_count": 3,
+    "warning_count": 0,
+    "lesson_count": 3,
+    "artifact_count": 7
+  },
+  "content_hash": "8b04f6a920fe6661"
+}
