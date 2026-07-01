@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T00:27:04+08:00",
-  "generated_at_epoch_ms": 1782923224000,
+  "generated_at": "2026-07-02T00:43:04+08:00",
+  "generated_at_epoch_ms": 1782924184000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "coding",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Phase 2.2B Local Task Transition Actions",
+      "current_task_short": "Phase 2.2B controlled transition verification",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-02T00:26:55+08:00",
+      "last_status_update": "2026-07-02T00:42:26+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "9e4f5217fcac4247"
+  "content_hash": "8ff1a0c74d491e4d"
 }
