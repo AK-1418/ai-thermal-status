@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-01T11:28:39+08:00",
-  "generated_at_epoch_ms": 1782876519000,
+  "generated_at": "2026-07-01T12:01:01+08:00",
+  "generated_at_epoch_ms": 1782878461000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
   "mode": "read_only_agent_status_mirror",
   "publisher": {
-    "mode": "本機自動發布",
+    "mode": "local_auto_publish",
     "interval_minutes": 2,
     "meaningful_change_fields": [
       "agents.status",
@@ -18,7 +18,7 @@
   "viewer": {
     "refresh_interval_seconds": 120,
     "animation_enabled": true,
-    "animation_version": "phase2.1C-public-agent-mirror-zh-no-overlay-v1"
+    "animation_version": "phase2.1C-integrated-office-scene-v1"
   },
   "health": {
     "status_age_minutes": 0,
