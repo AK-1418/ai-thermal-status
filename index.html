@@ -44,7 +44,7 @@
       .agent-status-label.warn { color:var(--warn); background:rgba(255,241,239,.96); border-color:#f2b8ae; }
       .agent-status-label.queue { color:#526174; background:rgba(238,243,248,.96); border-color:#cbd6e3; }
       .agent-status-label.status-flash { animation:statusBlink 1.05s ease-in-out infinite; }
-      .agent-task-line { position:absolute; left:50%; bottom:-2.1em; transform:translate(-50%,100%); max-width:min(26em,34vw); padding:.25em .55em; border-radius:6px; color:#17202d; background:rgba(255,255,255,.92); border:1px solid rgba(23,32,45,.14); box-shadow:0 4px 14px rgba(16,25,38,.18); font-size:clamp(9px,1.05vw,12px); font-weight:700; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; pointer-events:none; }
+      .agent-task-line { position:absolute; left:50%; bottom:-2.35em; transform:translate(-50%,100%); max-width:min(24em,32vw); padding:.25em .55em; border-radius:6px; color:#17202d; background:rgba(255,255,255,.92); border:1px solid rgba(23,32,45,.14); box-shadow:0 4px 14px rgba(16,25,38,.18); font-size:clamp(9px,1vw,12px); font-weight:700; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; pointer-events:none; }
       .effect-coding { width:42%; aspect-ratio:3/1; right:20%; top:72%; background:rgba(89,255,177,.38); animation:typingGlow 900ms ease-in-out infinite; }
       .effect-blocked { background:#fff1ef; border:.28em solid var(--warn); animation:warnPulse 900ms ease-in-out infinite; }
       .effect-blocked::after { content:"!"; position:absolute; inset:0; display:grid; place-items:center; color:var(--warn); font-weight:900; font-size:1.25em; }
@@ -72,12 +72,12 @@
   </head>
   <body>
     <header class="topbar">
-      <div class="brand"><div class="brand-mark">AI</div><div><h1>AI Thermal 公開 Agent 狀態鏡像</h1><small>唯讀 Agent 狀態鏡像 · phase2.1I-chinese-ui-task-line-v1 · assets/agent_layout.json</small></div></div>
+      <div class="brand"><div class="brand-mark">AI</div><div><h1>AI Thermal 公開 Agent 狀態鏡像</h1><small>唯讀 Agent 狀態鏡像 · phase2.1I-A-chinese-ui-polish-v1 · assets/agent_layout.json</small></div></div>
       <div class="case-meta">
-        <div><strong id="case-title">載入中</strong><small id="case-id">Local Virtual Office 狀態快照</small></div>
-        <div class="metric"><strong id="agent-count">4</strong><small>Agents</small></div>
-        <div class="metric"><strong id="task-count">--</strong><small id="task-count-label">任務載入中</small></div>
-        <div class="metric"><strong id="warning-count">--</strong><small id="warning-count-label">警示載入中</small></div>
+        <div><strong id="case-title">正在載入</strong><small id="case-id">Local Virtual Office 狀態快照載入中</small></div>
+        <div class="metric"><strong id="agent-count">載入中</strong><small id="agent-count-label">Agent 載入中...</small></div>
+        <div class="metric"><strong id="task-count">載入中</strong><small id="task-count-label">任務載入中...</small></div>
+        <div class="metric"><strong id="warning-count">載入中</strong><small id="warning-count-label">警示載入中...</small></div>
       </div>
       <div class="timebar"><span id="health-badge" class="badge">載入中</span><button id="refresh-display" type="button">重新整理顯示</button></div>
     </header>
