@@ -1,0 +1,40 @@
+{
+  "version": "phase2.1F-layout-v1",
+  "scene": {
+    "coordinate_system": "percentage",
+    "anchor": "bottom-center",
+    "office_scene_width": 1672,
+    "office_scene_height": 941,
+    "aspect_ratio": "1672 / 941"
+  },
+  "agents": {
+    "ALAN_AI": {
+      "room": "Manager Room",
+      "x": 25,
+      "y": 43,
+      "h": 24,
+      "z": 20
+    },
+    "Thermal 大師": {
+      "room": "Thermal Desk",
+      "x": 74,
+      "y": 43,
+      "h": 24,
+      "z": 20
+    },
+    "程式大師": {
+      "room": "Coding Desk",
+      "x": 25,
+      "y": 82,
+      "h": 24,
+      "z": 40
+    },
+    "簡報大師": {
+      "room": "Presentation Room",
+      "x": 74,
+      "y": 82,
+      "h": 24,
+      "z": 40
+    }
+  }
+}

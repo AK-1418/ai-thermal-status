@@ -12,8 +12,8 @@ Visual assets:
 
 - Public-safe office background image.
 - Public-safe cropped agent pose sprites.
+- `assets/agent_layout.json` controls responsive sprite placement.
 - Source sheets are retained only as source assets, not as main UI images.
-- Public asset manifest maps each public agent state to one sprite.
 
 Boundary:
 

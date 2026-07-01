@@ -1,9 +1,9 @@
 {
-  "version": "phase2.1E-agent-sprites-v1",
+  "version": "phase2.1F-visual-stabilization-v1",
   "created_at": "2026-07-01T12:28:00+08:00",
   "purpose": "Public-safe visual assets for the AI Thermal GitHub Pages read-only agent status mirror.",
   "public_safe": true,
-  "visual_quality": "cropped_sprites_need_visual_qa",
+  "visual_quality": "responsive_sprite_layout_needs_alan_visual_approval",
   "office_scene": {
     "id": "office_scene",
     "path": "assets/office/office_scene.png",
@@ -86,11 +86,13 @@
       "source_sheet_reference": "assets/agents/source_sheets/presentation_master_pose_sheet.png"
     }
   },
+  "layout_config": "assets/agent_layout.json",
   "allowed_asset_paths": [
     "assets/office/office_scene.png",
     "assets/agents/source_sheets/*.png",
     "assets/agents/sprites/*.png",
     "assets/status_effects/",
-    "assets/asset_manifest.json"
+    "assets/asset_manifest.json",
+    "assets/agent_layout.json"
   ]
 }

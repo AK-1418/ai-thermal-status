@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T13:13:04+08:00",
-  "generated_at_epoch_ms": 1782882784000,
+  "generated_at": "2026-07-01T13:59:05+08:00",
+  "generated_at_epoch_ms": 1782885545000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -15,15 +15,17 @@
       "agents.pose_asset",
       "asset_manifest.version",
       "asset_manifest.office_scene.path",
-      "asset_manifest.agents.*.sprites"
+      "asset_manifest.agents.*.sprites",
+      "agent_layout.version",
+      "agent_layout.agents.*"
     ],
     "last_export_status": "success"
   },
   "viewer": {
     "refresh_interval_seconds": 120,
     "animation_enabled": true,
-    "animation_version": "phase2.1E-agent-sprites-v1",
-    "asset_manifest_version": "phase2.1E-agent-sprites-v1"
+    "animation_version": "phase2.1F-visual-stabilization-v1",
+    "asset_manifest_version": "phase2.1F-visual-stabilization-v1"
   },
   "health": {
     "status_age_minutes": 0,
@@ -143,11 +145,11 @@
   ],
   "warnings": [],
   "asset_manifest": {
-    "version": "phase2.1E-agent-sprites-v1",
+    "version": "phase2.1F-visual-stabilization-v1",
     "created_at": "2026-07-01T12:28:00+08:00",
     "purpose": "Public-safe visual assets for the AI Thermal GitHub Pages read-only agent status mirror.",
     "public_safe": true,
-    "visual_quality": "cropped_sprites_need_visual_qa",
+    "visual_quality": "responsive_sprite_layout_needs_alan_visual_approval",
     "office_scene": {
       "id": "office_scene",
       "path": "assets/office/office_scene.png",
@@ -230,12 +232,14 @@
         "source_sheet_reference": "assets/agents/source_sheets/presentation_master_pose_sheet.png"
       }
     },
+    "layout_config": "assets/agent_layout.json",
     "allowed_asset_paths": [
       "assets/office/office_scene.png",
       "assets/agents/source_sheets/*.png",
       "assets/agents/sprites/*.png",
       "assets/status_effects/",
-      "assets/asset_manifest.json"
+      "assets/asset_manifest.json",
+      "assets/agent_layout.json"
     ]
   },
   "summary": {
@@ -244,5 +248,5 @@
     "warning_count": 0,
     "active_agent_count": 3
   },
-  "content_hash": "a58def11dd5c3bbb"
+  "content_hash": "b4a31e456c1b5e5a"
 }
