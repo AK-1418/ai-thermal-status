@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Thermal Public Agent Status Mirror</title>
+    <title>AI Thermal 公開 Agent 狀態鏡像</title>
     <style>
       :root { --nav:#0e1724; --ink:#17202d; --muted:#607084; --panel:#fff; --line:#d6e0ea; --ok:#1f9d63; --warn:#c2412d; --review:#a56212; --blue:#2774e6; }
       * { box-sizing:border-box; }
@@ -44,6 +44,7 @@
       .agent-status-label.warn { color:var(--warn); background:rgba(255,241,239,.96); border-color:#f2b8ae; }
       .agent-status-label.queue { color:#526174; background:rgba(238,243,248,.96); border-color:#cbd6e3; }
       .agent-status-label.status-flash { animation:statusBlink 1.05s ease-in-out infinite; }
+      .agent-task-line { position:absolute; left:50%; bottom:-2.1em; transform:translate(-50%,100%); max-width:min(26em,34vw); padding:.25em .55em; border-radius:6px; color:#17202d; background:rgba(255,255,255,.92); border:1px solid rgba(23,32,45,.14); box-shadow:0 4px 14px rgba(16,25,38,.18); font-size:clamp(9px,1.05vw,12px); font-weight:700; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; pointer-events:none; }
       .effect-coding { width:42%; aspect-ratio:3/1; right:20%; top:72%; background:rgba(89,255,177,.38); animation:typingGlow 900ms ease-in-out infinite; }
       .effect-blocked { background:#fff1ef; border:.28em solid var(--warn); animation:warnPulse 900ms ease-in-out infinite; }
       .effect-blocked::after { content:"!"; position:absolute; inset:0; display:grid; place-items:center; color:var(--warn); font-weight:900; font-size:1.25em; }
@@ -66,46 +67,46 @@
       @media (max-width:1500px) { .topbar { grid-template-columns:minmax(0,1fr) auto; } .case-meta { grid-column:1 / -1; grid-template-columns:minmax(260px,1fr) repeat(3,90px); } .timebar { justify-content:flex-end; } }
       @media (max-width:1100px) { .topbar { grid-template-columns:1fr; } .case-meta { grid-template-columns:minmax(180px,1fr) repeat(3,72px); } .timebar { justify-content:flex-start; } .layout { grid-template-columns:1fr; } .panel { order:2; } }
       @media (max-width:720px) { .shell { padding:8px; } .case-meta { grid-template-columns:1fr 1fr; } .notice { font-size:12px; } .office-wrap { padding:8px; } .scene-head { align-items:flex-start; flex-direction:column; } .office-viewport { width:100%; } .badge { white-space:normal; } }
-      @media (max-width:430px) { .topbar { padding:10px; } .brand h1 { white-space:normal; } .case-meta { grid-template-columns:1fr; gap:8px; } .office-wrap,.panel { border-radius:6px; } .agent-sprite-wrap { height:calc(var(--agent-h) * .92); } }
+      @media (max-width:430px) { .topbar { padding:10px; } .brand h1 { white-space:normal; } .case-meta { grid-template-columns:1fr; gap:8px; } .office-wrap,.panel { border-radius:6px; } .agent-sprite-wrap { height:calc(var(--agent-h) * .92); } .agent-task-line { max-width:12em; } }
     </style>
   </head>
   <body>
     <header class="topbar">
-      <div class="brand"><div class="brand-mark">AI</div><div><h1>AI Thermal Public Agent Status Mirror</h1><small>Read-only Agent Status Mirror · phase2.1G-assigned-status-label-v1 · assets/agent_layout.json</small></div></div>
+      <div class="brand"><div class="brand-mark">AI</div><div><h1>AI Thermal 公開 Agent 狀態鏡像</h1><small>唯讀 Agent 狀態鏡像 · phase2.1I-chinese-ui-task-line-v1 · assets/agent_layout.json</small></div></div>
       <div class="case-meta">
-        <div><strong id="case-title">Loading</strong><small id="case-id">Snapshot from Local Virtual Office</small></div>
+        <div><strong id="case-title">載入中</strong><small id="case-id">Local Virtual Office 狀態快照</small></div>
         <div class="metric"><strong id="agent-count">4</strong><small>Agents</small></div>
-        <div class="metric"><strong id="task-count">0</strong><small>Tasks</small></div>
-        <div class="metric"><strong id="warning-count">0</strong><small>Warnings</small></div>
+        <div class="metric"><strong id="task-count">--</strong><small>任務載入中</small></div>
+        <div class="metric"><strong id="warning-count">--</strong><small>警示</small></div>
       </div>
-      <div class="timebar"><span id="health-badge" class="badge">Loading</span><button id="refresh-display" type="button">Refresh Display</button></div>
+      <div class="timebar"><span id="health-badge" class="badge">載入中</span><button id="refresh-display" type="button">重新整理顯示</button></div>
     </header>
     <div class="shell">
-      <div class="notice">GitHub Pages is a sanitized read-only mirror. Refresh Display only reloads public snapshot and public assets; it does not control the local PC.</div>
+      <div class="notice">GitHub Pages 是 sanitized 公開唯讀狀態鏡像。重新整理顯示只會重新讀取公開 snapshot 與公開素材，不會控制本機電腦。</div>
       <section class="panel"><div class="timebar">
-        <span id="current-viewer-time" class="badge">Current viewer time: --</span>
-        <span id="last-synced" class="badge">Last snapshot synced: --</span>
-        <span id="snapshot-age" class="badge">Snapshot age: --</span>
-        <span id="next-refresh" class="badge">Next display refresh: --</span>
-        <span id="asset-version" class="badge">asset manifest</span>
+        <span id="current-viewer-time" class="badge">目前觀看時間：--</span>
+        <span id="last-synced" class="badge">最後同步時間：--</span>
+        <span id="snapshot-age" class="badge">狀態資料年齡：--</span>
+        <span id="next-refresh" class="badge">下次顯示更新：--</span>
+        <span id="asset-version" class="badge">素材版本</span>
       </div></section>
       <main class="layout">
         <section class="office-wrap">
-          <div class="scene-head"><div><h2>Responsive Sprite Office Mirror</h2><p class="asset-note">Agents use bottom-center anchors from assets/agent_layout.json. Background, sprites, and overlays share one responsive scene coordinate system.</p></div><span class="badge review">Visual L2+ Pending Alan Approval</span></div>
+          <div class="scene-head"><div><h2>2D Agent 辦公室狀態鏡像</h2><p class="asset-note">Agent 位置使用 assets/agent_layout.json 的 bottom-center anchor；背景、sprite、狀態標籤共用同一 responsive coordinate system。</p></div><span class="badge review">Visual L2+ 等待 Alan 視覺確認</span></div>
           <div class="office-viewport">
             <div id="asset-scene" class="office-asset-scene">
               <img class="office-background" src="assets/office/office_scene.png" alt="office scene">
-              <div class="agent-sprite-wrap" data-agent-name="ALAN_AI"><img class="agent-sprite alan-ai" alt="ALAN_AI current pose"><span class="status-effect"></span><span class="agent-status-label">idle</span></div>
-              <div class="agent-sprite-wrap" data-agent-name="Thermal 大師"><img class="agent-sprite thermal-master" alt="Thermal master current pose"><span class="status-effect"></span><span class="agent-status-label">idle</span></div>
-              <div class="agent-sprite-wrap" data-agent-name="程式大師"><img class="agent-sprite coding-master" alt="Coding master current pose"><span class="status-effect"></span><span class="agent-status-label">idle</span></div>
-              <div class="agent-sprite-wrap" data-agent-name="簡報大師"><img class="agent-sprite presentation-master" alt="Presentation master current pose"><span class="status-effect"></span><span class="agent-status-label">idle</span></div>
+              <div class="agent-sprite-wrap" data-agent-name="ALAN_AI"><img class="agent-sprite alan-ai" alt="ALAN_AI current pose"><span class="status-effect"></span><span class="agent-status-label">待命</span><span class="agent-task-line">目前任務：載入中</span></div>
+              <div class="agent-sprite-wrap" data-agent-name="Thermal 大師"><img class="agent-sprite thermal-master" alt="Thermal master current pose"><span class="status-effect"></span><span class="agent-status-label">待命</span><span class="agent-task-line">目前任務：載入中</span></div>
+              <div class="agent-sprite-wrap" data-agent-name="程式大師"><img class="agent-sprite coding-master" alt="Coding master current pose"><span class="status-effect"></span><span class="agent-status-label">待命</span><span class="agent-task-line">目前任務：載入中</span></div>
+              <div class="agent-sprite-wrap" data-agent-name="簡報大師"><img class="agent-sprite presentation-master" alt="Presentation master current pose"><span class="status-effect"></span><span class="agent-status-label">待命</span><span class="agent-task-line">目前任務：載入中</span></div>
             </div>
           </div>
         </section>
         <aside class="panel">
-          <section><h2>Agent Status</h2><div id="agent-list" class="status-list"></div></section>
-          <section><h2>Sprite Mapping</h2><div id="asset-list" class="status-list"></div></section>
-          <section><h2>Warnings / Stale</h2><div id="warnings" class="status-list"></div></section>
+          <section><h2>Agent 狀態</h2><div id="agent-list" class="status-list"></div></section>
+          <section><h2>角色動作對應</h2><div id="asset-list" class="status-list"></div></section>
+          <section><h2>警示 / 過期</h2><div id="warnings" class="status-list"></div></section>
         </aside>
       </main>
     </div>
@@ -120,22 +121,25 @@
       const FLASHING_STATUS_LABELS = new Set(["working","coding","testing","checking","reviewing","ready_for_review"]);
       let latestSnapshot = null, latestAssetManifest = null, latestAgentLayout = FALLBACK_LAYOUT, refreshIntervalSeconds = 120, countdownRemaining = 120, latestStaleAfterMinutes = 6;
       const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
-      function statusLabel(value){const key=String(value||"idle").toLowerCase();const labels={idle:"idle",assigned:"assigned",working:"working",coding:"coding",testing:"testing",checking:"checking",reviewing:"reviewing",ready_for_review:"ready for review",blocked:"blocked",done:"done",failed:"failed",stale:"stale",offline:"offline"};return labels[key]||String(value||"unknown").replaceAll("_"," ");}
+      function statusLabel(value){const key=String(value||"idle").toLowerCase();const labels={idle:"待命",assigned:"已指派",working:"工作中",coding:"程式開發中",testing:"測試中",checking:"檢查中",reviewing:"審查中",ready_for_review:"待審查",blocked:"卡住",done:"完成",failed:"失敗",stale:"已過期",offline:"離線"};return labels[key]||String(value||"未知").replaceAll("_"," ");}
       function badgeClass(status){const value=String(status||"").toLowerCase();if(["blocked","failed","stale","offline"].includes(value))return"warn";if(["checking","reviewing","testing","ready_for_review"].includes(value))return"review";if(value==="assigned")return"queue";return"ok";}
-      function formatTaipei(epochMs){const ms=Number(epochMs);if(!Number.isFinite(ms))return"unknown";const parts=new Intl.DateTimeFormat("en-CA",{timeZone:TAIPEI_TIMEZONE,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).formatToParts(new Date(ms)).reduce((acc,part)=>{acc[part.type]=part.value;return acc;},{});return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} ${TAIPEI_TIMEZONE}`;}
-      function statusAge(epochMs){const ms=Number(epochMs);if(!Number.isFinite(ms))return{totalSeconds:Infinity,label:"unknown"};const totalSeconds=Math.max(0,Math.floor((Date.now()-ms)/1000));return{totalSeconds,label:`${Math.floor(totalSeconds/60)}m ${totalSeconds%60}s`};}
+      function formatTaipei(epochMs){const ms=Number(epochMs);if(!Number.isFinite(ms))return"未知";const parts=new Intl.DateTimeFormat("en-CA",{timeZone:TAIPEI_TIMEZONE,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).formatToParts(new Date(ms)).reduce((acc,part)=>{acc[part.type]=part.value;return acc;},{});return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} ${TAIPEI_TIMEZONE}`;}
+      function statusAge(epochMs){const ms=Number(epochMs);if(!Number.isFinite(ms))return{totalSeconds:Infinity,label:"未知"};const totalSeconds=Math.max(0,Math.floor((Date.now()-ms)/1000));return{totalSeconds,label:`${Math.floor(totalSeconds/60)}分 ${totalSeconds%60}秒`};}
       function formatCountdown(seconds){const safeSeconds=Math.max(0,Number(seconds)||0);return `${String(Math.floor(safeSeconds/60)).padStart(2,"0")}:${String(safeSeconds%60).padStart(2,"0")}`;}
       function smallCard(title, body, badge="", className=""){return `<article class="small-card ${className}"><h3>${safe(title)}</h3><p>${safe(body)}</p>${badge?`<span class="badge ${badgeClass(badge)}">${safe(statusLabel(badge))}</span>`:""}</article>`;}
+      function taskText(value){const cleaned=String(value||"").replace(/^((目前任務|Current Task)\s*[:：]\s*)+/i,"").trim();return cleaned||"未指定任務";}
+      function truncateText(value, maxLength){const text=String(value||"");return text.length>maxLength?`${text.slice(0,Math.max(0,maxLength-1))}…`:text;}
+      function agentCard(agent, visualState){const task=taskText(agent.current_task_short);const sourceStatus=String(agent.source_status||agent.status||"").toLowerCase();const blocked=sourceStatus==="blocked"&&agent.blocked_reason_short?`<p>卡住原因：${safe(agent.blocked_reason_short)}</p>`:"";return `<article class="small-card"><h3>${safe(agent.name)}</h3><p>工作區：${safe(agent.room||"未指定")}</p><p>角色：${safe(agent.role||"未指定")}</p><p>狀態：${safe(statusLabel(visualState))}</p><p>目前任務：${safe(truncateText(task,80))}</p>${blocked}<span class="badge ${badgeClass(visualState)}">${safe(statusLabel(visualState))}</span></article>`;}
       function spriteForAgent(agent){const manifest=latestAssetManifest||latestSnapshot?.asset_manifest||{};const info=manifest.agents?.[agent.name]||{};const sprites=info.sprites||{};const state=String(agent.visual_state||agent.status||"idle").toLowerCase();const mapped=info.fallback_status_map?.[state]||state;return sprites[state]||sprites[mapped]||sprites.idle||agent.pose_asset||INLINE_FALLBACK_SVG;}
       function applyLayout(agentName){const wrap=document.querySelector(`.agent-sprite-wrap[data-agent-name="${agentName}"]`);const cfg=latestAgentLayout?.agents?.[agentName]||FALLBACK_LAYOUT.agents[agentName];if(!wrap||!cfg)return;wrap.style.setProperty("--agent-x",`${cfg.x}%`);wrap.style.setProperty("--agent-y",`${cfg.y}%`);wrap.style.setProperty("--agent-h",`${cfg.h}%`);wrap.style.setProperty("--agent-z",cfg.z||20);}
       function applyAgentImage(wrap, agent){const img=wrap.querySelector(".agent-sprite");if(!img)return;const sprite=spriteForAgent(agent);img.onerror=()=>{img.onerror=null;img.src=INLINE_FALLBACK_SVG;};img.src=sprite;}
       async function fetchJson(url){const response=await fetch(url+"?t="+Date.now(),{cache:"no-store"});if(!response.ok)throw new Error(`failed to load ${url}`);return response.json();}
       async function loadAssetManifest(){try{latestAssetManifest=await fetchJson(ASSET_MANIFEST_URL);}catch(error){latestAssetManifest=latestSnapshot?.asset_manifest||null;}}
       async function loadAgentLayout(){try{latestAgentLayout=await fetchJson(AGENT_LAYOUT_URL);}catch(error){latestAgentLayout=FALLBACK_LAYOUT;}}
-      function updateTimeDisplays(){document.getElementById("current-viewer-time").textContent=`Current viewer time: ${formatTaipei(Date.now())}`;if(!latestSnapshot)return;const age=statusAge(latestSnapshot.generated_at_epoch_ms);const isStale=(age.totalSeconds/60)>latestStaleAfterMinutes||latestSnapshot.health?.is_stale===true;document.getElementById("last-synced").textContent=`Last snapshot synced: ${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;document.getElementById("snapshot-age").textContent=`Snapshot age: ${age.label}`;document.getElementById("health-badge").className=`badge ${isStale?"warn":"ok"}`;document.getElementById("health-badge").textContent=isStale?"stale":"healthy";}
-      function render(snapshot){latestSnapshot=snapshot;refreshIntervalSeconds=Number(snapshot.viewer?.refresh_interval_seconds)||120;latestStaleAfterMinutes=Number(snapshot.health?.stale_after_minutes)||6;const age=statusAge(snapshot.generated_at_epoch_ms);const isStale=(age.totalSeconds/60)>latestStaleAfterMinutes||snapshot.health?.is_stale===true;updateTimeDisplays();const summary=snapshot.summary||{};document.getElementById("case-title").textContent=snapshot.case?.title||"AI Thermal Virtual Office";document.getElementById("case-id").textContent=`${snapshot.case?.case_id||"CASE-UNKNOWN"} · Snapshot from Local Virtual Office`;document.getElementById("agent-count").textContent=summary.agent_count??4;document.getElementById("task-count").textContent=summary.task_count??0;document.getElementById("warning-count").textContent=summary.warning_count??0;document.getElementById("asset-version").textContent=`Asset manifest: ${(latestAssetManifest||snapshot.asset_manifest||{}).version||"unknown"} · Layout: ${latestAgentLayout?.version||"fallback"}`;document.getElementById("asset-scene").classList.toggle("scene-stale",isStale);const agents=snapshot.agents||[];for(const agent of agents){applyLayout(agent.name);const wrap=document.querySelector(`.agent-sprite-wrap[data-agent-name="${agent.name}"]`);if(wrap){applyAgentImage(wrap,agent);const state=isStale?"stale":String(agent.visual_state||agent.status||"idle").toLowerCase();const effect=wrap.querySelector(".status-effect");if(effect){effect.className=`status-effect ${STATUS_EFFECTS[state]||""}`;}const label=wrap.querySelector(".agent-status-label");if(label){label.textContent=statusLabel(state);label.className=`agent-status-label ${badgeClass(state)} ${FLASHING_STATUS_LABELS.has(state)?"status-flash":""}`.trim();}}}document.getElementById("agent-list").innerHTML=agents.map(agent=>{const visualState=isStale?"stale":(agent.visual_state||agent.status||"idle");return smallCard(agent.name,`${agent.room} · ${agent.current_task_short||"No public task summary"}`,visualState);}).join("");document.getElementById("asset-list").innerHTML=agents.map(agent=>smallCard(agent.name,spriteForAgent(agent),agent.visual_state||agent.status||"idle")).join("");const warnings=[];if(isStale)warnings.push(smallCard("Stale warning","Public snapshot age is above threshold. This does not mean the public page controls the local PC.","stale","warning"));for(const warning of(snapshot.warnings||[]))warnings.push(smallCard("Validation warning",warning,"blocked","warning"));document.getElementById("warnings").innerHTML=warnings.join("")||smallCard("No warnings","Public mirror validation passed.","done");}
-      async function refreshDisplay(){try{const snapshot=await fetchJson("status_snapshot.json");latestSnapshot=snapshot;await Promise.all([loadAssetManifest(),loadAgentLayout()]);render(snapshot);countdownRemaining=refreshIntervalSeconds;}catch(error){document.getElementById("warnings").innerHTML=smallCard("Load warning",error.message,"blocked","warning");}}
-      function tick(){updateTimeDisplays();countdownRemaining=Math.max(0,countdownRemaining-1);document.getElementById("next-refresh").textContent=`Next display refresh: ${formatCountdown(countdownRemaining)}`;if(countdownRemaining<=0)refreshDisplay();}
+      function updateTimeDisplays(){document.getElementById("current-viewer-time").textContent=`目前觀看時間：${formatTaipei(Date.now())}`;if(!latestSnapshot)return;const age=statusAge(latestSnapshot.generated_at_epoch_ms);const isStale=(age.totalSeconds/60)>latestStaleAfterMinutes||latestSnapshot.health?.is_stale===true;document.getElementById("last-synced").textContent=`最後同步時間：${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;document.getElementById("snapshot-age").textContent=`狀態資料年齡：${age.label}`;document.getElementById("health-badge").className=`badge ${isStale?"warn":"ok"}`;document.getElementById("health-badge").textContent=isStale?"已過期":"正常";}
+      function render(snapshot){latestSnapshot=snapshot;refreshIntervalSeconds=Number(snapshot.viewer?.refresh_interval_seconds)||120;latestStaleAfterMinutes=Number(snapshot.health?.stale_after_minutes)||6;const age=statusAge(snapshot.generated_at_epoch_ms);const isStale=(age.totalSeconds/60)>latestStaleAfterMinutes||snapshot.health?.is_stale===true;updateTimeDisplays();const summary=snapshot.summary||{};document.getElementById("case-title").textContent=snapshot.case?.title||"AI Thermal Virtual Office";document.getElementById("case-id").textContent=`${snapshot.case?.case_id||"CASE-UNKNOWN"} · Local Virtual Office 狀態快照`;document.getElementById("agent-count").textContent=summary.agent_count??4;document.getElementById("task-count").textContent=summary.task_count??"等待狀態資料";document.getElementById("warning-count").textContent=summary.warning_count??0;document.getElementById("asset-version").textContent=`素材版本：${(latestAssetManifest||snapshot.asset_manifest||{}).version||"未知"} · 版面：${latestAgentLayout?.version||"fallback"}`;document.getElementById("asset-scene").classList.toggle("scene-stale",isStale);const agents=snapshot.agents||[];for(const agent of agents){applyLayout(agent.name);const wrap=document.querySelector(`.agent-sprite-wrap[data-agent-name="${agent.name}"]`);if(wrap){applyAgentImage(wrap,agent);const state=isStale?"stale":String(agent.visual_state||agent.status||"idle").toLowerCase();const effect=wrap.querySelector(".status-effect");if(effect){effect.className=`status-effect ${STATUS_EFFECTS[state]||""}`;}const label=wrap.querySelector(".agent-status-label");if(label){label.textContent=statusLabel(state);label.className=`agent-status-label ${badgeClass(state)} ${FLASHING_STATUS_LABELS.has(state)?"status-flash":""}`.trim();}const taskLine=wrap.querySelector(".agent-task-line");if(taskLine){const task=taskText(agent.current_task_short);taskLine.textContent=`目前任務：${truncateText(task,32)}`;taskLine.title=`目前任務：${task}`;}}}document.getElementById("agent-list").innerHTML=agents.map(agent=>{const visualState=isStale?"stale":(agent.visual_state||agent.status||"idle");return agentCard(agent,visualState);}).join("");document.getElementById("asset-list").innerHTML=agents.map(agent=>smallCard(agent.name,`sprite：${spriteForAgent(agent)}`,agent.visual_state||agent.status||"idle")).join("");const warnings=[];if(isStale)warnings.push(smallCard("過期警示","公開 snapshot 已超過過期門檻。這不代表公開頁面可以控制本機電腦。","stale","warning"));for(const warning of(snapshot.warnings||[]))warnings.push(smallCard("驗證警示",warning,"blocked","warning"));document.getElementById("warnings").innerHTML=warnings.join("")||smallCard("無警示","公開鏡像驗證通過。","done");}
+      async function refreshDisplay(){try{const snapshot=await fetchJson("status_snapshot.json");latestSnapshot=snapshot;await Promise.all([loadAssetManifest(),loadAgentLayout()]);render(snapshot);countdownRemaining=refreshIntervalSeconds;}catch(error){document.getElementById("warnings").innerHTML=smallCard("載入警示",error.message,"blocked","warning");}}
+      function tick(){updateTimeDisplays();countdownRemaining=Math.max(0,countdownRemaining-1);document.getElementById("next-refresh").textContent=`下次顯示更新：${formatCountdown(countdownRemaining)}`;if(countdownRemaining<=0)refreshDisplay();}
       document.getElementById("refresh-display").addEventListener("click",refreshDisplay);refreshDisplay();setInterval(tick,1000);
     </script>
   </body>
