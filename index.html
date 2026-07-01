@@ -3,35 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alan Virtual Office Monitor</title>
+    <title>AI Thermal Agent Status Mirror</title>
     <style>
       :root {
-        --bg: #edf2f7;
+        --bg: #eef3f7;
         --surface: #ffffff;
         --surface-soft: #f7fafc;
         --line: #cbd8e6;
         --text: #19232f;
-        --muted: #64748b;
-        --teal: #168b86;
-        --blue: #3569c8;
-        --amber: #c98217;
-        --coral: #d9574f;
-        --green: #168a55;
-        --red: #b42318;
+        --muted: #637388;
+        --manager: #168b86;
+        --thermal: #d9574f;
+        --coding: #3569c8;
+        --presentation: #c98217;
+        --ok: #168a55;
+        --warn: #b42318;
         --shadow: 0 16px 42px rgba(26, 39, 54, .12);
       }
       * { box-sizing: border-box; }
       body {
         margin: 0;
-        min-width: 1180px;
+        min-width: 980px;
         font-family: Arial, "Microsoft JhengHei", sans-serif;
         color: var(--text);
-        background: linear-gradient(180deg, #e7edf5 0%, #f6f8fb 100%);
+        background:
+          linear-gradient(90deg, rgba(203,216,230,.35) 1px, transparent 1px),
+          linear-gradient(rgba(203,216,230,.35) 1px, transparent 1px),
+          linear-gradient(180deg, #e7edf5 0%, #f7fafc 100%);
+        background-size: 44px 44px, 44px 44px, auto;
       }
       h1, h2, h3, p { margin: 0; letter-spacing: 0; }
-      h1 { font-size: 22px; }
+      h1 { font-size: 23px; }
       h2 { font-size: 15px; }
-      h3, p, span, button { font-size: 12px; }
+      h3, p, span, button, li { font-size: 12px; }
       button {
         border: 1px solid var(--line);
         border-radius: 6px;
@@ -41,7 +45,7 @@
         color: var(--text);
       }
       .shell { padding: 16px; display: grid; gap: 14px; }
-      .topbar, .panel, .office, .dock-panel, .read-only-note {
+      .topbar, .notice, .office, .panel {
         background: var(--surface);
         border: 1px solid var(--line);
         border-radius: 8px;
@@ -54,8 +58,8 @@
         padding: 14px 16px;
         gap: 16px;
       }
-      .title-block p { color: var(--muted); margin-top: 4px; }
-      .top-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+      .subtitle { color: var(--muted); margin-top: 4px; }
+      .timebar { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
       .badge {
         display: inline-flex;
         align-items: center;
@@ -66,145 +70,189 @@
         white-space: nowrap;
         border: 1px solid transparent;
       }
-      .badge.ok { background: #ddf7ee; color: var(--green); border-color: #a9dfc8; }
-      .badge.warn { background: #fff0ed; color: var(--red); border-color: #f2b8ae; }
+      .badge.ok { background: #ddf7ee; color: var(--ok); border-color: #a9dfc8; }
+      .badge.warn { background: #fff0ed; color: var(--warn); border-color: #f2b8ae; }
       .badge.ref { background: #fff7e5; color: #8a5a00; border-color: #efd083; }
-      .grid {
-        display: grid;
-        grid-template-columns: 300px minmax(540px, 1fr) 330px;
-        gap: 14px;
-      }
-      .panel, .office, .dock-panel { padding: 12px; }
-      .panel { display: grid; gap: 10px; align-content: start; }
-      .metric, .card {
-        border: 1px solid var(--line);
-        border-radius: 7px;
-        background: #fff;
-        padding: 10px;
-        display: grid;
-        gap: 6px;
-      }
-      .metric strong { display: block; font-size: 18px; }
-      .metric span, .card p, .muted { color: var(--muted); line-height: 1.35; }
-      .office-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; }
+      .notice { padding: 10px 12px; color: #725800; background: #fff8df; border-color: #eed28b; }
+      .layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 14px; }
+      .office { padding: 14px; }
+      .office-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
       .floorplan {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-auto-rows: 174px;
-        gap: 10px;
-        padding: 12px;
-        min-height: 382px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        min-height: 450px;
+        padding: 18px;
         border: 1px solid var(--line);
         border-radius: 8px;
         background:
-          linear-gradient(90deg, rgba(203,216,230,.75) 1px, transparent 1px),
-          linear-gradient(rgba(203,216,230,.75) 1px, transparent 1px),
-          #f8fbfd;
-        background-size: 42px 42px;
+          linear-gradient(135deg, rgba(255,255,255,.92), rgba(241,247,252,.92)),
+          repeating-linear-gradient(0deg, transparent 0 41px, rgba(203,216,230,.5) 42px),
+          repeating-linear-gradient(90deg, transparent 0 41px, rgba(203,216,230,.5) 42px);
         position: relative;
       }
-      .floorplan::after {
-        content: "Read-only display layer";
+      .floorplan::before {
+        content: "Public read-only agent rooms";
         position: absolute;
-        right: 12px;
-        bottom: 8px;
+        left: 18px;
+        bottom: 10px;
         color: #8aa0b6;
         font-size: 11px;
       }
-      .room {
+      .agent-room {
         border: 2px solid #c9d6e4;
         border-radius: 8px;
-        background: rgba(255,255,255,.92);
-        padding: 10px;
+        background: rgba(255,255,255,.94);
+        padding: 12px;
         display: grid;
-        grid-template-rows: auto 1fr auto;
-        gap: 10px;
+        grid-template-rows: auto 1fr auto auto;
+        gap: 12px;
+        min-height: 360px;
         overflow: hidden;
         position: relative;
       }
-      .room.manager { border-color: var(--teal); }
-      .room.thermal { border-color: var(--coral); }
-      .room.coding { border-color: var(--blue); }
-      .room.presentation { border-color: var(--amber); }
+      .agent-room.manager { border-color: var(--manager); }
+      .agent-room.thermal { border-color: var(--thermal); }
+      .agent-room.coding { border-color: var(--coding); }
+      .agent-room.presentation { border-color: var(--presentation); }
       .room-title { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; }
-      .room-title h3 { font-size: 13px; }
-      .agent-line { display: grid; grid-template-columns: 54px 1fr; gap: 10px; align-items: center; }
-      .avatar-wrap { position: relative; width: 54px; height: 54px; display: grid; place-items: center; }
-      .avatar {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
+      .room-title h3 { font-size: 14px; }
+      .role { color: var(--muted); margin-top: 4px; }
+      .stage {
         display: grid;
         place-items: center;
-        color: #fff;
-        background: var(--teal);
-        font-weight: 700;
-        box-shadow: inset 0 -6px 12px rgba(0,0,0,.14);
+        min-height: 150px;
+        border: 1px dashed #c7d5e4;
+        border-radius: 8px;
+        background: linear-gradient(180deg, #f9fcff, #eef4f9);
       }
-      .room.thermal .avatar { background: var(--coral); }
-      .room.coding .avatar { background: var(--blue); }
-      .room.presentation .avatar { background: var(--amber); }
+      .avatar-area {
+        position: relative;
+        width: 104px;
+        height: 118px;
+      }
+      .agent-body {
+        position: absolute;
+        left: 29px;
+        top: 48px;
+        width: 46px;
+        height: 54px;
+        border-radius: 16px 16px 10px 10px;
+        background: var(--manager);
+        box-shadow: inset 0 -10px 16px rgba(0,0,0,.12);
+      }
+      .thermal .agent-body { background: var(--thermal); }
+      .coding .agent-body { background: var(--coding); }
+      .presentation .agent-body { background: var(--presentation); }
+      .agent-head {
+        position: absolute;
+        left: 31px;
+        top: 16px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #ffe2c7;
+        border: 2px solid rgba(25,35,47,.18);
+      }
+      .agent-head::after {
+        content: attr(data-avatar);
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 12px;
+        color: #19232f;
+      }
+      .agent-arm {
+        position: absolute;
+        top: 58px;
+        width: 10px;
+        height: 36px;
+        border-radius: 999px;
+        background: #ffe2c7;
+        transform-origin: top center;
+      }
+      .agent-arm.left { left: 22px; transform: rotate(18deg); }
+      .agent-arm.right { right: 22px; transform: rotate(-18deg); }
       .desk {
+        position: absolute;
+        left: 12px;
+        bottom: 5px;
+        width: 80px;
         height: 22px;
         border: 1px solid var(--line);
         border-radius: 5px;
-        background: #eef3f8;
-        position: relative;
+        background: #dce7f2;
       }
-      .desk::after {
-        content: "";
+      .screen {
         position: absolute;
-        width: 26px;
-        height: 8px;
+        right: 14px;
+        bottom: 25px;
+        width: 32px;
+        height: 24px;
         border-radius: 4px;
-        right: 10px;
-        top: 6px;
-        background: #c3d2e2;
+        background: #253244;
+        border: 2px solid #9fb0c2;
       }
       .status-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: var(--green);
         position: absolute;
-        right: 4px;
-        top: 4px;
+        right: 13px;
+        top: 13px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--ok);
       }
-      .agent-active .avatar { animation: breathing 2.8s ease-in-out infinite; }
-      .agent-typing .avatar { animation: typing 650ms steps(2, end) infinite; }
-      .agent-typing .desk::after { animation: laptopGlow 1s ease-in-out infinite; }
-      .agent-testing .desk::after { animation: terminalBlink 900ms steps(1, end) infinite; }
-      .agent-reviewing .avatar-wrap { animation: reviewWalk 3.6s ease-in-out infinite; }
-      .agent-ready .status-dot { animation: readyPulse 1.4s ease-in-out infinite; background: var(--amber); }
-      .agent-blocked .status-dot, .agent-failed .status-dot { animation: warningPulse 1s ease-in-out infinite; background: var(--red); }
-      .stale .avatar, .stale .avatar-wrap, .stale .desk::after, .stale .status-dot { animation: none !important; filter: grayscale(.55); }
-      @keyframes breathing { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-2px) scale(1.03); } }
-      @keyframes typing { 0%,100% { transform: translateX(0); } 50% { transform: translateX(2px); } }
-      @keyframes laptopGlow { 0%,100% { background: #b8c7d8; box-shadow: none; } 50% { background: #7fb7ff; box-shadow: 0 0 12px rgba(53,105,200,.55); } }
-      @keyframes terminalBlink { 0%,50% { background: #253244; } 51%,100% { background: #97f2bd; } }
-      @keyframes reviewWalk { 0%,100% { transform: translateX(0); } 50% { transform: translateX(9px); } }
-      @keyframes readyPulse { 0%,100% { transform: scale(1); opacity: .85; } 50% { transform: scale(1.45); opacity: 1; } }
-      @keyframes warningPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.3); } }
-      .bottom { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-      .list { display: grid; gap: 8px; margin-top: 10px; }
+      .task-text { color: var(--muted); line-height: 1.4; min-height: 34px; }
+      .last-update { color: #8090a4; }
+      .status-to-action-mapping { display: grid; gap: 7px; }
+      .panel { padding: 12px; display: grid; gap: 12px; align-content: start; }
+      .small-card {
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        background: #fff;
+        padding: 9px;
+        display: grid;
+        gap: 5px;
+      }
+      .small-card p { color: var(--muted); line-height: 1.35; }
       .warning { border-color: #f1b6b0; background: #fff8f7; }
-      .read-only-note { color: #725800; background: #fff8df; border-color: #eed28b; padding: 8px 10px; }
-      .progress {
-        height: 6px;
-        border-radius: 999px;
-        background: #edf2f7;
-        overflow: hidden;
-      }
-      .progress span {
-        display: block;
-        height: 100%;
-        border-radius: 999px;
-        background: linear-gradient(90deg, var(--teal), var(--blue));
-      }
+
+      .agent-idle .agent-head { animation: breathe 2.8s ease-in-out infinite; }
+      .agent-working .agent-arm.right { animation: handWork 850ms ease-in-out infinite; }
+      .agent-working .screen { animation: screenGlow 1.2s ease-in-out infinite; }
+      .agent-coding .agent-arm.left, .agent-coding .agent-arm.right { animation: typingHands 540ms steps(2, end) infinite; }
+      .agent-coding .screen { animation: terminalCursor 900ms steps(1, end) infinite; }
+      .agent-testing .screen { animation: terminalCursor 650ms steps(1, end) infinite; }
+      .agent-testing .status-dot { animation: debugBlink 1s ease-in-out infinite; }
+      .agent-checking .agent-head { animation: headCheck 1.6s ease-in-out infinite; }
+      .agent-reviewing .avatar-area { animation: reviewWalk 3.4s ease-in-out infinite; }
+      .agent-ready .status-dot { background: var(--presentation); animation: readyPulse 1.3s ease-in-out infinite; }
+      .agent-ready .agent-arm.right { animation: raiseHand 1.4s ease-in-out infinite; }
+      .agent-blocked .status-dot, .agent-failed .status-dot { background: var(--warn); animation: warningPulse 1s ease-in-out infinite; }
+      .agent-blocked .avatar-area { animation: blockedShake 700ms ease-in-out infinite; }
+      .agent-done .status-dot { background: var(--ok); box-shadow: 0 0 0 5px rgba(22,138,85,.14); }
+      .agent-stale .avatar-area, .agent-offline .avatar-area { filter: grayscale(.8); opacity: .55; }
+      .agent-stale *, .agent-offline * { animation: none !important; }
+
+      @keyframes breathe { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+      @keyframes handWork { 0%,100% { transform: rotate(-18deg); } 50% { transform: rotate(-42deg); } }
+      @keyframes screenGlow { 0%,100% { box-shadow: none; background: #253244; } 50% { box-shadow: 0 0 14px rgba(53,105,200,.45); background: #315a86; } }
+      @keyframes typingHands { 0%,100% { transform: rotate(12deg); } 50% { transform: rotate(-12deg); } }
+      @keyframes terminalCursor { 0%,50% { background: #253244; } 51%,100% { background: #8ff3b9; } }
+      @keyframes debugBlink { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+      @keyframes headCheck { 0%,100% { transform: rotate(0); } 35% { transform: rotate(-8deg); } 70% { transform: rotate(7deg); } }
+      @keyframes reviewWalk { 0%,100% { transform: translateX(0); } 50% { transform: translateX(9px); } }
+      @keyframes readyPulse { 0%,100% { transform: scale(1); opacity: .85; } 50% { transform: scale(1.55); opacity: 1; } }
+      @keyframes raiseHand { 0%,100% { transform: rotate(-18deg); } 50% { transform: rotate(-86deg); } }
+      @keyframes warningPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.35); } }
+      @keyframes blockedShake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }
+
       @media (max-width: 900px) {
         body { min-width: 0; }
         .topbar { align-items: stretch; flex-direction: column; }
-        .grid, .bottom { grid-template-columns: 1fr; }
+        .layout { grid-template-columns: 1fr; }
         .floorplan { grid-template-columns: 1fr; }
       }
     </style>
@@ -212,65 +260,64 @@
   <body>
     <div class="shell">
       <header class="topbar">
-        <div class="title-block">
-          <h1>Alan Virtual Office Monitor</h1>
-          <p>Read-only Snapshot · Snapshot from Local Virtual Office</p>
+        <div>
+          <h1>AI Thermal Virtual Office</h1>
+          <p class="subtitle">Read-only Agent Status Mirror</p>
         </div>
-        <div class="top-actions">
+        <div class="timebar">
           <span id="current-viewer-time" class="badge">Current viewer time: loading</span>
           <span id="last-synced" class="badge">Last snapshot synced: loading</span>
-          <span id="status-age" class="badge">Snapshot age: loading</span>
+          <span id="snapshot-age" class="badge">Snapshot age: loading</span>
           <span id="next-refresh" class="badge">Next display refresh: 02:00</span>
           <span id="health-badge" class="badge">Checking</span>
           <button id="refresh-display" type="button">Refresh Display</button>
         </div>
       </header>
-      <div class="read-only-note">Refresh Display only. Local PC publishes every 2 minutes when public state meaningfully changes. Current viewer time updates in the browser and is not a heartbeat push. Display refreshes every 2 minutes. Status is considered stale after 6 minutes. GitHub Pages cannot control the local PC, call a local backend, or write state.</div>
-      <main class="grid">
-        <aside class="panel" id="metrics"></aside>
+      <div class="notice">This is a public read-only mirror. Refresh Display only reloads the public snapshot file. The page cannot trigger export, push, local backend access, local state writes, webhooks, or local PC control.</div>
+      <main class="layout">
         <section class="office">
           <div class="office-head">
-            <h2>2D Read-only Virtual Office</h2>
+            <h2>Public agent rooms</h2>
             <span id="publisher-mode" class="badge">Publisher mode</span>
           </div>
           <div id="agents" class="floorplan"></div>
         </section>
         <aside class="panel">
           <section>
-            <h2>Task Summary</h2>
-            <div id="tasks" class="list"></div>
+            <h2>Status-to-action mapping</h2>
+            <div id="mapping" class="status-to-action-mapping"></div>
           </section>
           <section>
-            <h2>Review Summary</h2>
-            <div id="reviews" class="list"></div>
+            <h2>Public snapshot summary</h2>
+            <div id="summary" class="status-to-action-mapping"></div>
           </section>
           <section>
-            <h2>Warning / Stale Section</h2>
-            <div id="warnings" class="list"></div>
+            <h2>Warning / stale section</h2>
+            <div id="warnings" class="status-to-action-mapping"></div>
           </section>
         </aside>
       </main>
-      <footer class="bottom">
-        <section class="dock-panel">
-          <h2>Artifacts</h2>
-          <div id="artifacts" class="list"></div>
-        </section>
-        <section class="dock-panel">
-          <h2>Lessons / Agent Notes</h2>
-          <div id="lessons" class="list"></div>
-        </section>
-        <section class="dock-panel">
-          <h2>Read-only Notice</h2>
-          <div id="notice" class="list"></div>
-        </section>
-      </footer>
     </div>
     <script>
-      const staleMessage = "Status may be stale. Local PC may be offline, rebooting, sleeping, unable to push, or GitHub Pages may be delayed.";
       const TAIPEI_TIMEZONE = "Asia/Taipei";
-      let refreshIntervalSeconds = 120;
-      let countdownRemaining = refreshIntervalSeconds;
+      const STALE_MESSAGE = "Status may be stale. Local PC may be offline, sleeping, unable to push, or GitHub Pages may still be deploying.";
+      const STATUS_ACTIONS = {
+        idle: "quiet breathing",
+        working: "screen glow and hand work",
+        coding: "typing hands and terminal cursor blink",
+        testing: "terminal blink and debug indicator",
+        checking: "head check motion",
+        reviewing: "walking review motion",
+        ready_for_review: "raised hand and review pulse",
+        blocked: "warning pulse and shake",
+        done: "green accepted state",
+        failed: "red error badge",
+        stale: "stale overlay with animation disabled",
+        offline: "dimmed offline state"
+      };
       let latestSnapshot = null;
+      let refreshIntervalSeconds = 120;
+      let countdownRemaining = 120;
       let latestStaleAfterMinutes = 6;
 
       const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -281,25 +328,20 @@
         "'": "&#039;"
       }[char]));
 
-      const statusLabel = (value) => String(value || "unknown").replaceAll("_", " ");
+      const statusLabel = (value) => String(value || "idle").replaceAll("_", " ");
 
-      function statusClass(status) {
+      function badgeClass(status) {
         const value = String(status || "").toLowerCase();
-        if (["blocked", "failed", "stale"].includes(value)) return "warn";
-        if (["ready_for_review", "checking", "reviewing"].includes(value)) return "ref";
+        if (["blocked", "failed", "stale", "offline"].includes(value)) return "warn";
+        if (["checking", "reviewing", "ready_for_review", "testing"].includes(value)) return "ref";
         return "ok";
       }
 
-      function animationClass(status, isStale) {
-        if (isStale) return "stale";
-        const value = String(status || "").toLowerCase();
-        if (["working", "coding"].includes(value)) return "agent-typing";
-        if (value === "testing") return "agent-testing";
-        if (["checking", "reviewing"].includes(value)) return "agent-reviewing";
-        if (value === "ready_for_review") return "agent-ready";
-        if (value === "blocked") return "agent-blocked";
-        if (value === "failed") return "agent-failed";
-        return "agent-active";
+      function agentAnimationClass(status, isStale) {
+        if (isStale) return "agent-stale";
+        const value = String(status || "idle").toLowerCase();
+        if (STATUS_ACTIONS[value]) return `agent-${value}`;
+        return "agent-idle";
       }
 
       function roomClass(room) {
@@ -333,23 +375,10 @@
       function statusAge(epochMs) {
         const ms = Number(epochMs);
         if (!Number.isFinite(ms)) return { totalSeconds: Infinity, label: "unknown" };
-        const rawSeconds = Math.floor((Date.now() - ms) / 1000);
-        const totalSeconds = Math.max(0, rawSeconds);
-        if (rawSeconds < 0) console.warn("Snapshot generated_at_epoch_ms is in the future; status age clamped to zero.");
+        const totalSeconds = Math.max(0, Math.floor((Date.now() - ms) / 1000));
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
         return { totalSeconds, label: `${minutes} min ${seconds} sec` };
-      }
-
-      function updateTimeDisplays() {
-        document.getElementById("current-viewer-time").textContent = `Current viewer time: ${formatTaipei(Date.now())}`;
-        if (!latestSnapshot) return;
-        const age = statusAge(latestSnapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_stale === true;
-        document.getElementById("last-synced").textContent = `Last snapshot synced: ${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
-        document.getElementById("status-age").textContent = `Snapshot age: ${age.label}`;
-        document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
-        document.getElementById("health-badge").textContent = isStale ? "stale" : "healthy";
       }
 
       function formatCountdown(seconds) {
@@ -359,77 +388,84 @@
         return `${minutes}:${remain}`;
       }
 
-      function card(title, body, badge = "", className = "") {
-        return `<article class="card ${className}"><h3>${safe(title)}</h3><p>${safe(body)}</p>${badge ? `<span class="badge ${statusClass(badge)}">${safe(statusLabel(badge))}</span>` : ""}</article>`;
+      function updateTimeDisplays() {
+        document.getElementById("current-viewer-time").textContent = `Current viewer time: ${formatTaipei(Date.now())}`;
+        if (!latestSnapshot) return;
+        const age = statusAge(latestSnapshot.generated_at_epoch_ms);
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_stale === true;
+        document.getElementById("last-synced").textContent = `Last snapshot synced: ${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
+        document.getElementById("snapshot-age").textContent = `Snapshot age: ${age.label}`;
+        document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
+        document.getElementById("health-badge").textContent = isStale ? "stale" : "healthy";
+      }
+
+      function smallCard(title, body, badge = "", className = "") {
+        return `<article class="small-card ${className}"><h3>${safe(title)}</h3><p>${safe(body)}</p>${badge ? `<span class="badge ${badgeClass(badge)}">${safe(statusLabel(badge))}</span>` : ""}</article>`;
       }
 
       async function loadSnapshot() {
-        const response = await fetch("status_snapshot.json?t=" + Date.now(), {cache: "no-store"});
-        if (!response.ok) throw new Error("Unable to load status_snapshot.json");
+        const response = await fetch("status_snapshot.json?t=" + Date.now(), { cache: "no-store" });
+        if (!response.ok) throw new Error("Unable to load status snapshot");
         return response.json();
       }
 
       function render(snapshot) {
         latestSnapshot = snapshot;
         refreshIntervalSeconds = Number(snapshot.viewer?.refresh_interval_seconds) || 120;
+        latestStaleAfterMinutes = Number(snapshot.health?.stale_after_minutes) || 6;
         const age = statusAge(snapshot.generated_at_epoch_ms);
-        const staleAfterMinutes = Number(snapshot.health?.stale_after_minutes) || 15;
-        latestStaleAfterMinutes = staleAfterMinutes;
-        const isStale = (age.totalSeconds / 60) > staleAfterMinutes || snapshot.health?.is_stale === true;
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || snapshot.health?.is_stale === true;
         updateTimeDisplays();
-        document.getElementById("publisher-mode").textContent = `${snapshot.publisher?.mode || "unknown"} · local publisher ${snapshot.publisher?.interval_minutes || "?"} min · viewer ${refreshIntervalSeconds} sec`;
-
-        const summary = snapshot.summary || {};
-        document.getElementById("metrics").innerHTML = [
-          ["Current case", snapshot.case?.case_id || "unknown"],
-          ["Case title", snapshot.case?.title || "unknown"],
-          ["Case status", snapshot.case?.status || "unknown"],
-          ["Task count", summary.task_count ?? 0],
-          ["Pending reviews", summary.pending_review_count ?? 0],
-          ["Warning count", summary.warning_count ?? 0],
-        ].map(([label, value]) => `<div class="metric"><strong>${safe(value)}</strong><span>${safe(label)}</span></div>`).join("");
+        document.getElementById("publisher-mode").textContent = `${snapshot.publisher?.mode || "unknown"} · publisher ${snapshot.publisher?.interval_minutes || "?"} min · viewer ${refreshIntervalSeconds} sec`;
 
         document.getElementById("agents").innerHTML = (snapshot.agents || []).map((agent) => {
-          const anim = animationClass(agent.status, isStale);
+          const visualState = isStale ? "stale" : (agent.visual_state || agent.status || "idle");
+          const animation = agentAnimationClass(visualState, isStale);
           return `
-            <div class="room ${roomClass(agent.room)} ${anim}">
+            <article class="agent-room ${roomClass(agent.room)} ${animation}" data-agent-id="${safe(agent.id)}" data-visual-state="${safe(visualState)}">
               <div class="room-title">
-                <div><h3>${safe(agent.room || agent.name)}</h3><span class="muted">${safe(agent.role || agent.name)}</span></div>
-                <span class="badge ${isStale ? "warn" : statusClass(agent.status)}">${safe(isStale ? "stale" : statusLabel(agent.status))}</span>
+                <div>
+                  <h3>${safe(agent.room)}</h3>
+                  <p class="role">${safe(agent.role)}</p>
+                </div>
+                <span class="badge ${badgeClass(visualState)}">${safe(statusLabel(visualState))}</span>
               </div>
-              <div class="agent-line">
-                <div class="avatar-wrap"><div class="avatar">${safe(agent.avatar || String(agent.name || "?").slice(0, 2))}</div><span class="status-dot"></span></div>
-                <div><h3>${safe(agent.name)}</h3><p>${safe(agent.current_task || "No task summary")}</p></div>
+              <div class="stage">
+                <div class="avatar-area">
+                  <div class="agent-head" data-avatar="${safe(agent.avatar || agent.name?.slice(0, 2) || "AG")}"></div>
+                  <div class="agent-body"></div>
+                  <div class="agent-arm left"></div>
+                  <div class="agent-arm right"></div>
+                  <div class="screen"></div>
+                  <div class="desk"></div>
+                  <div class="status-dot"></div>
+                </div>
               </div>
-              <div class="desk"></div>
-            </div>
+              <div>
+                <h3>${safe(agent.name)}</h3>
+                <p class="task-text">${safe(agent.current_task_short || "No active public task")}</p>
+              </div>
+              <p class="last-update">Last status update: ${safe(agent.last_status_update || "not provided")}</p>
+            </article>
           `;
         }).join("");
 
-        document.getElementById("tasks").innerHTML = (snapshot.tasks || []).map((task) => `
-          <article class="card">
-            <h3>${safe(task.task_id)}</h3>
-            <p>${safe(task.title)}</p>
-            <span class="badge ${statusClass(task.status)}">${safe(statusLabel(task.status))} · ${safe(task.primary_agent)}</span>
-            <div class="progress"><span style="width:${Math.max(0, Math.min(100, Number(task.progress) || 0))}%"></span></div>
-          </article>
-        `).join("") || card("No tasks", "No task summary in snapshot.");
+        document.getElementById("mapping").innerHTML = Object.entries(STATUS_ACTIONS)
+          .map(([status, action]) => smallCard(statusLabel(status), action, status))
+          .join("");
 
-        document.getElementById("reviews").innerHTML = (snapshot.reviews || []).map((review) => card(review.review_id, `${review.task_id} · ${review.reviewer}`, review.status)).join("") || card("No reviews", "No review summary in snapshot.");
-        const warningCards = [];
-        if (isStale) warningCards.push(card("Stale warning", staleMessage, "stale", "warning"));
-        for (const warning of (snapshot.warnings || [])) warningCards.push(`<article class="card warning"><span class="badge warn">warning</span><p>${safe(warning)}</p></article>`);
-        document.getElementById("warnings").innerHTML = warningCards.join("") || card("State validation passed", "No public validation warnings.");
-
-        document.getElementById("artifacts").innerHTML = (snapshot.artifacts || []).map((artifact) => card(artifact.artifact_id, artifact.type, artifact.status)).join("") || card("No artifacts", "No artifact summary.");
-        const noteCards = (snapshot.agent_state_notes || []).slice(0, 3).map((note) => card(note.file, `${note.summary} · ${note.content_scope}`, note.semantic_status));
-        const lessonCards = (snapshot.lessons || []).slice(0, 3).map((lesson) => card(lesson.lesson_id, lesson.title, lesson.stage));
-        document.getElementById("lessons").innerHTML = [...noteCards, ...lessonCards].join("") || card("No lessons", "No lesson or note summary.");
-        document.getElementById("notice").innerHTML = [
-          card("Read-only Snapshot", "This page only fetches status_snapshot.json with cache busting. It cannot trigger local export, git push, backend calls, or local state writes.", "read-only"),
-          card("Refresh Display button", "Manual display refresh only. Local PC publishes every 2 minutes. Display refreshes every 2 minutes. Status is considered stale after 6 minutes.", "120 sec"),
-          card("Time semantics", "Current viewer time uses the browser clock. Last snapshot synced and snapshot age use generated_at_epoch_ms rendered in Asia/Taipei. This is not a heartbeat push.", snapshot.timezone || TAIPEI_TIMEZONE),
+        const summary = snapshot.summary || {};
+        document.getElementById("summary").innerHTML = [
+          smallCard("Current case", `${snapshot.case?.case_id || "unknown"} · ${snapshot.case?.title || "Virtual Office"}`, snapshot.case?.status || "unknown"),
+          smallCard("Four agents", `${summary.agent_count ?? 0} public-safe agent mirrors loaded`, "done"),
+          smallCard("Task summary", `${summary.task_count ?? 0} sanitized task titles available for context only`, "read-only"),
+          smallCard("Public change fields", (snapshot.publisher?.meaningful_change_fields || []).join(", "), "read-only")
         ].join("");
+
+        const warnings = [];
+        if (isStale) warnings.push(smallCard("Stale warning", STALE_MESSAGE, "stale", "warning"));
+        for (const warning of (snapshot.warnings || [])) warnings.push(smallCard("Validation warning", warning, "blocked", "warning"));
+        document.getElementById("warnings").innerHTML = warnings.join("") || smallCard("No warning", "State validation passed for the public mirror.", "done");
       }
 
       async function refreshDisplay() {
@@ -437,22 +473,20 @@
           render(await loadSnapshot());
           countdownRemaining = refreshIntervalSeconds;
         } catch (error) {
-          document.getElementById("warnings").innerHTML = `<article class="card warning"><span class="badge warn">warning</span><p>${safe(error.message)}</p></article>`;
+          document.getElementById("warnings").innerHTML = smallCard("Load warning", error.message, "blocked", "warning");
         }
       }
 
-      function tickCountdown() {
+      function tick() {
         updateTimeDisplays();
         countdownRemaining = Math.max(0, countdownRemaining - 1);
         document.getElementById("next-refresh").textContent = `Next display refresh: ${formatCountdown(countdownRemaining)}`;
-        if (countdownRemaining <= 0) {
-          refreshDisplay();
-        }
+        if (countdownRemaining <= 0) refreshDisplay();
       }
 
       document.getElementById("refresh-display").addEventListener("click", refreshDisplay);
       refreshDisplay();
-      setInterval(tickCountdown, 1000);
+      setInterval(tick, 1000);
     </script>
   </body>
 </html>

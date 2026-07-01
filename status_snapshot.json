@@ -1,19 +1,24 @@
 {
-  "generated_at": "2026-07-01T00:18:18+08:00",
-  "generated_at_epoch_ms": 1782836298000,
+  "generated_at": "2026-07-01T10:43:01+08:00",
+  "generated_at_epoch_ms": 1782873781000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
-  "mode": "read_only_snapshot",
+  "mode": "read_only_agent_status_mirror",
   "publisher": {
     "mode": "local_auto_publish",
     "interval_minutes": 2,
+    "meaningful_change_fields": [
+      "agents.status",
+      "agents.visual_state",
+      "agents.current_task_short"
+    ],
     "last_export_status": "success"
   },
   "viewer": {
     "refresh_interval_seconds": 120,
     "animation_enabled": true,
-    "animation_version": "phase1.15-v1"
+    "animation_version": "phase2.1-public-agent-mirror-v1"
   },
   "health": {
     "status_age_minutes": 0,
@@ -27,36 +32,56 @@
   },
   "agents": [
     {
+      "id": "ALAN_AI",
       "name": "ALAN_AI",
-      "role": "Lead Integrator",
+      "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
       "status": "reviewing",
-      "current_task": "Phase 1 acceptance review"
+      "source_status": "reviewing",
+      "visual_state": "reviewing",
+      "current_task_short": "Phase 1 acceptance review",
+      "last_status_update": "",
+      "public_safe": true
     },
     {
+      "id": "Thermal_Master",
       "name": "Thermal 大師",
-      "role": "Thermal / Control",
+      "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "assigned",
-      "current_task": "Review thermal contexts"
+      "status": "working",
+      "source_status": "assigned",
+      "visual_state": "working",
+      "current_task_short": "Review thermal contexts",
+      "last_status_update": "",
+      "public_safe": true
     },
     {
+      "id": "Coding_Master",
       "name": "程式大師",
-      "role": "Code / QA",
+      "role": "Coder / Implementer",
       "room": "Coding Desk",
       "avatar": "CD",
       "status": "working",
-      "current_task": "State flow polling verification"
+      "source_status": "working",
+      "visual_state": "working",
+      "current_task_short": "State flow polling verification",
+      "last_status_update": "",
+      "public_safe": true
     },
     {
+      "id": "Presentation_Master",
       "name": "簡報大師",
-      "role": "Report / Deck",
+      "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "available",
-      "current_task": "Report template classification"
+      "status": "idle",
+      "source_status": "available",
+      "visual_state": "idle",
+      "current_task_short": "Report template classification",
+      "last_status_update": "",
+      "public_safe": true
     }
   ],
   "tasks": [
@@ -103,104 +128,12 @@
       "progress": 35
     }
   ],
-  "reviews": [
-    {
-      "review_id": "REVIEW-2026-0001",
-      "task_id": "TASK-2026-0001",
-      "reviewer": "ALAN_AI",
-      "status": "review_passed"
-    }
-  ],
   "warnings": [],
-  "agent_state_notes": [
-    {
-      "file": ".agents/state/current-task.md",
-      "summary": "Current Task State",
-      "content_scope": "current_virtual_office",
-      "semantic_status": "current",
-      "related_case_type": "virtual_office",
-      "active_truth_source": "collaboration/task_board/tasks.json",
-      "warnings": []
-    },
-    {
-      "file": ".agents/state/project-status.md",
-      "summary": "Project Status",
-      "content_scope": "project_reference",
-      "semantic_status": "current",
-      "related_case_type": "knowledge_management",
-      "active_truth_source": "collaboration/task_board/tasks.json",
-      "warnings": []
-    },
-    {
-      "file": ".agents/state/handoff-log.md",
-      "summary": "Handoff Log",
-      "content_scope": "project_reference",
-      "semantic_status": "current",
-      "related_case_type": "agent_workflow",
-      "active_truth_source": "collaboration/task_board/tasks.json",
-      "warnings": []
-    }
-  ],
-  "artifacts": [
-    {
-      "artifact_id": "ART-MIGRATION-REPORT",
-      "type": "report",
-      "status": "created"
-    },
-    {
-      "artifact_id": "ART-FILE-INVENTORY",
-      "type": "inventory",
-      "status": "created"
-    },
-    {
-      "artifact_id": "ART-VIRTUAL-OFFICE-UI",
-      "type": "ui",
-      "status": "ready_for_review"
-    },
-    {
-      "artifact_id": "ART-REVIEW-GATE-LOGIC",
-      "type": "backend",
-      "status": "ready_for_review"
-    },
-    {
-      "artifact_id": "ART-CONTEXT-PACKAGES",
-      "type": "context",
-      "status": "created"
-    },
-    {
-      "artifact_id": "ART-CASE-MEMORY",
-      "type": "memory",
-      "status": "created"
-    },
-    {
-      "artifact_id": "ART-PHASE1-FOLDER-STRUCTURE",
-      "type": "scaffold",
-      "status": "ready_for_review"
-    }
-  ],
-  "lessons": [
-    {
-      "lesson_id": "LESSON-2026-0001",
-      "title": "ready_for_review is not done",
-      "stage": "rule"
-    },
-    {
-      "lesson_id": "LESSON-2026-0002",
-      "title": "Unregistered output is treated as non-existent",
-      "stage": "checklist"
-    },
-    {
-      "lesson_id": "LESSON-2026-0003",
-      "title": "Use polling before realtime transport in Phase 1.5",
-      "stage": "raw"
-    }
-  ],
   "summary": {
+    "agent_count": 4,
     "task_count": 6,
-    "pending_review_count": 3,
     "warning_count": 0,
-    "lesson_count": 3,
-    "artifact_count": 7
+    "active_agent_count": 3
   },
-  "content_hash": "35bf90c64a8c5210"
+  "content_hash": "8842784c127b2433"
 }

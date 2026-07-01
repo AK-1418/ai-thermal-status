@@ -1,6 +1,6 @@
-# AI Thermal Public Status Monitor
+# AI Thermal Public Agent Status Mirror
 
-Read-only GitHub Pages monitor for Alan's local Virtual Office.
+Read-only GitHub Pages mirror for the local AI Thermal Virtual Office.
 
 Public URL:
 
@@ -8,21 +8,30 @@ Public URL:
 https://ak-1418.github.io/ai-thermal-status/
 ```
 
+Purpose:
+
+- Show four public-safe agent rooms.
+- Show each agent name, role, status, current task short text, and last status update when available.
+- Map public status to simple CSS animation classes.
+- Refresh the display from `status_snapshot.json` every 120 seconds.
+- Publish from the local PC every 2 minutes only when public state meaningfully changes.
+
+Meaningful public changes include:
+
+- `agents.status`
+- `agents.visual_state`
+- `agents.current_task_short`
+
 Safety rules:
 
-- Local Virtual Office remains the live source of truth.
-- GitHub Pages displays a sanitized snapshot only.
-- Local PC publishes every 2 minutes when public state meaningfully changes.
-- Display refreshes every 2 minutes.
-- Current viewer time updates in the browser and does not require a new commit.
-- Last snapshot synced shows the last published snapshot time.
-- Snapshot age is calculated in the browser from `generated_at_epoch_ms`.
-- Status is considered stale after 6 minutes.
+- GitHub Pages is read-only.
 - Refresh Display only reloads `status_snapshot.json`.
+- Current viewer time uses the browser clock and is not a heartbeat push.
+- Last snapshot synced and Snapshot age are calculated from `generated_at_epoch_ms`.
 - No remote control.
 - No write-back to the local PC.
 - No local backend calls from GitHub Pages.
-- No private repo folders, raw logs, customer data, optimizer outputs, credentials, or full Markdown bodies are published.
+- No private repo folders, raw logs, customer data, optimizer outputs, credentials, internal prompts, or full Markdown bodies are published.
 
 Public files are limited to:
 
