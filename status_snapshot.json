@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T15:36:34+08:00",
-  "generated_at_epoch_ms": 1782891394000,
+  "generated_at": "2026-07-01T18:07:55+08:00",
+  "generated_at_epoch_ms": 1782900475000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "State flow polling verification",
+      "current_task_short": "Phase 2.1K source ownership verification",
       "blocked_reason_short": "",
-      "last_status_update": "",
+      "last_status_update": "2026-07-01T18:05:00+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "7c20b5d715c7b755"
+  "content_hash": "fb71e0766f0c878f"
 }
