@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T14:31:04+08:00",
-  "generated_at_epoch_ms": 1782887464000,
+  "generated_at": "2026-07-01T15:36:34+08:00",
+  "generated_at_epoch_ms": 1782891394000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -12,7 +12,14 @@
       "agents.status",
       "agents.visual_state",
       "agents.current_task_short",
+      "agents.last_status_update",
+      "agents.blocked_reason_short",
       "agents.pose_asset",
+      "tasks.active_task",
+      "tasks.assigned_agent",
+      "tasks.status",
+      "tasks.report_path_public",
+      "reviews.status",
       "asset_manifest.version",
       "asset_manifest.office_scene.path",
       "asset_manifest.agents.*.sprites",
@@ -50,6 +57,7 @@
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
       "current_task_short": "Phase 1 acceptance review",
+      "blocked_reason_short": "",
       "last_status_update": "",
       "public_safe": true
     },
@@ -65,6 +73,7 @@
       "pose_name": "idle",
       "pose_asset": "assets/agents/sprites/thermal_idle.png",
       "current_task_short": "Review thermal contexts",
+      "blocked_reason_short": "Needs source-level thermal review in Phase 2",
       "last_status_update": "",
       "public_safe": true
     },
@@ -80,6 +89,7 @@
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
       "current_task_short": "State flow polling verification",
+      "blocked_reason_short": "",
       "last_status_update": "",
       "public_safe": true
     },
@@ -95,6 +105,7 @@
       "pose_name": "idle",
       "pose_asset": "assets/agents/sprites/presentation_idle.png",
       "current_task_short": "Report template classification",
+      "blocked_reason_short": "",
       "last_status_update": "",
       "public_safe": true
     }
@@ -252,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "1d26677d161e5b7b"
+  "content_hash": "7c20b5d715c7b755"
 }
