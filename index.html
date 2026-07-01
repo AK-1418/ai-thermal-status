@@ -5,183 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AI Thermal 公開代理人狀態鏡像</title>
     <style>
-      :root {
-        --nav: #0e1724;
-        --ink: #17202d;
-        --muted: #607084;
-        --panel: #ffffff;
-        --line: #d6e0ea;
-        --ok: #1f9d63;
-        --warn: #c2412d;
-        --review: #a56212;
-        --blue: #2774e6;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-width: 1120px;
-        font-family: Arial, "Microsoft JhengHei", sans-serif;
-        color: var(--ink);
-        background: #edf3f8;
-      }
-      h1, h2, h3, p { margin: 0; letter-spacing: 0; }
-      h1 { font-size: 22px; }
-      h2 { font-size: 14px; }
-      h3, p, span, button { font-size: 12px; }
-      button {
-        border: 1px solid rgba(255,255,255,.22);
-        border-radius: 6px;
-        background: var(--blue);
-        color: #fff;
-        padding: 8px 11px;
-        cursor: pointer;
-      }
-      .topbar {
-        min-height: 72px;
-        padding: 12px 18px;
-        color: #fff;
-        background: linear-gradient(180deg, var(--nav), #09111d);
-        display: grid;
-        grid-template-columns: 300px 1fr auto;
-        gap: 18px;
-        align-items: center;
-      }
-      .brand { display: flex; align-items: center; gap: 12px; }
-      .brand-mark {
-        width: 40px; height: 40px; border-radius: 50%;
-        display: grid; place-items: center; font-weight: 800;
-        background: #6aa6ff; color: #0d1725;
-      }
-      .brand small, .case-meta small, .metric small { color: #9fb0c3; display: block; margin-top: 3px; }
-      .case-meta {
-        display: grid;
-        grid-template-columns: minmax(240px, 1fr) repeat(3, 92px);
-        gap: 16px;
-        align-items: center;
-      }
-      .metric strong { font-size: 21px; margin-right: 6px; }
-      .timebar { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 7px; }
-      .badge {
-        display: inline-flex; align-items: center; border-radius: 999px;
-        padding: 4px 8px; background: #eef3f8; color: var(--muted);
-        border: 1px solid transparent; white-space: nowrap;
-      }
-      .topbar .badge { background: rgba(255,255,255,.1); color: #dce7f3; border-color: rgba(255,255,255,.12); }
-      .badge.ok { color: var(--ok); background: #e0f7eb; border-color: #b8e6cc; }
-      .badge.warn { color: var(--warn); background: #fff1ef; border-color: #f2b8ae; }
-      .badge.review { color: var(--review); background: #fff6df; border-color: #efce80; }
-      .shell { padding: 12px; display: grid; gap: 10px; }
-      .notice { border: 1px solid #efd18b; background: #fff8df; color: #6f570a; border-radius: 8px; padding: 9px 12px; }
-      .layout { display: grid; grid-template-columns: minmax(820px, 1fr) 292px; gap: 12px; }
-      .office-wrap, .panel {
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: var(--panel);
-        box-shadow: 0 18px 45px rgba(16,25,38,.14);
-      }
-      .office-wrap { padding: 12px; }
-      .scene-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
-      .scene-head p { color: var(--muted); margin-top: 3px; }
-      .office-asset-scene {
-        position: relative;
-        aspect-ratio: 16 / 9;
-        min-height: 640px;
-        border: 1px solid #c8d5e4;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #dbe6f0;
-      }
-      .office-background {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .agent-pose {
-        position: absolute;
-        width: 17%;
-        transform: translate(-50%, -50%);
-        filter: drop-shadow(0 16px 14px rgba(45,32,22,.24));
-        transition: opacity .25s ease, filter .25s ease;
-      }
-      .agent-pose.alan-ai { left: 50%; top: 42%; }
-      .agent-pose.thermal-master { left: 28%; top: 66%; }
-      .agent-pose.coding-master { left: 50%; top: 66%; }
-      .agent-pose.presentation-master { left: 72%; top: 66%; }
-      .status-effect {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        border-radius: 999px;
-        pointer-events: none;
-      }
-      .effect-coding { width: 64px; height: 20px; background: rgba(89, 255, 177, .38); animation: typingGlow 900ms ease-in-out infinite; }
-      .effect-blocked { width: 42px; height: 42px; background: #fff1ef; border: 4px solid var(--warn); animation: warnPulse 900ms ease-in-out infinite; }
-      .effect-blocked::after { content: "!"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--warn); font-weight: 900; font-size: 24px; }
-      .effect-done { width: 42px; height: 42px; background: #e0f7eb; border: 4px solid var(--ok); }
-      .effect-done::after { content: "✓"; position: absolute; inset: 0; display: grid; place-items: center; color: var(--ok); font-weight: 900; font-size: 24px; }
-      .effect-reviewing { width: 78px; height: 78px; border: 4px solid rgba(165,98,18,.52); animation: reviewPulse 1.2s ease-in-out infinite; }
-      .scene-stale .office-background, .scene-stale .agent-pose { filter: grayscale(.78); opacity: .62; }
-      .panel { padding: 12px; display: grid; gap: 12px; align-content: start; }
-      .small-card {
-        border: 1px solid var(--line);
-        border-radius: 7px;
-        background: #fff;
-        padding: 9px;
-        display: grid;
-        gap: 5px;
-      }
-      .small-card p { color: var(--muted); line-height: 1.35; }
-      .status-list { display: grid; gap: 7px; }
-      .warning { border-color: #f1b6b0; background: #fff8f7; }
-      .asset-note { color: var(--muted); }
-      @keyframes typingGlow { 0%,100% { opacity: .35; transform: translate(-50%,-50%) scaleX(.65); } 50% { opacity: .95; transform: translate(-50%,-50%) scaleX(1.15); } }
-      @keyframes warnPulse { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.16); } }
-      @keyframes reviewPulse { 0%,100% { opacity: .3; transform: translate(-50%,-50%) scale(.92); } 50% { opacity: .86; transform: translate(-50%,-50%) scale(1.12); } }
+      :root { --nav:#0e1724; --ink:#17202d; --muted:#607084; --panel:#fff; --line:#d6e0ea; --ok:#1f9d63; --warn:#c2412d; --review:#a56212; --blue:#2774e6; }
+      * { box-sizing:border-box; }
+      body { margin:0; min-width:1120px; font-family:Arial,"Microsoft JhengHei",sans-serif; color:var(--ink); background:#edf3f8; }
+      h1,h2,h3,p { margin:0; letter-spacing:0; }
+      h1 { font-size:22px; } h2 { font-size:14px; } h3,p,span,button { font-size:12px; }
+      button { border:1px solid rgba(255,255,255,.22); border-radius:6px; background:var(--blue); color:#fff; padding:8px 11px; cursor:pointer; }
+      .topbar { min-height:72px; padding:12px 18px; color:#fff; background:linear-gradient(180deg,var(--nav),#09111d); display:grid; grid-template-columns:300px 1fr auto; gap:18px; align-items:center; }
+      .brand { display:flex; align-items:center; gap:12px; }
+      .brand-mark { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; font-weight:800; background:#6aa6ff; color:#0d1725; }
+      .brand small,.case-meta small,.metric small { color:#9fb0c3; display:block; margin-top:3px; }
+      .case-meta { display:grid; grid-template-columns:minmax(240px,1fr) repeat(3,92px); gap:16px; align-items:center; }
+      .metric strong { font-size:21px; margin-right:6px; }
+      .timebar { display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; gap:7px; }
+      .badge { display:inline-flex; align-items:center; border-radius:999px; padding:4px 8px; background:#eef3f8; color:var(--muted); border:1px solid transparent; white-space:nowrap; }
+      .topbar .badge { background:rgba(255,255,255,.1); color:#dce7f3; border-color:rgba(255,255,255,.12); }
+      .badge.ok { color:var(--ok); background:#e0f7eb; border-color:#b8e6cc; }
+      .badge.warn { color:var(--warn); background:#fff1ef; border-color:#f2b8ae; }
+      .badge.review { color:var(--review); background:#fff6df; border-color:#efce80; }
+      .shell { padding:12px; display:grid; gap:10px; }
+      .notice { border:1px solid #efd18b; background:#fff8df; color:#6f570a; border-radius:8px; padding:9px 12px; }
+      .layout { display:grid; grid-template-columns:minmax(820px,1fr) 292px; gap:12px; }
+      .office-wrap,.panel { border:1px solid var(--line); border-radius:8px; background:var(--panel); box-shadow:0 18px 45px rgba(16,25,38,.14); }
+      .office-wrap { padding:12px; }
+      .scene-head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px; }
+      .scene-head p { color:var(--muted); margin-top:3px; }
+      .office-asset-scene { position:relative; aspect-ratio:16/9; min-height:640px; border:1px solid #c8d5e4; border-radius:8px; overflow:hidden; background:#dbe6f0; }
+      .office-background { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+      .agent-pose { position:absolute; width:22%; transform:translate(-50%,-50%); object-fit:contain; filter:drop-shadow(0 16px 14px rgba(45,32,22,.24)); transition:opacity .25s ease,filter .25s ease; }
+      .agent-pose.alan-ai { left:50%; top:40%; }
+      .agent-pose.thermal-master { left:26%; top:66%; }
+      .agent-pose.coding-master { left:50%; top:66%; }
+      .agent-pose.presentation-master { left:74%; top:66%; }
+      .status-effect { position:absolute; transform:translate(-50%,-50%); border-radius:999px; pointer-events:none; }
+      .effect-coding { width:64px; height:20px; background:rgba(89,255,177,.38); animation:typingGlow 900ms ease-in-out infinite; }
+      .effect-blocked { width:42px; height:42px; background:#fff1ef; border:4px solid var(--warn); animation:warnPulse 900ms ease-in-out infinite; }
+      .effect-blocked::after { content:"!"; position:absolute; inset:0; display:grid; place-items:center; color:var(--warn); font-weight:900; font-size:24px; }
+      .effect-done { width:42px; height:42px; background:#e0f7eb; border:4px solid var(--ok); }
+      .effect-done::after { content:"✓"; position:absolute; inset:0; display:grid; place-items:center; color:var(--ok); font-weight:900; font-size:24px; }
+      .effect-reviewing { width:78px; height:78px; border:4px solid rgba(165,98,18,.52); animation:reviewPulse 1.2s ease-in-out infinite; }
+      .scene-stale .office-background,.scene-stale .agent-pose { filter:grayscale(.78); opacity:.62; }
+      .panel { padding:12px; display:grid; gap:12px; align-content:start; }
+      .small-card { border:1px solid var(--line); border-radius:7px; background:#fff; padding:9px; display:grid; gap:5px; }
+      .small-card p { color:var(--muted); line-height:1.35; word-break:break-word; }
+      .status-list { display:grid; gap:7px; }
+      .warning { border-color:#f1b6b0; background:#fff8f7; }
+      .asset-note { color:var(--muted); }
+      @keyframes typingGlow { 0%,100%{opacity:.35;transform:translate(-50%,-50%) scaleX(.65);} 50%{opacity:.95;transform:translate(-50%,-50%) scaleX(1.15);} }
+      @keyframes warnPulse { 0%,100%{transform:translate(-50%,-50%) scale(1);} 50%{transform:translate(-50%,-50%) scale(1.16);} }
+      @keyframes reviewPulse { 0%,100%{opacity:.3;transform:translate(-50%,-50%) scale(.92);} 50%{opacity:.86;transform:translate(-50%,-50%) scale(1.12);} }
     </style>
   </head>
   <body>
     <header class="topbar">
-      <div class="brand">
-        <div class="brand-mark">AI</div>
-        <div>
-          <h1>AI Thermal 公開代理人狀態鏡像</h1>
-          <small>Read-only Agent Status Mirror · assets/office/office_scene.svg · assets/agents/</small>
-        </div>
-      </div>
+      <div class="brand"><div class="brand-mark">AI</div><div><h1>AI Thermal 公開代理人狀態鏡像</h1><small>Read-only Agent Status Mirror · visual asset package v1</small></div></div>
       <div class="case-meta">
         <div><strong id="case-title">Loading</strong><small id="case-id">Snapshot from Local Virtual Office</small></div>
         <div class="metric"><strong id="agent-count">4</strong><small>Agents</small></div>
         <div class="metric"><strong id="task-count">0</strong><small>Tasks</small></div>
         <div class="metric"><strong id="warning-count">0</strong><small>Warnings</small></div>
       </div>
-      <div class="timebar">
-        <span id="health-badge" class="badge">Loading</span>
-        <button id="refresh-display" type="button">刷新畫面</button>
-      </div>
+      <div class="timebar"><span id="health-badge" class="badge">Loading</span><button id="refresh-display" type="button">刷新畫面</button></div>
     </header>
     <div class="shell">
       <div class="notice">GitHub Pages 是 sanitized read-only mirror。「刷新畫面」只重新讀取公開快照與 public assets，不控制本機。</div>
-      <section class="panel">
-        <div class="timebar">
-          <span id="current-viewer-time" class="badge">目前瀏覽時間：--</span>
-          <span id="last-synced" class="badge">最後快照同步：--</span>
-          <span id="snapshot-age" class="badge">快照時間差：--</span>
-          <span id="next-refresh" class="badge">下次畫面刷新：--</span>
-          <span id="asset-version" class="badge">asset_manifest.json</span>
-        </div>
-      </section>
+      <section class="panel"><div class="timebar">
+        <span id="current-viewer-time" class="badge">目前瀏覽時間：--</span>
+        <span id="last-synced" class="badge">最後快照同步：--</span>
+        <span id="snapshot-age" class="badge">快照時間差：--</span>
+        <span id="next-refresh" class="badge">下次畫面刷新：--</span>
+        <span id="asset-version" class="badge">asset manifest</span>
+      </div></section>
       <main class="layout">
         <section class="office-wrap">
-          <div class="scene-head">
-            <div>
-              <h2>Public Visual Asset Pipeline MVP</h2>
-              <p class="asset-note">Office background and agent poses load from public-safe assets. Current art is placeholder asset, not final visual quality.</p>
-            </div>
-            <span class="badge review">Visual L2 Placeholder</span>
-          </div>
+          <div class="scene-head"><div><h2>Public Visual Asset Package Integration</h2><p class="asset-note">Office background uses the provided package image. Agent images currently fall back to pose sheets until isolated transparent sprites are approved.</p></div><span class="badge review">Visual L2 Pose Sheets</span></div>
           <div id="asset-scene" class="office-asset-scene">
-            <img class="office-background" src="assets/office/office_scene.svg" alt="office scene">
+            <img class="office-background" src="assets/office/office_scene.png" alt="office scene">
             <img class="agent-pose alan-ai" data-agent-name="ALAN_AI" alt="ALAN_AI pose">
             <img class="agent-pose thermal-master" data-agent-name="Thermal 大師" alt="Thermal master pose">
             <img class="agent-pose coding-master" data-agent-name="程式大師" alt="Coding master pose">
@@ -193,246 +92,36 @@
           </div>
         </section>
         <aside class="panel">
-          <section>
-            <h2>代理人狀態</h2>
-            <div id="agent-list" class="status-list"></div>
-          </section>
-          <section>
-            <h2>Asset Mapping</h2>
-            <div id="asset-list" class="status-list"></div>
-          </section>
-          <section>
-            <h2>警示 / 過期狀態</h2>
-            <div id="warnings" class="status-list"></div>
-          </section>
+          <section><h2>代理人狀態</h2><div id="agent-list" class="status-list"></div></section>
+          <section><h2>Asset Mapping</h2><div id="asset-list" class="status-list"></div></section>
+          <section><h2>警示 / 過期狀態</h2><div id="warnings" class="status-list"></div></section>
         </aside>
       </main>
     </div>
     <script>
       const TAIPEI_TIMEZONE = "Asia/Taipei";
-      const OFFICE_SCENE_ASSET = "assets/office/office_scene.svg";
+      const OFFICE_SCENE_ASSET = "assets/office/office_scene.png";
       const ASSET_MANIFEST_URL = "assets/asset_manifest.json";
-      const AGENT_ASSET_MAP = {
-  "ALAN_AI": {
-    "idle": "assets/agents/alan_ai_idle.svg",
-    "reviewing": "assets/agents/alan_ai_reviewing.svg",
-    "blocked": "assets/agents/alan_ai_blocked.svg",
-    "done": "assets/agents/alan_ai_done.svg"
-  },
-  "Thermal 大師": {
-    "idle": "assets/agents/thermal_idle.svg",
-    "checking": "assets/agents/thermal_checking.svg",
-    "working": "assets/agents/thermal_working.svg",
-    "blocked": "assets/agents/thermal_blocked.svg"
-  },
-  "程式大師": {
-    "idle": "assets/agents/coder_idle.svg",
-    "coding": "assets/agents/coder_coding.svg",
-    "testing": "assets/agents/coder_testing.svg",
-    "blocked": "assets/agents/coder_blocked.svg"
-  },
-  "簡報大師": {
-    "idle": "assets/agents/presentation_idle.svg",
-    "working": "assets/agents/presentation_working.svg",
-    "reviewing": "assets/agents/presentation_reviewing.svg",
-    "done": "assets/agents/presentation_done.svg"
-  }
-};
       const INLINE_FALLBACK_SVG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360"><rect width="300" height="360" fill="#f5efe6"/><circle cx="150" cy="96" r="54" fill="#ffd6ba"/><rect x="86" y="160" width="128" height="118" rx="30" fill="#607084"/><text x="150" y="326" text-anchor="middle" font-size="16" font-family="Arial">inline SVG fallback</text></svg>`);
-      const AGENT_POSITIONS = {
-        "ALAN_AI": { className: "alan-ai", effectLeft: "58%", effectTop: "27%" },
-        "Thermal 大師": { className: "thermal-master", effectLeft: "36%", effectTop: "53%" },
-        "程式大師": { className: "coding-master", effectLeft: "58%", effectTop: "53%" },
-        "簡報大師": { className: "presentation-master", effectLeft: "80%", effectTop: "53%" }
-      };
-      const STATUS_EFFECTS = {
-        blocked: "effect-blocked",
-        failed: "effect-blocked",
-        done: "effect-done",
-        reviewing: "effect-reviewing",
-        checking: "effect-reviewing",
-        testing: "effect-reviewing",
-        coding: "effect-coding",
-        working: "effect-coding"
-      };
-      const EMBEDDED_ASSET_MANIFEST = {
-  "version": "phase2.1D-asset-pipeline-v1",
-  "office_scene": "assets/office/office_scene.svg",
-  "agents": {
-    "ALAN_AI": {
-      "idle": "assets/agents/alan_ai_idle.svg",
-      "reviewing": "assets/agents/alan_ai_reviewing.svg",
-      "blocked": "assets/agents/alan_ai_blocked.svg",
-      "done": "assets/agents/alan_ai_done.svg"
-    },
-    "Thermal 大師": {
-      "idle": "assets/agents/thermal_idle.svg",
-      "checking": "assets/agents/thermal_checking.svg",
-      "working": "assets/agents/thermal_working.svg",
-      "blocked": "assets/agents/thermal_blocked.svg"
-    },
-    "程式大師": {
-      "idle": "assets/agents/coder_idle.svg",
-      "coding": "assets/agents/coder_coding.svg",
-      "testing": "assets/agents/coder_testing.svg",
-      "blocked": "assets/agents/coder_blocked.svg"
-    },
-    "簡報大師": {
-      "idle": "assets/agents/presentation_idle.svg",
-      "working": "assets/agents/presentation_working.svg",
-      "reviewing": "assets/agents/presentation_reviewing.svg",
-      "done": "assets/agents/presentation_done.svg"
-    }
-  },
-  "status_effects": {
-    "blocked": "css-warning-bubble",
-    "done": "css-check-overlay",
-    "stale": "css-dim-scene",
-    "coding": "css-typing-glow"
-  },
-  "asset_policy": "public_safe_placeholder_assets",
-  "visual_quality": "placeholder asset - not final visual quality"
-};
-      let latestSnapshot = null;
-      let refreshIntervalSeconds = 120;
-      let countdownRemaining = 120;
-      let latestStaleAfterMinutes = 6;
-      let latestAssetManifest = EMBEDDED_ASSET_MANIFEST;
-
-      const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"}[char]));
-      function statusLabel(value) {
-        const key = String(value || "idle").toLowerCase();
-        const labels = { idle: "待命", working: "工作中", coding: "撰寫程式", testing: "測試中", checking: "檢查中", reviewing: "審查中", blocked: "受阻", done: "完成", stale: "過期", offline: "離線" };
-        return labels[key] || String(value || "未知").replaceAll("_", " ");
-      }
-      function badgeClass(status) {
-        const value = String(status || "").toLowerCase();
-        if (["blocked", "failed", "stale", "offline"].includes(value)) return "warn";
-        if (["checking", "reviewing", "testing"].includes(value)) return "review";
-        return "ok";
-      }
-      function formatTaipei(epochMs) {
-        const ms = Number(epochMs);
-        if (!Number.isFinite(ms)) return "未知";
-        const parts = new Intl.DateTimeFormat("en-CA", { timeZone: TAIPEI_TIMEZONE, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }).formatToParts(new Date(ms)).reduce((acc, part) => { acc[part.type] = part.value; return acc; }, {});
-        return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} ${TAIPEI_TIMEZONE}`;
-      }
-      function statusAge(epochMs) {
-        const ms = Number(epochMs);
-        if (!Number.isFinite(ms)) return { totalSeconds: Infinity, label: "未知" };
-        const totalSeconds = Math.max(0, Math.floor((Date.now() - ms) / 1000));
-        return { totalSeconds, label: `${Math.floor(totalSeconds / 60)} 分 ${totalSeconds % 60} 秒` };
-      }
-      function formatCountdown(seconds) {
-        const safeSeconds = Math.max(0, Number(seconds) || 0);
-        return `${String(Math.floor(safeSeconds / 60)).padStart(2, "0")}:${String(safeSeconds % 60).padStart(2, "0")}`;
-      }
-      function smallCard(title, body, badge = "", className = "") {
-        return `<article class="small-card ${className}"><h3>${safe(title)}</h3><p>${safe(body)}</p>${badge ? `<span class="badge ${badgeClass(badge)}">${safe(statusLabel(badge))}</span>` : ""}</article>`;
-      }
-      function assetForAgent(agent) {
-        const map = AGENT_ASSET_MAP[agent.name] || {};
-        const state = String(agent.visual_state || agent.status || "idle").toLowerCase();
-        return map[state] || map.idle || agent.pose_asset || INLINE_FALLBACK_SVG;
-      }
-      function applyAgentImage(img, agent) {
-        const map = AGENT_ASSET_MAP[agent.name] || {};
-        const state = String(agent.visual_state || agent.status || "idle").toLowerCase();
-        const selected = map[state] || map.idle || agent.pose_asset || INLINE_FALLBACK_SVG;
-        let triedIdle = selected === map.idle;
-        img.onerror = () => {
-          if (!triedIdle && map.idle) {
-            triedIdle = true;
-            img.src = map.idle;
-            return;
-          }
-          img.onerror = null;
-          img.src = INLINE_FALLBACK_SVG;
-        };
-        img.src = selected;
-      }
-      async function loadSnapshot() {
-        const response = await fetch("status_snapshot.json?t=" + Date.now(), { cache: "no-store" });
-        if (!response.ok) throw new Error("無法讀取狀態快照");
-        return response.json();
-      }
-      async function loadAssetManifest() {
-        try {
-          const response = await fetch(ASSET_MANIFEST_URL + "?t=" + Date.now(), { cache: "no-store" });
-          if (response.ok) latestAssetManifest = await response.json();
-        } catch (error) {
-          latestAssetManifest = EMBEDDED_ASSET_MANIFEST;
-        }
-      }
-      function updateTimeDisplays() {
-        document.getElementById("current-viewer-time").textContent = `目前瀏覽時間：${formatTaipei(Date.now())}`;
-        if (!latestSnapshot) return;
-        const age = statusAge(latestSnapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_stale === true;
-        document.getElementById("last-synced").textContent = `最後快照同步：${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
-        document.getElementById("snapshot-age").textContent = `快照時間差：${age.label}`;
-        document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
-        document.getElementById("health-badge").textContent = isStale ? "過期" : "正常";
-      }
-      function render(snapshot) {
-        latestSnapshot = snapshot;
-        refreshIntervalSeconds = Number(snapshot.viewer?.refresh_interval_seconds) || 120;
-        latestStaleAfterMinutes = Number(snapshot.health?.stale_after_minutes) || 6;
-        const age = statusAge(snapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || snapshot.health?.is_stale === true;
-        updateTimeDisplays();
-        const summary = snapshot.summary || {};
-        document.getElementById("case-title").textContent = snapshot.case?.title || "AI Thermal Virtual Office";
-        document.getElementById("case-id").textContent = `${snapshot.case?.case_id || "CASE-UNKNOWN"} · Snapshot from Local Virtual Office`;
-        document.getElementById("agent-count").textContent = summary.agent_count ?? 4;
-        document.getElementById("task-count").textContent = summary.task_count ?? 0;
-        document.getElementById("warning-count").textContent = summary.warning_count ?? 0;
-        document.getElementById("asset-version").textContent = `Asset manifest：${latestAssetManifest.version || snapshot.asset_manifest?.version || "unknown"}`;
-        document.getElementById("asset-scene").classList.toggle("scene-stale", isStale);
-        const agents = snapshot.agents || [];
-        for (const agent of agents) {
-          const position = AGENT_POSITIONS[agent.name];
-          if (!position) continue;
-          const img = document.querySelector(`.agent-pose.${position.className}`);
-          if (img) applyAgentImage(img, agent);
-          const effect = document.querySelector(`[data-effect-for="${agent.name}"]`);
-          if (effect) {
-            const state = isStale ? "stale" : String(agent.visual_state || agent.status || "idle").toLowerCase();
-            effect.className = `status-effect ${STATUS_EFFECTS[state] || ""}`;
-            effect.style.left = position.effectLeft;
-            effect.style.top = position.effectTop;
-          }
-        }
-        document.getElementById("agent-list").innerHTML = agents.map((agent) => {
-          const visualState = isStale ? "stale" : (agent.visual_state || agent.status || "idle");
-          return smallCard(agent.name, `${agent.room} · ${agent.current_task_short || "No public task summary"}`, visualState);
-        }).join("");
-        document.getElementById("asset-list").innerHTML = agents.map((agent) => {
-          return smallCard(agent.name, assetForAgent(agent), agent.visual_state || agent.status || "idle");
-        }).join("");
-        const warnings = [];
-        if (isStale) warnings.push(smallCard("過期警示", "公開快照時間差超過門檻。這不代表本機被遠端控制。", "stale", "warning"));
-        for (const warning of (snapshot.warnings || [])) warnings.push(smallCard("驗證警示", warning, "blocked", "warning"));
-        document.getElementById("warnings").innerHTML = warnings.join("") || smallCard("沒有警示", "公開鏡像狀態驗證通過。", "done");
-      }
-      async function refreshDisplay() {
-        try {
-          await loadAssetManifest();
-          render(await loadSnapshot());
-          countdownRemaining = refreshIntervalSeconds;
-        } catch (error) {
-          document.getElementById("warnings").innerHTML = smallCard("讀取警示", error.message, "blocked", "warning");
-        }
-      }
-      function tick() {
-        updateTimeDisplays();
-        countdownRemaining = Math.max(0, countdownRemaining - 1);
-        document.getElementById("next-refresh").textContent = `下次畫面刷新：${formatCountdown(countdownRemaining)}`;
-        if (countdownRemaining <= 0) refreshDisplay();
-      }
-      document.getElementById("refresh-display").addEventListener("click", refreshDisplay);
-      refreshDisplay();
-      setInterval(tick, 1000);
+      const AGENT_POSITIONS = {"ALAN_AI":{className:"alan-ai",effectLeft:"58%",effectTop:"28%"},"Thermal 大師":{className:"thermal-master",effectLeft:"34%",effectTop:"55%"},"程式大師":{className:"coding-master",effectLeft:"58%",effectTop:"55%"},"簡報大師":{className:"presentation-master",effectLeft:"82%",effectTop:"55%"}};
+      const STATUS_EFFECTS = {blocked:"effect-blocked",failed:"effect-blocked",done:"effect-done",reviewing:"effect-reviewing",checking:"effect-reviewing",testing:"effect-reviewing",ready_for_review:"effect-reviewing",coding:"effect-coding",working:"effect-coding"};
+      let latestSnapshot = null, latestAssetManifest = null, refreshIntervalSeconds = 120, countdownRemaining = 120, latestStaleAfterMinutes = 6;
+      const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
+      function statusLabel(value){const key=String(value||"idle").toLowerCase();const labels={idle:"待命",working:"工作中",coding:"撰寫程式",testing:"測試中",checking:"檢查中",reviewing:"審查中",ready_for_review:"等待審查",blocked:"受阻",done:"完成",failed:"失敗",stale:"過期",offline:"離線"};return labels[key]||String(value||"未知").replaceAll("_"," ");}
+      function badgeClass(status){const value=String(status||"").toLowerCase();if(["blocked","failed","stale","offline"].includes(value))return"warn";if(["checking","reviewing","testing","ready_for_review"].includes(value))return"review";return"ok";}
+      function formatTaipei(epochMs){const ms=Number(epochMs);if(!Number.isFinite(ms))return"未知";const parts=new Intl.DateTimeFormat("en-CA",{timeZone:TAIPEI_TIMEZONE,year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).formatToParts(new Date(ms)).reduce((acc,part)=>{acc[part.type]=part.value;return acc;},{});return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}:${parts.second} ${TAIPEI_TIMEZONE}`;}
+      function statusAge(epochMs){const ms=Number(epochMs);if(!Number.isFinite(ms))return{totalSeconds:Infinity,label:"未知"};const totalSeconds=Math.max(0,Math.floor((Date.now()-ms)/1000));return{totalSeconds,label:`${Math.floor(totalSeconds/60)} 分 ${totalSeconds%60} 秒`};}
+      function formatCountdown(seconds){const safeSeconds=Math.max(0,Number(seconds)||0);return `${String(Math.floor(safeSeconds/60)).padStart(2,"0")}:${String(safeSeconds%60).padStart(2,"0")}`;}
+      function smallCard(title, body, badge="", className=""){return `<article class="small-card ${className}"><h3>${safe(title)}</h3><p>${safe(body)}</p>${badge?`<span class="badge ${badgeClass(badge)}">${safe(statusLabel(badge))}</span>`:""}</article>`;}
+      function resolvePose(agent){const manifest=latestAssetManifest||latestSnapshot?.asset_manifest||{};const info=manifest.agents?.[agent.name]||{};const state=String(agent.visual_state||agent.status||"idle").toLowerCase();const poses=info.poses_in_sheet||[];const pose=poses.includes(state)?state:(info.fallback_status_map?.[state]||"idle");const cropped=info.recommended_asset_names_after_crop?.[pose];const sourceSheet=info.source_sheet||agent.source_sheet;return [cropped, sourceSheet, INLINE_FALLBACK_SVG].filter(Boolean);}
+      function applyAgentImage(img, agent){const candidates=resolvePose(agent);let index=0;img.onerror=()=>{index+=1;if(index<candidates.length){img.src=candidates[index];}else{img.onerror=null;img.src=INLINE_FALLBACK_SVG;}};img.src=candidates[index]||INLINE_FALLBACK_SVG;}
+      async function loadSnapshot(){const response=await fetch("status_snapshot.json?t="+Date.now(),{cache:"no-store"});if(!response.ok)throw new Error("無法讀取狀態快照");return response.json();}
+      async function loadAssetManifest(){try{const response=await fetch(ASSET_MANIFEST_URL+"?t="+Date.now(),{cache:"no-store"});if(response.ok)latestAssetManifest=await response.json();}catch(error){latestAssetManifest=latestSnapshot?.asset_manifest||null;}}
+      function updateTimeDisplays(){document.getElementById("current-viewer-time").textContent=`目前瀏覽時間：${formatTaipei(Date.now())}`;if(!latestSnapshot)return;const age=statusAge(latestSnapshot.generated_at_epoch_ms);const isStale=(age.totalSeconds/60)>latestStaleAfterMinutes||latestSnapshot.health?.is_stale===true;document.getElementById("last-synced").textContent=`最後快照同步：${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;document.getElementById("snapshot-age").textContent=`快照時間差：${age.label}`;document.getElementById("health-badge").className=`badge ${isStale?"warn":"ok"}`;document.getElementById("health-badge").textContent=isStale?"過期":"正常";}
+      function render(snapshot){latestSnapshot=snapshot;refreshIntervalSeconds=Number(snapshot.viewer?.refresh_interval_seconds)||120;latestStaleAfterMinutes=Number(snapshot.health?.stale_after_minutes)||6;const age=statusAge(snapshot.generated_at_epoch_ms);const isStale=(age.totalSeconds/60)>latestStaleAfterMinutes||snapshot.health?.is_stale===true;updateTimeDisplays();const summary=snapshot.summary||{};document.getElementById("case-title").textContent=snapshot.case?.title||"AI Thermal Virtual Office";document.getElementById("case-id").textContent=`${snapshot.case?.case_id||"CASE-UNKNOWN"} · Snapshot from Local Virtual Office`;document.getElementById("agent-count").textContent=summary.agent_count??4;document.getElementById("task-count").textContent=summary.task_count??0;document.getElementById("warning-count").textContent=summary.warning_count??0;document.getElementById("asset-version").textContent=`Asset manifest：${(latestAssetManifest||snapshot.asset_manifest||{}).version||"unknown"}`;document.getElementById("asset-scene").classList.toggle("scene-stale",isStale);const agents=snapshot.agents||[];for(const agent of agents){const position=AGENT_POSITIONS[agent.name];if(!position)continue;const img=document.querySelector(`.agent-pose.${position.className}`);if(img)applyAgentImage(img,agent);const effect=document.querySelector(`[data-effect-for="${agent.name}"]`);if(effect){const state=isStale?"stale":String(agent.visual_state||agent.status||"idle").toLowerCase();effect.className=`status-effect ${STATUS_EFFECTS[state]||""}`;effect.style.left=position.effectLeft;effect.style.top=position.effectTop;}}document.getElementById("agent-list").innerHTML=agents.map(agent=>{const visualState=isStale?"stale":(agent.visual_state||agent.status||"idle");return smallCard(agent.name,`${agent.room} · ${agent.current_task_short||"No public task summary"}`,visualState);}).join("");document.getElementById("asset-list").innerHTML=agents.map(agent=>smallCard(agent.name,resolvePose(agent).join(" → "),agent.visual_state||agent.status||"idle")).join("");const warnings=[];if(isStale)warnings.push(smallCard("過期警示","公開快照時間差超過門檻。這不代表本機被遠端控制。","stale","warning"));for(const warning of(snapshot.warnings||[]))warnings.push(smallCard("驗證警示",warning,"blocked","warning"));document.getElementById("warnings").innerHTML=warnings.join("")||smallCard("沒有警示","公開鏡像狀態驗證通過。","done");}
+      async function refreshDisplay(){try{const snapshot=await loadSnapshot();latestSnapshot=snapshot;await loadAssetManifest();render(snapshot);countdownRemaining=refreshIntervalSeconds;}catch(error){document.getElementById("warnings").innerHTML=smallCard("讀取警示",error.message,"blocked","warning");}}
+      function tick(){updateTimeDisplays();countdownRemaining=Math.max(0,countdownRemaining-1);document.getElementById("next-refresh").textContent=`下次畫面刷新：${formatCountdown(countdownRemaining)}`;if(countdownRemaining<=0)refreshDisplay();}
+      document.getElementById("refresh-display").addEventListener("click",refreshDisplay);refreshDisplay();setInterval(tick,1000);
     </script>
   </body>
 </html>
