@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T00:45:04+08:00",
-  "generated_at_epoch_ms": 1782924304000,
+  "generated_at": "2026-07-02T00:53:04+08:00",
+  "generated_at_epoch_ms": 1782924784000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -90,7 +90,7 @@
       "pose_asset": "assets/agents/sprites/coder_idle.png",
       "current_task_short": "Phase 2.2B controlled transition verification",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-02T00:43:13+08:00",
+      "last_status_update": "2026-07-02T00:51:14+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "13ebaa4fda5143f9"
+  "content_hash": "67532b29aa4d25b6"
 }
