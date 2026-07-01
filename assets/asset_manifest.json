@@ -1,9 +1,9 @@
 {
-  "version": "phase2.1D-visual-assets-v1",
+  "version": "phase2.1E-agent-sprites-v1",
   "created_at": "2026-07-01T12:28:00+08:00",
   "purpose": "Public-safe visual assets for the AI Thermal GitHub Pages read-only agent status mirror.",
   "public_safe": true,
-  "visual_quality": "pose_sheet_integration_not_final_sprites",
+  "visual_quality": "cropped_sprites_need_visual_qa",
   "office_scene": {
     "id": "office_scene",
     "path": "assets/office/office_scene.png",
@@ -12,18 +12,11 @@
   },
   "agents": {
     "ALAN_AI": {
-      "source_sheet": "assets/agents/source_sheets/alan_ai_pose_sheet.png",
-      "poses_in_sheet": [
-        "idle",
-        "reviewing",
-        "blocked",
-        "done"
-      ],
-      "recommended_asset_names_after_crop": {
-        "idle": "assets/agents/alan_ai_idle.png",
-        "reviewing": "assets/agents/alan_ai_reviewing.png",
-        "blocked": "assets/agents/alan_ai_blocked.png",
-        "done": "assets/agents/alan_ai_done.png"
+      "sprites": {
+        "idle": "assets/agents/sprites/alan_ai_idle.png",
+        "reviewing": "assets/agents/sprites/alan_ai_reviewing.png",
+        "blocked": "assets/agents/sprites/alan_ai_blocked.png",
+        "done": "assets/agents/sprites/alan_ai_done.png"
       },
       "fallback_status_map": {
         "working": "reviewing",
@@ -32,21 +25,15 @@
         "failed": "blocked",
         "stale": "idle",
         "offline": "idle"
-      }
+      },
+      "source_sheet_reference": "assets/agents/source_sheets/alan_ai_pose_sheet.png"
     },
     "Thermal 大師": {
-      "source_sheet": "assets/agents/source_sheets/thermal_master_pose_sheet.png",
-      "poses_in_sheet": [
-        "idle",
-        "checking",
-        "working",
-        "blocked"
-      ],
-      "recommended_asset_names_after_crop": {
-        "idle": "assets/agents/thermal_idle.png",
-        "checking": "assets/agents/thermal_checking.png",
-        "working": "assets/agents/thermal_working.png",
-        "blocked": "assets/agents/thermal_blocked.png"
+      "sprites": {
+        "idle": "assets/agents/sprites/thermal_idle.png",
+        "checking": "assets/agents/sprites/thermal_checking.png",
+        "working": "assets/agents/sprites/thermal_working.png",
+        "blocked": "assets/agents/sprites/thermal_blocked.png"
       },
       "fallback_status_map": {
         "reviewing": "checking",
@@ -57,21 +44,15 @@
         "failed": "blocked",
         "stale": "idle",
         "offline": "idle"
-      }
+      },
+      "source_sheet_reference": "assets/agents/source_sheets/thermal_master_pose_sheet.png"
     },
     "程式大師": {
-      "source_sheet": "assets/agents/source_sheets/coding_master_pose_sheet.png",
-      "poses_in_sheet": [
-        "idle",
-        "coding",
-        "testing",
-        "blocked"
-      ],
-      "recommended_asset_names_after_crop": {
-        "idle": "assets/agents/coder_idle.png",
-        "coding": "assets/agents/coder_coding.png",
-        "testing": "assets/agents/coder_testing.png",
-        "blocked": "assets/agents/coder_blocked.png"
+      "sprites": {
+        "idle": "assets/agents/sprites/coder_idle.png",
+        "coding": "assets/agents/sprites/coder_coding.png",
+        "testing": "assets/agents/sprites/coder_testing.png",
+        "blocked": "assets/agents/sprites/coder_blocked.png"
       },
       "fallback_status_map": {
         "working": "coding",
@@ -82,21 +63,15 @@
         "failed": "blocked",
         "stale": "idle",
         "offline": "idle"
-      }
+      },
+      "source_sheet_reference": "assets/agents/source_sheets/coding_master_pose_sheet.png"
     },
     "簡報大師": {
-      "source_sheet": "assets/agents/source_sheets/presentation_master_pose_sheet.png",
-      "poses_in_sheet": [
-        "idle",
-        "working",
-        "reviewing",
-        "done"
-      ],
-      "recommended_asset_names_after_crop": {
-        "idle": "assets/agents/presentation_idle.png",
-        "working": "assets/agents/presentation_working.png",
-        "reviewing": "assets/agents/presentation_reviewing.png",
-        "done": "assets/agents/presentation_done.png"
+      "sprites": {
+        "idle": "assets/agents/sprites/presentation_idle.png",
+        "working": "assets/agents/sprites/presentation_working.png",
+        "reviewing": "assets/agents/sprites/presentation_reviewing.png",
+        "done": "assets/agents/sprites/presentation_done.png"
       },
       "fallback_status_map": {
         "coding": "working",
@@ -107,15 +82,14 @@
         "failed": "reviewing",
         "stale": "idle",
         "offline": "idle"
-      }
+      },
+      "source_sheet_reference": "assets/agents/source_sheets/presentation_master_pose_sheet.png"
     }
   },
   "allowed_asset_paths": [
     "assets/office/office_scene.png",
-    "assets/agents/source_sheets/alan_ai_pose_sheet.png",
-    "assets/agents/source_sheets/thermal_master_pose_sheet.png",
-    "assets/agents/source_sheets/coding_master_pose_sheet.png",
-    "assets/agents/source_sheets/presentation_master_pose_sheet.png",
+    "assets/agents/source_sheets/*.png",
+    "assets/agents/sprites/*.png",
     "assets/status_effects/",
     "assets/asset_manifest.json"
   ]

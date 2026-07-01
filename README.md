@@ -11,8 +11,9 @@ https://ak-1418.github.io/ai-thermal-status/
 Visual assets:
 
 - Public-safe office background image.
-- Public-safe agent pose sheet images.
-- Public asset manifest for status-to-visual mapping.
+- Public-safe cropped agent pose sprites.
+- Source sheets are retained only as source assets, not as main UI images.
+- Public asset manifest maps each public agent state to one sprite.
 
 Boundary:
 
@@ -20,9 +21,3 @@ Boundary:
 - The page does not call local backend APIs.
 - The page does not control the local PC.
 - The page does not write project state.
-
-Current visual level:
-
-- Functional asset pipeline is active.
-- Agent files are pose sheets, not final isolated transparent sprites.
-- Visual L3 requires Alan approval of live page or screenshot quality.
