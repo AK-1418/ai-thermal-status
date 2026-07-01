@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" role="img" aria-label="Coder coding placeholder pose asset">
+  <title>Coder coding - placeholder asset not final visual quality</title>
+  <ellipse cx="150" cy="322" rx="102" ry="22" fill="#3b2a1d" opacity=".2"/>
+  <rect x="50" y="190" width="200" height="92" rx="18" fill="#9b653e" stroke="#5d3b24" stroke-width="5"/>
+  <rect x="34" y="160" width="232" height="44" rx="16" fill="#bd8350" stroke="#6f4326" stroke-width="4"/>
+  <rect x="92" y="118" width="116" height="118" rx="34" fill="#3975d6" stroke="#1f4788" stroke-width="5"/>
+  <rect x="75" y="125" width="28" height="100" rx="14" fill="#ffd6ba" stroke="#b98570" stroke-width="3"/>
+  <rect x="197" y="125" width="28" height="100" rx="14" fill="#ffd6ba" stroke="#b98570" stroke-width="3"/>
+  <circle cx="89" cy="235" r="16" fill="#ffd6ba" stroke="#b98570" stroke-width="3"/><circle cx="211" cy="235" r="16" fill="#ffd6ba" stroke="#b98570" stroke-width="3"/>
+  <circle cx="150" cy="83" r="56" fill="#ffd6ba" stroke="#b98570" stroke-width="4"/>
+  <path d="M95 80C102 22 195 20 205 82C178 58 126 56 95 80Z" fill="#1f4788"/>
+  <circle cx="130" cy="82" r="7" fill="#111827"/><circle cx="170" cy="82" r="7" fill="#111827"/>
+  <path d="M132 108Q150 120 168 108" fill="none" stroke="#7b4b3a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="83" y="176" width="134" height="64" rx="10" fill="#77e0a0" stroke="#1f4788" stroke-width="4"/>
+  <text x="150" y="205" text-anchor="middle" font-size="19" font-family="Arial, sans-serif" font-weight="800" fill="#203044">terminal</text>
+  <circle cx="238" cy="52" r="28" fill="#fff" stroke="#3975d6" stroke-width="6"/>
+  <text x="238" y="63" text-anchor="middle" font-size="32" font-family="Arial, sans-serif" font-weight="900" fill="#3975d6">•</text>
+  <rect x="44" y="288" width="212" height="38" rx="12" fill="rgba(255,255,255,.92)" stroke="#9d7045" stroke-width="3"/>
+  <text x="150" y="312" text-anchor="middle" font-size="15" font-family="Arial, sans-serif" font-weight="700" fill="#4c3928">placeholder asset</text>
+  <text x="150" y="346" text-anchor="middle" font-size="11" font-family="Arial, sans-serif" fill="#77583a">not final visual quality</text>
+</svg>

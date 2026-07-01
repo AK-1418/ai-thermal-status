@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="cartoon virtual office scene placeholder">
+  <title>AI Thermal Virtual Office - placeholder asset not final visual quality</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff1d9"/><stop offset="1" stop-color="#e7b985"/></linearGradient>
+    <pattern id="floorGrid" width="72" height="72" patternUnits="userSpaceOnUse"><rect width="72" height="72" fill="#f7dba8"/><path d="M72 0H0v72" fill="none" stroke="#e7bd83" stroke-width="3"/></pattern>
+    <filter id="softShadow"><feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#5d3b24" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="#eaf2f8"/>
+  <path d="M105 96h1390v714H105z" rx="24" fill="url(#wall)" stroke="#a8724b" stroke-width="10"/>
+  <path d="M170 165h1260v570H170z" fill="url(#floorGrid)" stroke="#b78155" stroke-width="7"/>
+  <path d="M535 165v228M1065 165v228M535 393H170M1065 393h365M535 393v342M1065 393v342" stroke="#9d6b48" stroke-width="10" opacity=".68"/>
+  <g filter="url(#softShadow)">
+    <rect x="605" y="190" width="390" height="82" rx="16" fill="#f1d1a3" stroke="#9d6b48" stroke-width="5"/><text x="800" y="242" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" font-weight="800" fill="#3d291d">Manager Room</text>
+    <rect x="225" y="215" width="230" height="108" rx="16" fill="#f1d1a3" stroke="#9d6b48" stroke-width="5"/><text x="340" y="278" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="800" fill="#3d291d">Knowledge Room</text>
+    <rect x="1148" y="215" width="230" height="108" rx="16" fill="#f1d1a3" stroke="#9d6b48" stroke-width="5"/><text x="1263" y="278" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="800" fill="#3d291d">Case Room</text>
+    <rect x="260" y="595" width="240" height="118" rx="16" fill="#f1d1a3" stroke="#9d6b48" stroke-width="5"/><text x="380" y="650" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="800" fill="#3d291d">Task Board</text>
+    <rect x="1100" y="595" width="240" height="118" rx="16" fill="#f1d1a3" stroke="#9d6b48" stroke-width="5"/><text x="1220" y="650" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="800" fill="#3d291d">Review Room</text>
+  </g>
+  <g fill="#85a96b" opacity=".95"><circle cx="195" cy="458" r="34"/><circle cx="1410" cy="458" r="34"/><circle cx="548" cy="700" r="34"/><circle cx="1050" cy="700" r="34"/></g>
+  <g fill="#98653d"><rect x="180" y="480" width="32" height="52" rx="8"/><rect x="1395" y="480" width="32" height="52" rx="8"/><rect x="533" y="722" width="32" height="52" rx="8"/><rect x="1035" y="722" width="32" height="52" rx="8"/></g>
+  <text x="800" y="840" text-anchor="middle" font-size="22" font-family="Arial, sans-serif" font-weight="700" fill="#4f3928">placeholder asset - not final visual quality</text>
+</svg>

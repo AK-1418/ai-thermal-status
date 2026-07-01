@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T12:01:01+08:00",
-  "generated_at_epoch_ms": 1782878461000,
+  "generated_at": "2026-07-01T12:27:54+08:00",
+  "generated_at_epoch_ms": 1782880074000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -11,14 +11,18 @@
     "meaningful_change_fields": [
       "agents.status",
       "agents.visual_state",
-      "agents.current_task_short"
+      "agents.current_task_short",
+      "agents.pose_asset",
+      "asset_manifest.version",
+      "asset_manifest.office_scene"
     ],
     "last_export_status": "success"
   },
   "viewer": {
     "refresh_interval_seconds": 120,
     "animation_enabled": true,
-    "animation_version": "phase2.1C-integrated-office-scene-v1"
+    "animation_version": "phase2.1D-asset-pipeline-v1",
+    "asset_manifest_version": "phase2.1D-asset-pipeline-v1"
   },
   "health": {
     "status_age_minutes": 0,
@@ -35,11 +39,12 @@
       "id": "ALAN_AI",
       "name": "ALAN_AI",
       "role": "Manager / Reviewer",
-      "room": "管理者房",
+      "room": "Manager Room",
       "avatar": "AI",
       "status": "reviewing",
       "source_status": "reviewing",
       "visual_state": "reviewing",
+      "pose_asset": "assets/agents/alan_ai_reviewing.svg",
       "current_task_short": "Phase 1 acceptance review",
       "last_status_update": "",
       "public_safe": true
@@ -48,11 +53,12 @@
       "id": "Thermal_Master",
       "name": "Thermal 大師",
       "role": "Thermal Engineer",
-      "room": "Thermal 工作區",
+      "room": "Thermal Desk",
       "avatar": "TH",
       "status": "working",
       "source_status": "assigned",
       "visual_state": "working",
+      "pose_asset": "assets/agents/thermal_working.svg",
       "current_task_short": "Review thermal contexts",
       "last_status_update": "",
       "public_safe": true
@@ -60,12 +66,13 @@
     {
       "id": "Coding_Master",
       "name": "程式大師",
-      "role": "Coder / Implementer",
-      "room": "程式工作區",
+      "role": "Coder / QA",
+      "room": "Coding Desk",
       "avatar": "CD",
       "status": "working",
       "source_status": "working",
       "visual_state": "working",
+      "pose_asset": "assets/agents/coder_idle.svg",
       "current_task_short": "State flow polling verification",
       "last_status_update": "",
       "public_safe": true
@@ -74,11 +81,12 @@
       "id": "Presentation_Master",
       "name": "簡報大師",
       "role": "Presentation Designer",
-      "room": "簡報工作區",
+      "room": "Presentation Room",
       "avatar": "PR",
       "status": "idle",
       "source_status": "available",
       "visual_state": "idle",
+      "pose_asset": "assets/agents/presentation_idle.svg",
       "current_task_short": "Report template classification",
       "last_status_update": "",
       "public_safe": true
@@ -129,11 +137,49 @@
     }
   ],
   "warnings": [],
+  "asset_manifest": {
+    "version": "phase2.1D-asset-pipeline-v1",
+    "office_scene": "assets/office/office_scene.svg",
+    "agents": {
+      "ALAN_AI": {
+        "idle": "assets/agents/alan_ai_idle.svg",
+        "reviewing": "assets/agents/alan_ai_reviewing.svg",
+        "blocked": "assets/agents/alan_ai_blocked.svg",
+        "done": "assets/agents/alan_ai_done.svg"
+      },
+      "Thermal 大師": {
+        "idle": "assets/agents/thermal_idle.svg",
+        "checking": "assets/agents/thermal_checking.svg",
+        "working": "assets/agents/thermal_working.svg",
+        "blocked": "assets/agents/thermal_blocked.svg"
+      },
+      "程式大師": {
+        "idle": "assets/agents/coder_idle.svg",
+        "coding": "assets/agents/coder_coding.svg",
+        "testing": "assets/agents/coder_testing.svg",
+        "blocked": "assets/agents/coder_blocked.svg"
+      },
+      "簡報大師": {
+        "idle": "assets/agents/presentation_idle.svg",
+        "working": "assets/agents/presentation_working.svg",
+        "reviewing": "assets/agents/presentation_reviewing.svg",
+        "done": "assets/agents/presentation_done.svg"
+      }
+    },
+    "status_effects": {
+      "blocked": "css-warning-bubble",
+      "done": "css-check-overlay",
+      "stale": "css-dim-scene",
+      "coding": "css-typing-glow"
+    },
+    "asset_policy": "public_safe_placeholder_assets",
+    "visual_quality": "placeholder asset - not final visual quality"
+  },
   "summary": {
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 0,
     "active_agent_count": 3
   },
-  "content_hash": "5bab05357c20f1b5"
+  "content_hash": "6561d0d88b929c62"
 }

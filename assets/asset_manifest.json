@@ -1,0 +1,38 @@
+{
+  "version": "phase2.1D-asset-pipeline-v1",
+  "office_scene": "assets/office/office_scene.svg",
+  "agents": {
+    "ALAN_AI": {
+      "idle": "assets/agents/alan_ai_idle.svg",
+      "reviewing": "assets/agents/alan_ai_reviewing.svg",
+      "blocked": "assets/agents/alan_ai_blocked.svg",
+      "done": "assets/agents/alan_ai_done.svg"
+    },
+    "Thermal 大師": {
+      "idle": "assets/agents/thermal_idle.svg",
+      "checking": "assets/agents/thermal_checking.svg",
+      "working": "assets/agents/thermal_working.svg",
+      "blocked": "assets/agents/thermal_blocked.svg"
+    },
+    "程式大師": {
+      "idle": "assets/agents/coder_idle.svg",
+      "coding": "assets/agents/coder_coding.svg",
+      "testing": "assets/agents/coder_testing.svg",
+      "blocked": "assets/agents/coder_blocked.svg"
+    },
+    "簡報大師": {
+      "idle": "assets/agents/presentation_idle.svg",
+      "working": "assets/agents/presentation_working.svg",
+      "reviewing": "assets/agents/presentation_reviewing.svg",
+      "done": "assets/agents/presentation_done.svg"
+    }
+  },
+  "status_effects": {
+    "blocked": "css-warning-bubble",
+    "done": "css-check-overlay",
+    "stale": "css-dim-scene",
+    "coding": "css-typing-glow"
+  },
+  "asset_policy": "public_safe_placeholder_assets",
+  "visual_quality": "placeholder asset - not final visual quality"
+}
