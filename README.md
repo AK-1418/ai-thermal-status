@@ -1,41 +1,42 @@
-# AI Thermal Public Agent Status Mirror
+# AI Thermal 公開代理人狀態鏡像
 
-Read-only GitHub Pages mirror for the local AI Thermal 虛擬辦公室.
+這是 Alan 本機 AI Thermal Virtual Office 的 GitHub Pages 唯讀監看頁。
 
-Public URL:
+公開網址：
 
 ```text
 https://ak-1418.github.io/ai-thermal-status/
 ```
 
-Purpose:
+用途：
 
-- Show four public-safe agent rooms in a 2D cartoon office scene.
-- Use inline SVG avatars, desks, room labels, and tool identity.
-- Show each agent name, role, status, current task short text, and last status update when available.
-- Map public status to CSS animation classes.
-- Refresh the display from `status_snapshot.json` every 120 seconds.
-- Publish from the local PC every 2 minutes only when public state meaningfully changes.
+- 顯示四個公開安全的代理人房間。
+- 用 2D cartoon office scene 呈現代理人狀態。
+- 使用 inline SVG avatar、桌子、房間標籤與工具特徵。
+- 顯示每位代理人的名稱、角色、狀態、目前任務摘要，以及可用的最後更新時間。
+- 將公開狀態對應到 CSS 動畫。
+- 頁面每 120 秒重新讀取 `status_snapshot.json`。
+- 本機每 2 分鐘執行 publisher；只有公開狀態有 meaningful change 時才提交更新。
 
-Meaningful public changes include:
+會觸發 meaningful public change 的欄位：
 
 - `agents.status`
 - `agents.visual_state`
 - `agents.current_task_short`
 
-Safety rules:
+安全規則：
 
-- GitHub Pages is read-only.
-- 刷新畫面 only reloads `status_snapshot.json`.
-- Current viewer time uses the browser clock and is not a heartbeat push.
-- Last snapshot synced and Snapshot age are calculated from `generated_at_epoch_ms`.
-- No remote control.
-- No write-back to the local PC.
-- No backend calls from GitHub Pages.
-- No private repo folders, raw logs, customer data, optimizer outputs, credentials, internal prompts, or complete markdown note content are published.
-- Reference images are private design references and are not published to the public status repo.
+- GitHub Pages 永遠是唯讀。
+- 「刷新畫面」只會重新讀取 `status_snapshot.json`。
+- 「目前瀏覽時間」使用瀏覽器時間，不代表 heartbeat push。
+- 「最後快照同步」與「快照時間差」由 `generated_at_epoch_ms` 計算。
+- 不做遠端控制。
+- 不寫回本機。
+- 不從 GitHub Pages 呼叫本機後端。
+- 不發布 private repo 資料夾、raw logs、customer data、optimizer outputs、credentials、internal prompts 或完整 markdown note content。
+- Reference image 只作為 private design reference，不發布到 public status repo。
 
-Public files are limited to:
+Public repo 只允許包含：
 
 - `.nojekyll`
 - `README.md`
