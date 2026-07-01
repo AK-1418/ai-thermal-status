@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T10:44:11+08:00",
-  "generated_at_epoch_ms": 1782873851000,
+  "generated_at": "2026-07-01T11:03:01+08:00",
+  "generated_at_epoch_ms": 1782874981000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -18,7 +18,7 @@
   "viewer": {
     "refresh_interval_seconds": 120,
     "animation_enabled": true,
-    "animation_version": "phase2.1-public-agent-mirror-v1"
+    "animation_version": "phase2.1B-public-agent-mirror-polish-v1"
   },
   "health": {
     "status_age_minutes": 0,
