@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Thermal Agent Status Mirror</title>
+    <title>AI Thermal 代理人狀態鏡像</title>
     <style>
       :root {
         --ink: #17202d;
@@ -51,7 +51,7 @@
         color: #fff;
         background: linear-gradient(180deg, var(--nav), #0b121d);
         display: grid;
-        grid-template-columns: 260px 1fr auto;
+        grid-template-columns: 250px 1fr auto;
         gap: 18px;
         align-items: center;
       }
@@ -119,7 +119,7 @@
       .section-head p { color: var(--muted); margin-top: 3px; }
       .office-scene {
         position: relative;
-        min-height: 640px;
+        min-height: 700px;
         border-radius: 8px;
         overflow: hidden;
         border: 1px solid #c8d5e4;
@@ -212,31 +212,33 @@
       .agent-room {
         position: absolute;
         z-index: 3;
-        width: 260px;
-        min-height: 188px;
+        width: 282px;
+        min-height: 252px;
         display: grid;
         gap: 6px;
         justify-items: center;
       }
-      .agent-room.manager { top: 70px; left: calc(50% - 130px); }
-      .agent-room.thermal { top: 286px; left: 190px; }
-      .agent-room.coding { top: 286px; left: calc(50% - 130px); }
-      .agent-room.presentation { top: 286px; right: 190px; }
+      .agent-room.manager { top: 80px; left: calc(50% - 141px); }
+      .agent-room.thermal { top: 318px; left: 170px; }
+      .agent-room.coding { top: 318px; left: calc(50% - 141px); }
+      .agent-room.presentation { top: 318px; right: 170px; }
       .agent-nameplate {
-        min-width: 120px;
-        max-width: 220px;
+        min-width: 150px;
+        max-width: 250px;
         text-align: center;
         padding: 6px 10px;
         border-radius: 7px;
         color: #fff;
         background: rgba(21, 28, 38, .88);
         box-shadow: 0 8px 16px rgba(16,25,38,.2);
+        position: relative;
+        z-index: 6;
       }
       .agent-nameplate strong { display: block; font-size: 13px; }
       .agent-nameplate small { color: #cbd5e1; }
       .task-chip {
-        max-width: 230px;
-        min-height: 34px;
+        max-width: 260px;
+        min-height: 42px;
         padding: 6px 8px;
         border-radius: 7px;
         background: rgba(255,255,255,.88);
@@ -244,16 +246,18 @@
         color: #384456;
         line-height: 1.28;
         text-align: center;
+        position: relative;
+        z-index: 6;
       }
       .agent-stage {
         width: 240px;
-        height: 136px;
+        height: 146px;
         display: grid;
         place-items: center;
       }
       .agent-svg {
         width: 240px;
-        height: 136px;
+        height: 146px;
         overflow: visible;
       }
       .svg-shadow { fill: rgba(72,47,24,.18); }
@@ -303,8 +307,8 @@
       .agent-blocked .agent-svg, .agent-failed .agent-svg { animation: blockedShake 760ms ease-in-out infinite; }
       .agent-blocked .svg-status-ring, .agent-failed .svg-status-ring { stroke: var(--warn); animation: warningPulse 1s ease-in-out infinite; }
       .agent-done .svg-status-ring { stroke: var(--ok); stroke-width: 5; }
-      .agent-stale .agent-svg, .agent-offline .agent-svg { filter: grayscale(.8); opacity: .55; }
-      .agent-stale *, .agent-offline * { animation: none !important; }
+      .agent-過期 .agent-svg, .agent-offline .agent-svg { filter: grayscale(.8); opacity: .55; }
+      .agent-過期 *, .agent-offline * { animation: none !important; }
 
       @keyframes breathe { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
       @keyframes glowTool { 0%,100% { opacity: .65; } 50% { opacity: 1; filter: drop-shadow(0 0 7px rgba(52,110,208,.65)); } }
@@ -335,46 +339,46 @@
       <div class="brand">
         <div class="brand-mark">AI</div>
         <div>
-          <h1>AI Thermal Virtual Office</h1>
-          <small>Read-only Agent Status Mirror</small>
+          <h1>AI Thermal 虛擬辦公室</h1>
+          <small>唯讀代理人狀態鏡像</small>
         </div>
       </div>
       <div class="case-meta">
-        <div><strong id="case-title">Loading case</strong><small id="case-id">Snapshot from Local Virtual Office</small></div>
-        <div class="metric"><strong id="agent-count">4</strong><small>Agents</small></div>
-        <div class="metric"><strong id="active-count">0</strong><small>Active</small></div>
-        <div class="metric"><strong id="task-count">0</strong><small>Tasks</small></div>
-        <div class="metric"><strong id="warning-count">0</strong><small>Warnings</small></div>
+        <div><strong id="case-title">讀取 Case 中</strong><small id="case-id">來自本機虛擬辦公室的快照</small></div>
+        <div class="metric"><strong id="agent-count">4</strong><small>代理人</small></div>
+        <div class="metric"><strong id="active-count">0</strong><small>運作中</small></div>
+        <div class="metric"><strong id="task-count">0</strong><small>任務</small></div>
+        <div class="metric"><strong id="warning-count">0</strong><small>警示</small></div>
       </div>
       <div class="timebar">
-        <span id="current-viewer-time" class="badge">Current viewer time: loading</span>
-        <span id="last-synced" class="badge">Last snapshot synced: loading</span>
-        <span id="snapshot-age" class="badge">Snapshot age: loading</span>
-        <span id="next-refresh" class="badge">Next display refresh: 02:00</span>
-        <span id="health-badge" class="badge">Checking</span>
-        <button id="refresh-display" type="button">Refresh Display</button>
+        <span id="current-viewer-time" class="badge">目前瀏覽時間：讀取中</span>
+        <span id="last-synced" class="badge">最後快照同步：讀取中</span>
+        <span id="snapshot-age" class="badge">快照時間差：讀取中</span>
+        <span id="next-refresh" class="badge">下次畫面刷新：02:00</span>
+        <span id="health-badge" class="badge">檢查中</span>
+        <button id="refresh-display" type="button">刷新畫面</button>
       </div>
     </header>
     <div class="shell">
-      <div class="notice">Public read-only mirror. It only reloads the published snapshot file and cannot trigger export, push, backend access, state writes, webhooks, or local PC control.</div>
+      <div class="notice">公開頁面僅供唯讀監看，只會重新讀取已發布的快照檔，不會觸發匯出、推送、後端存取、狀態寫入、webhook 或本機電腦控制。</div>
       <main class="mirror-frame">
         <section class="office-wrap">
           <div class="section-head">
             <div>
-              <h2>Virtual office scene</h2>
-              <p>Public agents: ALAN_AI / Thermal 大師 / 程式大師 / 簡報大師</p>
+              <h2>虛擬辦公室場景</h2>
+              <p>公開代理人：ALAN_AI / Thermal 大師 / 程式大師 / 簡報大師</p>
             </div>
-            <span id="publisher-mode" class="badge">Publisher mode</span>
+            <span id="publisher-mode" class="badge">發布模式</span>
           </div>
           <div class="office-scene" aria-label="2D isometric cartoon public agent status mirror">
-            <div class="room-label label-manager">Manager Room</div>
-            <div class="room-label label-thermal">Thermal Desk</div>
-            <div class="room-label label-coding">Coding Desk</div>
-            <div class="room-label label-presentation">Presentation Room</div>
-            <div class="decor-room knowledge">Knowledge<br>Room</div>
-            <div class="decor-room case">Case<br>Room</div>
-            <div class="decor-room task-board">Task Board</div>
-            <div class="decor-room review-board">Review Room</div>
+            <div class="room-label label-manager">管理者房</div>
+            <div class="room-label label-thermal">Thermal 工作區</div>
+            <div class="room-label label-coding">程式工作區</div>
+            <div class="room-label label-presentation">簡報工作區</div>
+            <div class="decor-room knowledge">知識<br>房</div>
+            <div class="decor-room case">Case<br>房</div>
+            <div class="decor-room task-board">任務板</div>
+            <div class="decor-room review-board">審查室</div>
             <div class="lounge"></div>
             <div class="plant p1"></div>
             <div class="plant p2"></div>
@@ -385,15 +389,15 @@
         </section>
         <aside class="panel">
           <section>
-            <h2>Agent status</h2>
+            <h2>代理人狀態</h2>
             <div id="agent-list" class="status-to-action-mapping"></div>
           </section>
           <section>
-            <h2>Status-to-action mapping</h2>
+            <h2>狀態動作對照</h2>
             <div id="mapping" class="status-to-action-mapping"></div>
           </section>
           <section>
-            <h2>Warning / stale section</h2>
+            <h2>警示 / 過期狀態</h2>
             <div id="warnings" class="status-to-action-mapping"></div>
           </section>
         </aside>
@@ -401,20 +405,20 @@
     </div>
     <script>
       const TAIPEI_TIMEZONE = "Asia/Taipei";
-      const STALE_MESSAGE = "Status may be stale. Local PC may be offline, sleeping, unable to push, or GitHub Pages may still be deploying.";
+      const STALE_MESSAGE = "狀態可能已過期。本機可能離線、睡眠、無法推送，或 GitHub Pages 仍在部署。";
       const STATUS_ACTIONS = {
-        idle: "breathing and quiet desk",
-        working: "tool glow and working arm",
-        coding: "typing hands and blinking code lines",
-        testing: "debug dots and moving progress bar",
-        checking: "head checking and board pulse",
-        reviewing: "review ring and paper movement",
-        ready_for_review: "raised hand and review pulse",
-        blocked: "warning ring and shake",
-        done: "green accepted ring",
-        failed: "red error ring and shake",
-        stale: "dimmed stale overlay",
-        offline: "dimmed offline state"
+        idle: "待命呼吸 / 安靜工作桌",
+        working: "工具發光 / 手部工作動作",
+        coding: "雙手打字 / 程式碼閃爍",
+        testing: "debug 點號 / 進度條掃動",
+        checking: "檢查點頭 / 白板脈衝",
+        reviewing: "審查光圈 / 文件移動",
+        ready_for_review: "舉手等待審查 / 審查脈衝",
+        blocked: "警示光圈 / 搖晃",
+        done: "綠色完成光圈",
+        failed: "紅色錯誤光圈 / 搖晃",
+        過期: "過期狀態淡化",
+        offline: "離線狀態淡化"
       };
       const ROOM_KIND = {
         ALAN_AI: "manager",
@@ -439,13 +443,13 @@
 
       function badgeClass(status) {
         const value = String(status || "").toLowerCase();
-        if (["blocked", "failed", "stale", "offline"].includes(value)) return "warn";
+        if (["blocked", "failed", "過期", "offline"].includes(value)) return "warn";
         if (["checking", "reviewing", "ready_for_review", "testing"].includes(value)) return "ref";
         return "ok";
       }
 
       function agentAnimationClass(status, isStale) {
-        if (isStale) return "agent-stale";
+        if (isStale) return "agent-過期";
         const value = String(status || "idle").toLowerCase();
         if (STATUS_ACTIONS[value]) return `agent-${value}`;
         return "agent-idle";
@@ -453,7 +457,7 @@
 
       function formatTaipei(epochMs) {
         const ms = Number(epochMs);
-        if (!Number.isFinite(ms)) return "unknown";
+        if (!Number.isFinite(ms)) return "未知";
         const parts = new Intl.DateTimeFormat("en-CA", {
           timeZone: TAIPEI_TIMEZONE,
           year: "numeric",
@@ -472,11 +476,11 @@
 
       function statusAge(epochMs) {
         const ms = Number(epochMs);
-        if (!Number.isFinite(ms)) return { totalSeconds: Infinity, label: "unknown" };
+        if (!Number.isFinite(ms)) return { totalSeconds: Infinity, label: "未知" };
         const totalSeconds = Math.max(0, Math.floor((Date.now() - ms) / 1000));
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
-        return { totalSeconds, label: `${minutes} min ${seconds} sec` };
+        return { totalSeconds, label: `${minutes} 分 ${seconds} 秒` };
       }
 
       function formatCountdown(seconds) {
@@ -487,14 +491,14 @@
       }
 
       function updateTimeDisplays() {
-        document.getElementById("current-viewer-time").textContent = `Current viewer time: ${formatTaipei(Date.now())}`;
+        document.getElementById("current-viewer-time").textContent = `目前瀏覽時間：${formatTaipei(Date.now())}`;
         if (!latestSnapshot) return;
         const age = statusAge(latestSnapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_stale === true;
-        document.getElementById("last-synced").textContent = `Last snapshot synced: ${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
-        document.getElementById("snapshot-age").textContent = `Snapshot age: ${age.label}`;
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_過期 === true;
+        document.getElementById("last-synced").textContent = `最後快照同步：${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
+        document.getElementById("snapshot-age").textContent = `快照時間差：${age.label}`;
         document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
-        document.getElementById("health-badge").textContent = isStale ? "stale" : "healthy";
+        document.getElementById("health-badge").textContent = isStale ? "過期" : "正常";
       }
 
       function smallCard(title, body, badge = "", className = "") {
@@ -548,31 +552,31 @@
 
       async function loadSnapshot() {
         const response = await fetch("status_snapshot.json?t=" + Date.now(), { cache: "no-store" });
-        if (!response.ok) throw new Error("Unable to load status snapshot");
+        if (!response.ok) throw new Error("無法讀取狀態快照");
         return response.json();
       }
 
       function render(snapshot) {
         latestSnapshot = snapshot;
         refreshIntervalSeconds = Number(snapshot.viewer?.refresh_interval_seconds) || 120;
-        latestStaleAfterMinutes = Number(snapshot.health?.stale_after_minutes) || 6;
+        latestStaleAfterMinutes = Number(snapshot.health?.過期_after_minutes) || 6;
         const age = statusAge(snapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || snapshot.health?.is_stale === true;
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || snapshot.health?.is_過期 === true;
         updateTimeDisplays();
 
         const summary = snapshot.summary || {};
-        document.getElementById("case-title").textContent = snapshot.case?.title || "AI Thermal Virtual Office";
-        document.getElementById("case-id").textContent = `${snapshot.case?.case_id || "CASE-UNKNOWN"} · ${snapshot.case?.status || "unknown"}`;
+        document.getElementById("case-title").textContent = snapshot.case?.title || "AI Thermal 虛擬辦公室";
+        document.getElementById("case-id").textContent = `${snapshot.case?.case_id || "CASE-UNKNOWN"} · ${snapshot.case?.status || "未知"}`;
         document.getElementById("agent-count").textContent = summary.agent_count ?? 4;
         document.getElementById("active-count").textContent = summary.active_agent_count ?? 0;
         document.getElementById("task-count").textContent = summary.task_count ?? 0;
         document.getElementById("warning-count").textContent = summary.warning_count ?? 0;
-        document.getElementById("publisher-mode").textContent = `${snapshot.publisher?.mode || "local_auto_publish"} · publisher ${snapshot.publisher?.interval_minutes || "?"} min · viewer ${refreshIntervalSeconds} sec`;
+        document.getElementById("publisher-mode").textContent = `本機發布：${snapshot.publisher?.interval_minutes || "?"} 分鐘 · 畫面刷新：${refreshIntervalSeconds} 秒`;
 
         const agents = snapshot.agents || [];
         document.getElementById("agents").innerHTML = agents.map((agent) => {
           const kind = ROOM_KIND[agent.id] || "manager";
-          const visualState = isStale ? "stale" : (agent.visual_state || agent.status || "idle");
+          const visualState = isStale ? "過期" : (agent.visual_state || agent.status || "idle");
           const animation = agentAnimationClass(visualState, isStale);
           return `
             <article class="agent-room ${kind} ${animation}" data-agent-id="${safe(agent.id)}" data-visual-state="${safe(visualState)}">
@@ -581,14 +585,14 @@
                 <strong>${safe(agent.name)}</strong>
                 <small>${safe(agent.role)} · <span class="badge ${badgeClass(visualState)}">${safe(statusLabel(visualState))}</span></small>
               </div>
-              <p class="task-chip">${safe(agent.current_task_short || "No active public task")}</p>
+              <p class="task-chip">${safe(agent.current_task_short || "沒有公開任務摘要")}</p>
             </article>
           `;
         }).join("");
 
         document.getElementById("agent-list").innerHTML = agents.map((agent) => {
-          const visualState = isStale ? "stale" : (agent.visual_state || agent.status || "idle");
-          return smallCard(agent.name, `${agent.room} · ${agent.current_task_short || "No active public task"}`, visualState);
+          const visualState = isStale ? "過期" : (agent.visual_state || agent.status || "idle");
+          return smallCard(agent.name, `${agent.room} · ${agent.current_task_short || "沒有公開任務摘要"}`, visualState);
         }).join("");
 
         document.getElementById("mapping").innerHTML = Object.entries(STATUS_ACTIONS)
@@ -596,9 +600,9 @@
           .join("");
 
         const warnings = [];
-        if (isStale) warnings.push(smallCard("Stale warning", STALE_MESSAGE, "stale", "warning"));
-        for (const warning of (snapshot.warnings || [])) warnings.push(smallCard("Validation warning", warning, "blocked", "warning"));
-        document.getElementById("warnings").innerHTML = warnings.join("") || smallCard("No warning", "State validation passed for the public mirror.", "done");
+        if (isStale) warnings.push(smallCard("過期警示", STALE_MESSAGE, "過期", "warning"));
+        for (const warning of (snapshot.warnings || [])) warnings.push(smallCard("驗證警示", warning, "blocked", "warning"));
+        document.getElementById("warnings").innerHTML = warnings.join("") || smallCard("沒有警示", "公開鏡像狀態驗證通過。", "done");
       }
 
       async function refreshDisplay() {
@@ -606,14 +610,14 @@
           render(await loadSnapshot());
           countdownRemaining = refreshIntervalSeconds;
         } catch (error) {
-          document.getElementById("warnings").innerHTML = smallCard("Load warning", error.message, "blocked", "warning");
+          document.getElementById("warnings").innerHTML = smallCard("讀取警示", error.message, "blocked", "warning");
         }
       }
 
       function tick() {
         updateTimeDisplays();
         countdownRemaining = Math.max(0, countdownRemaining - 1);
-        document.getElementById("next-refresh").textContent = `Next display refresh: ${formatCountdown(countdownRemaining)}`;
+        document.getElementById("next-refresh").textContent = `下次畫面刷新：${formatCountdown(countdownRemaining)}`;
         if (countdownRemaining <= 0) refreshDisplay();
       }
 

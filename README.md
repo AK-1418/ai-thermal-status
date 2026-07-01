@@ -1,6 +1,6 @@
 # AI Thermal Public Agent Status Mirror
 
-Read-only GitHub Pages mirror for the local AI Thermal Virtual Office.
+Read-only GitHub Pages mirror for the local AI Thermal 虛擬辦公室.
 
 Public URL:
 
@@ -26,7 +26,7 @@ Meaningful public changes include:
 Safety rules:
 
 - GitHub Pages is read-only.
-- Refresh Display only reloads `status_snapshot.json`.
+- 刷新畫面 only reloads `status_snapshot.json`.
 - Current viewer time uses the browser clock and is not a heartbeat push.
 - Last snapshot synced and Snapshot age are calculated from `generated_at_epoch_ms`.
 - No remote control.

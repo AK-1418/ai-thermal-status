@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-01T11:05:01+08:00",
-  "generated_at_epoch_ms": 1782875101000,
+  "generated_at": "2026-07-01T11:25:01+08:00",
+  "generated_at_epoch_ms": 1782876301000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
   "mode": "read_only_agent_status_mirror",
   "publisher": {
-    "mode": "local_auto_publish",
+    "mode": "本機自動發布",
     "interval_minutes": 2,
     "meaningful_change_fields": [
       "agents.status",
@@ -18,12 +18,12 @@
   "viewer": {
     "refresh_interval_seconds": 120,
     "animation_enabled": true,
-    "animation_version": "phase2.1B-public-agent-mirror-polish-v1"
+    "animation_version": "phase2.1C-public-agent-mirror-zh-no-overlay-v1"
   },
   "health": {
     "status_age_minutes": 0,
-    "stale_after_minutes": 6,
-    "is_stale": false
+    "過期_after_minutes": 6,
+    "is_過期": false
   },
   "case": {
     "case_id": "CASE-2026-0001",
@@ -35,7 +35,7 @@
       "id": "ALAN_AI",
       "name": "ALAN_AI",
       "role": "Manager / Reviewer",
-      "room": "Manager Room",
+      "room": "管理者房",
       "avatar": "AI",
       "status": "reviewing",
       "source_status": "reviewing",
@@ -48,7 +48,7 @@
       "id": "Thermal_Master",
       "name": "Thermal 大師",
       "role": "Thermal Engineer",
-      "room": "Thermal Desk",
+      "room": "Thermal 工作區",
       "avatar": "TH",
       "status": "working",
       "source_status": "assigned",
@@ -61,7 +61,7 @@
       "id": "Coding_Master",
       "name": "程式大師",
       "role": "Coder / Implementer",
-      "room": "Coding Desk",
+      "room": "程式工作區",
       "avatar": "CD",
       "status": "working",
       "source_status": "working",
@@ -74,7 +74,7 @@
       "id": "Presentation_Master",
       "name": "簡報大師",
       "role": "Presentation Designer",
-      "room": "Presentation Room",
+      "room": "簡報工作區",
       "avatar": "PR",
       "status": "idle",
       "source_status": "available",
@@ -135,5 +135,5 @@
     "warning_count": 0,
     "active_agent_count": 3
   },
-  "content_hash": "8842784c127b2433"
+  "content_hash": "5bab05357c20f1b5"
 }
