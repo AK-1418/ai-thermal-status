@@ -307,8 +307,8 @@
       .agent-blocked .agent-svg, .agent-failed .agent-svg { animation: blockedShake 760ms ease-in-out infinite; }
       .agent-blocked .svg-status-ring, .agent-failed .svg-status-ring { stroke: var(--warn); animation: warningPulse 1s ease-in-out infinite; }
       .agent-done .svg-status-ring { stroke: var(--ok); stroke-width: 5; }
-      .agent-過期 .agent-svg, .agent-offline .agent-svg { filter: grayscale(.8); opacity: .55; }
-      .agent-過期 *, .agent-offline * { animation: none !important; }
+      .agent-stale .agent-svg, .agent-offline .agent-svg { filter: grayscale(.8); opacity: .55; }
+      .agent-stale *, .agent-offline * { animation: none !important; }
 
       @keyframes breathe { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
       @keyframes glowTool { 0%,100% { opacity: .65; } 50% { opacity: 1; filter: drop-shadow(0 0 7px rgba(52,110,208,.65)); } }
@@ -439,17 +439,35 @@
         "'": "&#039;"
       }[char]));
 
-      const statusLabel = (value) => String(value || "idle").replaceAll("_", " ");
+      function statusLabel(value) {
+        const key = String(value || "idle").toLowerCase();
+        const labels = {
+          idle: "待命",
+          working: "工作中",
+          coding: "撰寫程式",
+          testing: "測試中",
+          checking: "檢查中",
+          reviewing: "審查中",
+          ready_for_review: "等待審查",
+          blocked: "受阻",
+          done: "完成",
+          failed: "失敗",
+          stale: "過期",
+          offline: "離線",
+          "read-only": "唯讀"
+        };
+        return labels[key] || String(value || "未知").replaceAll("_", " ");
+      }
 
       function badgeClass(status) {
         const value = String(status || "").toLowerCase();
-        if (["blocked", "failed", "過期", "offline"].includes(value)) return "warn";
+        if (["blocked", "failed", "stale", "offline"].includes(value)) return "warn";
         if (["checking", "reviewing", "ready_for_review", "testing"].includes(value)) return "ref";
         return "ok";
       }
 
       function agentAnimationClass(status, isStale) {
-        if (isStale) return "agent-過期";
+        if (isStale) return "agent-stale";
         const value = String(status || "idle").toLowerCase();
         if (STATUS_ACTIONS[value]) return `agent-${value}`;
         return "agent-idle";
@@ -494,7 +512,7 @@
         document.getElementById("current-viewer-time").textContent = `目前瀏覽時間：${formatTaipei(Date.now())}`;
         if (!latestSnapshot) return;
         const age = statusAge(latestSnapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_過期 === true;
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || latestSnapshot.health?.is_stale === true;
         document.getElementById("last-synced").textContent = `最後快照同步：${formatTaipei(latestSnapshot.generated_at_epoch_ms)}`;
         document.getElementById("snapshot-age").textContent = `快照時間差：${age.label}`;
         document.getElementById("health-badge").className = `badge ${isStale ? "warn" : "ok"}`;
@@ -559,9 +577,9 @@
       function render(snapshot) {
         latestSnapshot = snapshot;
         refreshIntervalSeconds = Number(snapshot.viewer?.refresh_interval_seconds) || 120;
-        latestStaleAfterMinutes = Number(snapshot.health?.過期_after_minutes) || 6;
+        latestStaleAfterMinutes = Number(snapshot.health?.stale_after_minutes) || 6;
         const age = statusAge(snapshot.generated_at_epoch_ms);
-        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || snapshot.health?.is_過期 === true;
+        const isStale = (age.totalSeconds / 60) > latestStaleAfterMinutes || snapshot.health?.is_stale === true;
         updateTimeDisplays();
 
         const summary = snapshot.summary || {};
@@ -576,7 +594,7 @@
         const agents = snapshot.agents || [];
         document.getElementById("agents").innerHTML = agents.map((agent) => {
           const kind = ROOM_KIND[agent.id] || "manager";
-          const visualState = isStale ? "過期" : (agent.visual_state || agent.status || "idle");
+          const visualState = isStale ? "stale" : (agent.visual_state || agent.status || "idle");
           const animation = agentAnimationClass(visualState, isStale);
           return `
             <article class="agent-room ${kind} ${animation}" data-agent-id="${safe(agent.id)}" data-visual-state="${safe(visualState)}">
@@ -591,7 +609,7 @@
         }).join("");
 
         document.getElementById("agent-list").innerHTML = agents.map((agent) => {
-          const visualState = isStale ? "過期" : (agent.visual_state || agent.status || "idle");
+          const visualState = isStale ? "stale" : (agent.visual_state || agent.status || "idle");
           return smallCard(agent.name, `${agent.room} · ${agent.current_task_short || "沒有公開任務摘要"}`, visualState);
         }).join("");
 
@@ -600,7 +618,7 @@
           .join("");
 
         const warnings = [];
-        if (isStale) warnings.push(smallCard("過期警示", STALE_MESSAGE, "過期", "warning"));
+        if (isStale) warnings.push(smallCard("過期警示", STALE_MESSAGE, "stale", "warning"));
         for (const warning of (snapshot.warnings || [])) warnings.push(smallCard("驗證警示", warning, "blocked", "warning"));
         document.getElementById("warnings").innerHTML = warnings.join("") || smallCard("沒有警示", "公開鏡像狀態驗證通過。", "done");
       }

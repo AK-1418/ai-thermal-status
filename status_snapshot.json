@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T11:27:01+08:00",
-  "generated_at_epoch_ms": 1782876421000,
+  "generated_at": "2026-07-01T11:28:39+08:00",
+  "generated_at_epoch_ms": 1782876519000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -22,8 +22,8 @@
   },
   "health": {
     "status_age_minutes": 0,
-    "過期_after_minutes": 6,
-    "is_過期": false
+    "stale_after_minutes": 6,
+    "is_stale": false
   },
   "case": {
     "case_id": "CASE-2026-0001",
