@@ -32,7 +32,7 @@ Safety rules:
 - No remote control.
 - No write-back to the local PC.
 - No backend calls from GitHub Pages.
-- No private repo folders, raw logs, customer data, optimizer outputs, credentials, internal prompts, or full Markdown bodies are published.
+- No private repo folders, raw logs, customer data, optimizer outputs, credentials, internal prompts, or complete markdown note content are published.
 - Reference images are private design references and are not published to the public status repo.
 
 Public files are limited to:
