@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T07:51:46+08:00",
-  "generated_at_epoch_ms": 1782949906000,
+  "generated_at": "2026-07-02T07:52:34+08:00",
+  "generated_at_epoch_ms": 1782949954000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "checking",
       "pose_name": "testing",
       "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "\"Phase",
+      "current_task_short": "Phase 2.2A-S stable local launcher and port cleanup",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-02T07:51:43+08:00",
+      "last_status_update": "2026-07-02T07:52:31+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "6d7dba56cd608da1"
+  "content_hash": "4779f0f9c317c377"
 }
