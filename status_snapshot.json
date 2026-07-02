@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T10:11:16+08:00",
-  "generated_at_epoch_ms": 1782958276000,
+  "generated_at": "2026-07-02T10:13:04+08:00",
+  "generated_at_epoch_ms": 1782958384000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "coding",
-      "source_status": "coding",
-      "visual_state": "coding",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Phase 2.2B Local Task Transition Actions",
+      "status": "done",
+      "source_status": "done",
+      "visual_state": "done",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/coder_idle.png",
+      "current_task_short": "Phase 2.2B controlled transition verification",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-02T10:11:12+08:00",
+      "last_status_update": "2026-07-02T10:11:33+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "bd2c35b4c58d475e"
+  "content_hash": "4642300449d711ab"
 }
