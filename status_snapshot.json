@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T10:14:06+08:00",
-  "generated_at_epoch_ms": 1782958446000,
+  "generated_at": "2026-07-02T10:47:25+08:00",
+  "generated_at_epoch_ms": 1782960445000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "done",
       "pose_name": "idle",
       "pose_asset": "assets/agents/sprites/coder_idle.png",
-      "current_task_short": "Phase 2.2B Local Task Transition Actions complete",
+      "current_task_short": "Phase 2.2B controlled transition verification",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-02T10:14:03+08:00",
+      "last_status_update": "2026-07-02T10:47:13+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "a57affd3c51f53f4"
+  "content_hash": "2942971a9082bef5"
 }
