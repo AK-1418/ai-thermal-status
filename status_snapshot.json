@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-02T10:49:05+08:00",
-  "generated_at_epoch_ms": 1782960545000,
+  "generated_at": "2026-07-03T22:59:05+08:00",
+  "generated_at_epoch_ms": 1783090745000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -74,7 +74,7 @@
       "pose_asset": "assets/agents/sprites/thermal_idle.png",
       "current_task_short": "Review thermal contexts",
       "blocked_reason_short": "Needs source-level thermal review in Phase 2",
-      "last_status_update": "",
+      "last_status_update": "2026-07-03T22:58:06+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "05058908b215ccb2"
+  "content_hash": "e1be6ea830234c95"
 }
