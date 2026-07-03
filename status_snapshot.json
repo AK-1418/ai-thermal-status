@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-03T22:59:05+08:00",
-  "generated_at_epoch_ms": 1783090745000,
+  "generated_at": "2026-07-03T23:00:34+08:00",
+  "generated_at_epoch_ms": 1783090834000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -106,7 +106,7 @@
       "pose_asset": "assets/agents/sprites/presentation_idle.png",
       "current_task_short": "Report template classification",
       "blocked_reason_short": "",
-      "last_status_update": "",
+      "last_status_update": "2026-07-03T23:00:05+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "e1be6ea830234c95"
+  "content_hash": "3a4b31b6e9412d53"
 }
