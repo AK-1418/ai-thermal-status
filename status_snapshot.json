@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-04T10:29:51+08:00",
-  "generated_at_epoch_ms": 1783132191000,
+  "generated_at": "2026-07-04T11:20:17+08:00",
+  "generated_at_epoch_ms": 1783135217000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "assigned",
-      "source_status": "assigned",
-      "visual_state": "assigned",
-      "pose_name": "idle",
-      "pose_asset": "assets/agents/sprites/thermal_idle.png",
-      "current_task_short": "Review thermal contexts",
-      "blocked_reason_short": "Needs source-level thermal review in Phase 2",
-      "last_status_update": "2026-07-03T22:58:06+08:00",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex session: 審查 table-only product-path 驗證",
+      "blocked_reason_short": "",
+      "last_status_update": "2026-07-04T11:19:52+08:00",
       "public_safe": true
     },
     {
@@ -261,7 +261,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 0,
-    "active_agent_count": 3
+    "active_agent_count": 4
   },
-  "content_hash": "67a2ed6b37772b54"
+  "content_hash": "7254134a42e77aa4"
 }
