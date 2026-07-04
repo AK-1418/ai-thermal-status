@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-04T09:22:26+08:00",
-  "generated_at_epoch_ms": 1783128146000,
+  "generated_at": "2026-07-04T09:25:04+08:00",
+  "generated_at_epoch_ms": 1783128304000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Phase2_2E_GlobalAgentStatusHook",
+      "current_task_short": "CrossProjectBridgeTest",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-04T09:22:23+08:00",
+      "last_status_update": "2026-07-04T09:24:29+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "0f41f283f7e0628b"
+  "content_hash": "29651ccfbc2ed77e"
 }
