@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-04T09:25:33+08:00",
-  "generated_at_epoch_ms": 1783128333000,
+  "generated_at": "2026-07-04T09:31:01+08:00",
+  "generated_at_epoch_ms": 1783128661000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "done",
       "pose_name": "idle",
       "pose_asset": "assets/agents/sprites/coder_idle.png",
-      "current_task_short": "Phase2_2E_GlobalAgentStatusHookComplete",
+      "current_task_short": "GlobalAgentStatusBridgeEnabled",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-04T09:25:30+08:00",
+      "last_status_update": "2026-07-04T09:30:58+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 2
   },
-  "content_hash": "05654f4e589e344a"
+  "content_hash": "426205113d3bab42"
 }
