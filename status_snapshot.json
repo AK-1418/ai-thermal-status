@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T07:57:05+08:00",
-  "generated_at_epoch_ms": 1783295825000,
+  "generated_at": "2026-07-06T07:59:05+08:00",
+  "generated_at_epoch_ms": 1783295945000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "failed",
-      "source_status": "failed",
-      "visual_state": "failed",
-      "pose_name": "blocked",
-      "pose_asset": "assets/agents/sprites/thermal_blocked.png",
-      "current_task_short": "BN1DecisionThermalTimeout",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "ZP2_decision_thermal_review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:18:27+08:00",
+      "last_status_update": "2026-07-06T07:59:01+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "failed",
-      "source_status": "failed",
-      "visual_state": "failed",
-      "pose_name": "blocked",
-      "pose_asset": "assets/agents/sprites/coder_blocked.png",
-      "current_task_short": "BN1DecisionCodeTimeout",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "ZP2_decision_evidence_extract",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:18:26+08:00",
+      "last_status_update": "2026-07-06T07:59:02+08:00",
       "public_safe": true
     },
     {
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Iteration_Excel_summary",
+      "current_task_short": "ZP2_decision_report_frame",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:56:39+08:00",
+      "last_status_update": "2026-07-06T07:59:04+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "71f570d2cb3a464a"
+  "content_hash": "1e7a152fbc8f3eb2"
 }
