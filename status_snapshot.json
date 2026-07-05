@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T19:15:04+08:00",
-  "generated_at_epoch_ms": 1783250104000,
+  "generated_at": "2026-07-05T19:17:05+08:00",
+  "generated_at_epoch_ms": 1783250225000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "reviewing",
-      "source_status": "reviewing",
-      "visual_state": "reviewing",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Phase 1 acceptance review",
+      "current_task_short": "Codex session: Design scenario validation loop",
       "blocked_reason_short": "",
-      "last_status_update": "",
+      "last_status_update": "2026-07-05T19:17:01+08:00",
       "public_safe": true
     },
     {
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "scenario_loop_review_ready",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex session: Inspect fuzzy scheduler artifacts",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T19:14:49+08:00",
+      "last_status_update": "2026-07-05T19:17:01+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "done",
-      "pose_asset": "assets/agents/sprites/presentation_done.png",
-      "current_task_short": "SubagentDelegationStatusVerified",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/presentation_working.png",
+      "current_task_short": "Codex session: Draft scenario report structure",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-04T10:28:53+08:00",
+      "last_status_update": "2026-07-05T19:17:01+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "973dc900e5cbe4c6"
+  "content_hash": "02f910117f99ca0b"
 }
