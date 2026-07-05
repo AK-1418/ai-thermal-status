@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T19:17:05+08:00",
-  "generated_at_epoch_ms": 1783250225000,
+  "generated_at": "2026-07-05T21:17:05+08:00",
+  "generated_at_epoch_ms": 1783257425000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Codex session: Design scenario validation loop",
+      "current_task_short": "Codex session: Inspect smoke metrics schema",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T19:17:01+08:00",
+      "last_status_update": "2026-07-05T21:17:02+08:00",
       "public_safe": true
     },
     {
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Codex session: Draft scenario report structure",
+      "current_task_short": "Codex session: Review smoke event report",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T19:17:01+08:00",
+      "last_status_update": "2026-07-05T21:17:02+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "02f910117f99ca0b"
+  "content_hash": "32742068ce3798ae"
 }
