@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T10:19:05+08:00",
-  "generated_at_epoch_ms": 1783217945000,
+  "generated_at": "2026-07-05T10:23:06+08:00",
+  "generated_at_epoch_ms": 1783218186000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex session: 審查 table-only product-path 驗證",
+      "current_task_short": "Codex session: 準備插值驗證風險報告",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-04T11:19:52+08:00",
+      "last_status_update": "2026-07-05T10:23:03+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "ee4f59d968a994b5"
+  "content_hash": "2098c005493869c0"
 }
