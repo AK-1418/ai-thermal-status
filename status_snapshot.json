@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T23:55:04+08:00",
-  "generated_at_epoch_ms": 1783266904000,
+  "generated_at": "2026-07-06T07:13:05+08:00",
+  "generated_at_epoch_ms": 1783293185000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "CodexChatGPTThreeMoreRounds",
+      "current_task_short": "BN1DirectionDecisionReport",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:53:58+08:00",
+      "last_status_update": "2026-07-06T07:11:40+08:00",
       "public_safe": true
     },
     {
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "failed",
-      "source_status": "failed",
-      "visual_state": "failed",
-      "pose_name": "blocked",
-      "pose_asset": "assets/agents/sprites/thermal_blocked.png",
-      "current_task_short": "P10NarrowedThermalReviewTimeout",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex active: 第二案: PID 優化",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:18:38+08:00",
+      "last_status_update": "2026-07-06T07:13:02+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "P10NarrowedValidationReuseReviewed",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "BN1DecisionEvidenceExtraction",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:18:38+08:00",
+      "last_status_update": "2026-07-06T07:11:51+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "reviewing",
-      "pose_asset": "assets/agents/sprites/presentation_reviewing.png",
-      "current_task_short": "P10NarrowedReportFramingReviewed",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/presentation_working.png",
+      "current_task_short": "BN1DecisionReportFraming",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:18:38+08:00",
+      "last_status_update": "2026-07-06T07:11:52+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "d7aa2850ed517272"
+  "content_hash": "c6708a4a574214a7"
 }
