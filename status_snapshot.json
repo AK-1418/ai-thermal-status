@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T23:17:05+08:00",
-  "generated_at_epoch_ms": 1783264625000,
+  "generated_at": "2026-07-05T23:18:45+08:00",
+  "generated_at_epoch_ms": 1783264725000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: 第二案: PID 優化",
+      "status": "failed",
+      "source_status": "failed",
+      "visual_state": "failed",
+      "pose_name": "blocked",
+      "pose_asset": "assets/agents/sprites/thermal_blocked.png",
+      "current_task_short": "P10NarrowedThermalReviewTimeout",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:11:02+08:00",
+      "last_status_update": "2026-07-05T23:18:38+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "testing",
       "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "P10_reuse_safety_review_done",
+      "current_task_short": "P10NarrowedValidationReuseReviewed",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:16:55+08:00",
+      "last_status_update": "2026-07-05T23:18:38+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Codex active: 第二案: PID 優化",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/presentation_reviewing.png",
+      "current_task_short": "P10NarrowedReportFramingReviewed",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:13:02+08:00",
+      "last_status_update": "2026-07-05T23:18:38+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "16ed8603ef72b22f"
+  "content_hash": "a69035a10cae94a6"
 }
