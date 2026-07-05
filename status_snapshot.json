@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T07:13:05+08:00",
-  "generated_at_epoch_ms": 1783293185000,
+  "generated_at": "2026-07-06T07:15:05+08:00",
+  "generated_at_epoch_ms": 1783293305000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "BN1DirectionDecisionReport",
+      "current_task_short": "Codex active: Review BN1 evidence",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:11:40+08:00",
+      "last_status_update": "2026-07-06T07:15:02+08:00",
       "public_safe": true
     },
     {
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "BN1DecisionReportFraming",
+      "current_task_short": "Codex active: Frame B-N1/P10 report",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:11:52+08:00",
+      "last_status_update": "2026-07-06T07:15:02+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "c6708a4a574214a7"
+  "content_hash": "f3ca234ebbfc16e3"
 }
