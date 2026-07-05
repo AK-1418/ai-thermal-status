@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T22:21:05+08:00",
-  "generated_at_epoch_ms": 1783261265000,
+  "generated_at": "2026-07-05T22:23:04+08:00",
+  "generated_at_epoch_ms": 1783261384000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -74,7 +74,7 @@
       "pose_asset": "assets/agents/sprites/thermal_working.png",
       "current_task_short": "Codex active: 第二案: PID 優化",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T22:21:02+08:00",
+      "last_status_update": "2026-07-05T22:23:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "95c2a37a5a53f15b"
+  "content_hash": "2af5949c3878e6ff"
 }
