@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T23:23:05+08:00",
-  "generated_at_epoch_ms": 1783264985000,
+  "generated_at": "2026-07-05T23:55:04+08:00",
+  "generated_at_epoch_ms": 1783266904000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "done",
-      "pose_asset": "assets/agents/sprites/alan_ai_done.png",
-      "current_task_short": "CodexChatGPTTwoRoundLoopComplete",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
+      "current_task_short": "CodexChatGPTThreeMoreRounds",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T23:22:25+08:00",
+      "last_status_update": "2026-07-05T23:53:58+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "80d10b3e1d8274b7"
+  "content_hash": "d7aa2850ed517272"
 }
