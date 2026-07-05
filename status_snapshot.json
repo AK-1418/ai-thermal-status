@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T22:35:04+08:00",
-  "generated_at_epoch_ms": 1783262104000,
+  "generated_at": "2026-07-05T22:45:05+08:00",
+  "generated_at_epoch_ms": 1783262705000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: 第二案: PID 優化",
+      "current_task_short": "Codex active: 第一案: 虛擬辦公室",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T22:13:02+08:00",
+      "last_status_update": "2026-07-05T22:45:02+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "56eb776a858c8735"
+  "content_hash": "47749c907265ea26"
 }
