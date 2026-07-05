@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T22:47:05+08:00",
-  "generated_at_epoch_ms": 1783262825000,
+  "generated_at": "2026-07-05T22:51:05+08:00",
+  "generated_at_epoch_ms": 1783263065000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Codex active: Review validation report",
+      "current_task_short": "Codex active: 第二案: PID 優化",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T22:13:02+08:00",
+      "last_status_update": "2026-07-05T22:51:02+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "9d63270deeba00aa"
+  "content_hash": "3b2ec3d5484ac1ad"
 }
