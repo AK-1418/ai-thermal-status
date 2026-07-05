@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T21:55:04+08:00",
-  "generated_at_epoch_ms": 1783259704000,
+  "generated_at": "2026-07-05T21:57:04+08:00",
+  "generated_at_epoch_ms": 1783259824000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Codex session: Verify smoke event review counts",
+      "current_task_short": "Codex active: 第一案: 虛擬辦公室",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T21:21:03+08:00",
+      "last_status_update": "2026-07-05T21:57:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "147f52b1ce795511"
+  "content_hash": "854b4b875706b46e"
 }
