@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-05T22:01:05+08:00",
-  "generated_at_epoch_ms": 1783260065000,
+  "generated_at": "2026-07-05T22:03:04+08:00",
+  "generated_at_epoch_ms": 1783260184000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -90,7 +90,7 @@
       "pose_asset": "assets/agents/sprites/coder_coding.png",
       "current_task_short": "Codex active: 第一案: 虛擬辦公室",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-05T22:01:02+08:00",
+      "last_status_update": "2026-07-05T22:03:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "ad8fc6a679fafca1"
+  "content_hash": "b716ee090795b007"
 }
