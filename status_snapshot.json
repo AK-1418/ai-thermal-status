@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T15:09:19+08:00",
-  "generated_at_epoch_ms": 1783321759000,
+  "generated_at": "2026-07-06T15:13:04+08:00",
+  "generated_at_epoch_ms": 1783321984000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "\"simulator_url_predtable_patch\"",
+      "current_task_short": "approved_remote_push",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T15:09:16+08:00",
+      "last_status_update": "2026-07-06T15:12:06+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "f7c10ba7c5445f69"
+  "content_hash": "726b44fa46a24c9b"
 }
