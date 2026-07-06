@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T14:43:05+08:00",
-  "generated_at_epoch_ms": 1783320185000,
+  "generated_at": "2026-07-06T14:49:05+08:00",
+  "generated_at_epoch_ms": 1783320545000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -88,9 +88,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "testing",
       "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "ZP2_evidence_extracted_main",
+      "current_task_short": "state_validation_passed",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T08:05:07+08:00",
+      "last_status_update": "2026-07-06T14:48:57+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "7e09d86ab040eec7"
+  "content_hash": "df842199526ba05a"
 }
