@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T15:19:06+08:00",
-  "generated_at_epoch_ms": 1783322346000,
+  "generated_at": "2026-07-06T15:21:10+08:00",
+  "generated_at_epoch_ms": 1783322470000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "blocked",
       "pose_name": "blocked",
       "pose_asset": "assets/agents/sprites/alan_ai_blocked.png",
-      "current_task_short": "manual_push_needs_approval",
+      "current_task_short": "explicit_push_needed_3d67cc6",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T15:18:54+08:00",
+      "last_status_update": "2026-07-06T15:20:44+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "4687ac0ad8bd7b9a"
+  "content_hash": "a01781e8e338d4ea"
 }
