@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T20:09:05+08:00",
-  "generated_at_epoch_ms": 1783339745000,
+  "generated_at": "2026-07-06T20:13:05+08:00",
+  "generated_at_epoch_ms": 1783339985000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "state_validation_passed",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "payload_validator_impl",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T14:48:57+08:00",
+      "last_status_update": "2026-07-06T20:11:33+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "4c8659d901b01b2a"
+  "content_hash": "a267080842647f82"
 }
