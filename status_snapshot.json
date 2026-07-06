@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T14:09:05+08:00",
-  "generated_at_epoch_ms": 1783318145000,
+  "generated_at": "2026-07-06T14:11:04+08:00",
+  "generated_at_epoch_ms": 1783318264000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "done",
-      "pose_asset": "assets/agents/sprites/alan_ai_done.png",
-      "current_task_short": "chatgpt_plot_prompt_sync",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
+      "current_task_short": "representative_result_plot_package",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T14:06:37+08:00",
+      "last_status_update": "2026-07-06T14:10:16+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "a41d74e83586e779"
+  "content_hash": "148183e4854ef89e"
 }
