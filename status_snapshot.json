@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T07:59:05+08:00",
-  "generated_at_epoch_ms": 1783295945000,
+  "generated_at": "2026-07-06T08:01:05+08:00",
+  "generated_at_epoch_ms": 1783296065000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "ZP2_decision_thermal_review",
+      "current_task_short": "Codex active: 第二案: PID 優化",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:59:01+08:00",
+      "last_status_update": "2026-07-06T08:01:02+08:00",
       "public_safe": true
     },
     {
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "ZP2_decision_report_frame",
+      "current_task_short": "Codex active: 第二案: PID 優化",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:59:04+08:00",
+      "last_status_update": "2026-07-06T08:01:02+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "1e7a152fbc8f3eb2"
+  "content_hash": "0667fd31ccea6dd7"
 }
