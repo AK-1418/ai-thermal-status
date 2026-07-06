@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T08:03:04+08:00",
-  "generated_at_epoch_ms": 1783296184000,
+  "generated_at": "2026-07-06T08:05:05+08:00",
+  "generated_at_epoch_ms": 1783296305000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: 評估P10與Z權衡",
+      "status": "failed",
+      "source_status": "failed",
+      "visual_state": "failed",
+      "pose_name": "blocked",
+      "pose_asset": "assets/agents/sprites/thermal_blocked.png",
+      "current_task_short": "ZP2_decision_agent_timeout",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T08:03:01+08:00",
+      "last_status_update": "2026-07-06T08:05:04+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "5f7632111f570de6"
+  "content_hash": "fffedc635ef1222f"
 }
