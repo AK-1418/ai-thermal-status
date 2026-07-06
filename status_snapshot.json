@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T08:01:05+08:00",
-  "generated_at_epoch_ms": 1783296065000,
+  "generated_at": "2026-07-06T08:03:04+08:00",
+  "generated_at_epoch_ms": 1783296184000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "ChatGPT_Codex_three_round_loop",
+      "current_task_short": "Codex active: 審視 Z/P2 肩部取捨",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T07:56:36+08:00",
+      "last_status_update": "2026-07-06T08:03:01+08:00",
       "public_safe": true
     },
     {
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: 第二案: PID 優化",
+      "current_task_short": "Codex active: 評估P10與Z權衡",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T08:01:02+08:00",
+      "last_status_update": "2026-07-06T08:03:01+08:00",
       "public_safe": true
     },
     {
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Codex active: 第二案: PID 優化",
+      "current_task_short": "Codex active: 設計肩部決策報告框架",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-06T08:01:02+08:00",
+      "last_status_update": "2026-07-06T08:03:01+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "0667fd31ccea6dd7"
+  "content_hash": "5f7632111f570de6"
 }
