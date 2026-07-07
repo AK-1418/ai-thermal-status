@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T10:25:20+08:00",
-  "generated_at_epoch_ms": 1783391120000,
+  "generated_at": "2026-07-07T10:27:05+08:00",
+  "generated_at_epoch_ms": 1783391225000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Sync_GPT_prompt",
+      "current_task_short": "payload_content_review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T10:25:16+08:00",
+      "last_status_update": "2026-07-07T10:26:11+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "1d45e4b80dd60e9e"
+  "content_hash": "2d7363c28943a631"
 }
