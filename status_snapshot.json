@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T22:13:05+08:00",
-  "generated_at_epoch_ms": 1783433585000,
+  "generated_at": "2026-07-07T22:27:05+08:00",
+  "generated_at_epoch_ms": 1783434425000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "\"push_a835f6f_checks\"",
+      "current_task_short": "\"backend_runtime_impl_v0_1\"",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T22:12:22+08:00",
+      "last_status_update": "2026-07-07T22:26:32+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "backend_payload_loader_done",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "\"backend_runtime_impl_v0_1\"",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T16:19:06+08:00",
+      "last_status_update": "2026-07-07T22:26:15+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "ead06fb7ce91c7b8"
+  "content_hash": "1b70b9a427d2b4be"
 }
