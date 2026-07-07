@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T22:27:05+08:00",
-  "generated_at_epoch_ms": 1783434425000,
+  "generated_at": "2026-07-07T22:31:05+08:00",
+  "generated_at_epoch_ms": 1783434665000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "reviewing",
+      "source_status": "reviewing",
+      "visual_state": "reviewing",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "\"backend_runtime_impl_v0_1\"",
+      "current_task_short": "\"report_19899dd_to_gpt\"",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T22:26:32+08:00",
+      "last_status_update": "2026-07-07T22:31:02+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "\"backend_runtime_impl_v0_1\"",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "testing",
+      "pose_asset": "assets/agents/sprites/coder_testing.png",
+      "current_task_short": "\"backend_runtime_impl_done\"",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T22:26:15+08:00",
+      "last_status_update": "2026-07-07T22:31:00+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "1b70b9a427d2b4be"
+  "content_hash": "718971f95f6ec1f0"
 }
