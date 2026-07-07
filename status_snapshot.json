@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T10:09:04+08:00",
-  "generated_at_epoch_ms": 1783390144000,
+  "generated_at": "2026-07-07T10:11:04+08:00",
+  "generated_at_epoch_ms": 1783390264000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "reviewing",
-      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "report_duplicate_push_gate",
+      "status": "blocked",
+      "source_status": "blocked",
+      "visual_state": "blocked",
+      "pose_name": "blocked",
+      "pose_asset": "assets/agents/sprites/alan_ai_blocked.png",
+      "current_task_short": "alan_push_approval_5385ae2",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T09:59:54+08:00",
+      "last_status_update": "2026-07-07T10:09:04+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "generator_5385ae2_ready",
+      "status": "done",
+      "source_status": "done",
+      "visual_state": "done",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/coder_idle.png",
+      "current_task_short": "generator_5385ae2_done",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T10:07:35+08:00",
+      "last_status_update": "2026-07-07T10:09:06+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "09702fe9ceb15c6a"
+  "content_hash": "ce42151115ce6cb3"
 }
