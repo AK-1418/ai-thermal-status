@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T19:05:05+08:00",
-  "generated_at_epoch_ms": 1783422305000,
+  "generated_at": "2026-07-07T19:53:05+08:00",
+  "generated_at_epoch_ms": 1783425185000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "\"prediction_weight_2d_alignment_verify\"",
+      "current_task_short": "Request_GPT_next_prompt_after_alignment_report",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T19:03:56+08:00",
+      "last_status_update": "2026-07-07T19:52:30+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "9f2f1fb3d41a0ac5"
+  "content_hash": "d9d5d832a9553810"
 }
