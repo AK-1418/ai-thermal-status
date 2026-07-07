@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T15:28:11+08:00",
-  "generated_at_epoch_ms": 1783409291000,
+  "generated_at": "2026-07-07T15:29:05+08:00",
+  "generated_at_epoch_ms": 1783409345000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "\"AMFT_v1_review_summary\"",
+      "current_task_short": "await_db70aca_push_approval",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T15:28:07+08:00",
+      "last_status_update": "2026-07-07T15:28:45+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "4fad693cd4a58e54"
+  "content_hash": "ca08bcbb220c9e4b"
 }
