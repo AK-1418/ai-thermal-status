@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T10:11:04+08:00",
-  "generated_at_epoch_ms": 1783390264000,
+  "generated_at": "2026-07-07T10:17:05+08:00",
+  "generated_at_epoch_ms": 1783390625000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "blocked",
       "pose_name": "blocked",
       "pose_asset": "assets/agents/sprites/alan_ai_blocked.png",
-      "current_task_short": "alan_push_approval_5385ae2",
+      "current_task_short": "wrong_push_approval_bebed25",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T10:09:04+08:00",
+      "last_status_update": "2026-07-07T10:16:26+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "ce42151115ce6cb3"
+  "content_hash": "bbe9b8df68ea0ec8"
 }
