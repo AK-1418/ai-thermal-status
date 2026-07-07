@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T16:29:05+08:00",
-  "generated_at_epoch_ms": 1783412945000,
+  "generated_at": "2026-07-07T16:31:06+08:00",
+  "generated_at_epoch_ms": 1783413066000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "\"isolated_runner_setup\"",
+      "current_task_short": "\"chatgpt_push_report_loop\"",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T16:28:47+08:00",
+      "last_status_update": "2026-07-07T16:30:28+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "6f0e238eb04e23df"
+  "content_hash": "d7c846cd757d0092"
 }
