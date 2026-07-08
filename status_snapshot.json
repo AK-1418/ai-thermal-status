@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T22:37:04+08:00",
-  "generated_at_epoch_ms": 1783435024000,
+  "generated_at": "2026-07-08T21:45:06+08:00",
+  "generated_at_epoch_ms": 1783518306000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "blocked",
-      "source_status": "blocked",
-      "visual_state": "blocked",
-      "pose_name": "blocked",
-      "pose_asset": "assets/agents/sprites/alan_ai_blocked.png",
-      "current_task_short": "\"gpt_blank_after_19899dd\"",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
+      "current_task_short": "OptionA_pilot",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T22:36:36+08:00",
+      "last_status_update": "2026-07-08T21:45:05+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "0552efee24289047"
+  "content_hash": "f5293e9f28969e5c"
 }
