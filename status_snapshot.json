@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-09T11:31:05+08:00",
-  "generated_at_epoch_ms": 1783567865000,
+  "generated_at": "2026-07-09T15:33:05+08:00",
+  "generated_at_epoch_ms": 1783582385000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "done",
-      "pose_asset": "assets/agents/sprites/presentation_done.png",
-      "current_task_short": "\"runtime_plan_docs_done\"",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/presentation_working.png",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-07T22:10:28+08:00",
+      "last_status_update": "2026-07-09T15:33:01+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "e8aac5dcaefbb9d9"
+  "content_hash": "1b8c25b6b51621cc"
 }
