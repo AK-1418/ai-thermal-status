@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-09T15:33:05+08:00",
-  "generated_at_epoch_ms": 1783582385000,
+  "generated_at": "2026-07-09T16:41:04+08:00",
+  "generated_at_epoch_ms": 1783586464000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "api",
@@ -104,9 +104,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Codex active: Codex Companion Task: <task>Find all handoff / 交接 markdown documents in t...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-09T15:33:01+08:00",
+      "last_status_update": "2026-07-09T16:41:01+08:00",
       "public_safe": true
     }
   ],
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "1b8c25b6b51621cc"
+  "content_hash": "e33fd9e18d19e168"
 }
