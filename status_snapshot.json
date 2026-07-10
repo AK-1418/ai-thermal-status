@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-10T21:43:06+08:00",
-  "generated_at_epoch_ms": 1783690986000,
+  "generated_at": "2026-07-10T21:51:06+08:00",
+  "generated_at_epoch_ms": 1783691466000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: Codex Companion Task: Task pred-weight-eval ROUND 4 (last confound cleanu...",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-10T19:47:02+08:00",
+      "last_status_update": "2026-07-10T21:51:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "3ddd62b012802c50"
+  "content_hash": "3d1f597b8e8b0f50"
 }
