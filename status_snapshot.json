@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-09T16:58:00+08:00",
-  "generated_at_epoch_ms": 1783587480000,
+  "generated_at": "2026-07-10T09:47:09+08:00",
+  "generated_at_epoch_ms": 1783648029000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
-  "source_mode": "api",
+  "source_mode": "local_files",
   "mode": "read_only_agent_status_mirror",
   "publisher": {
     "mode": "local_auto_publish",
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "0739913b4a8300f2"
+  "content_hash": "e2b3aadf5689baca"
 }
