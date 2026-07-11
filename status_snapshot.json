@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T23:35:07+08:00",
-  "generated_at_epoch_ms": 1783784107000,
+  "generated_at": "2026-07-11T23:36:51+08:00",
+  "generated_at_epoch_ms": 1783784211000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "review locked section 7 machine oracles",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "checking",
+      "pose_asset": "assets/agents/sprites/thermal_checking.png",
+      "current_task_short": "section 7 oracle review complete no contradiction",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T23:33:05+08:00",
+      "last_status_update": "2026-07-11T23:36:46+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "221d1b9b06b7394c"
+  "content_hash": "1e74b6c81791d223"
 }
