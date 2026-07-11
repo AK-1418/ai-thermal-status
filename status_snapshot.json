@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T00:52:58+08:00",
-  "generated_at_epoch_ms": 1783788778000,
+  "generated_at": "2026-07-12T00:53:21+08:00",
+  "generated_at_epoch_ms": 1783788801000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -74,7 +74,7 @@
       "pose_asset": "assets/agents/sprites/thermal_working.png",
       "current_task_short": "Review B/S control logic and slope information",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:52:46+08:00",
+      "last_status_update": "2026-07-12T00:53:16+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Quantify scheduler range and identifiability",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:52:53+08:00",
+      "last_status_update": "2026-07-12T00:53:16+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "ec06b96750f94adf"
+  "content_hash": "c5182acbbaaaf6a4"
 }
