@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T17:27:06+08:00",
-  "generated_at_epoch_ms": 1783762026000,
+  "generated_at": "2026-07-11T17:35:06+08:00",
+  "generated_at_epoch_ms": 1783762506000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Stage 1 smoke orchestration",
+      "current_task_short": "Awaiting Claude Stage 1 diff review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T16:32:25+08:00",
+      "last_status_update": "2026-07-11T17:33:09+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "reviewing",
-      "source_status": "reviewing",
-      "visual_state": "reviewing",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "testing",
       "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "Final v4 fresh-context acceptance review",
+      "current_task_short": "Stage 1 v4 smoke passed fresh review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T17:26:15+08:00",
+      "last_status_update": "2026-07-11T17:33:09+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "c51bfa3d6ec97c08"
+  "content_hash": "9fdba72586762048"
 }
