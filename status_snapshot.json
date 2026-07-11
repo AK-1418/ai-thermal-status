@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T16:17:06+08:00",
-  "generated_at_epoch_ms": 1783757826000,
+  "generated_at": "2026-07-11T16:19:06+08:00",
+  "generated_at_epoch_ms": 1783757946000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Phase1b Stage1 smoke implementation",
+      "status": "blocked",
+      "source_status": "blocked",
+      "visual_state": "blocked",
+      "pose_name": "blocked",
+      "pose_asset": "assets/agents/sprites/coder_blocked.png",
+      "current_task_short": "Stopped: holdout denylist search boundary breached before changes",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T16:16:41+08:00",
+      "last_status_update": "2026-07-11T16:17:34+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "670647fdba9a34eb"
+  "content_hash": "680539fe09c59790"
 }
