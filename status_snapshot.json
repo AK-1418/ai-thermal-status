@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T01:57:06+08:00",
-  "generated_at_epoch_ms": 1783792626000,
+  "generated_at": "2026-07-12T02:07:06+08:00",
+  "generated_at_epoch_ms": 1783793226000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "done",
-      "pose_asset": "assets/agents/sprites/alan_ai_done.png",
-      "current_task_short": "Independent B/S design review complete",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
+      "current_task_short": "coverage_v2 Round-3 ready for Claude review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T01:03:13+08:00",
+      "last_status_update": "2026-07-12T02:06:09+08:00",
       "public_safe": true
     },
     {
@@ -72,9 +72,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "checking",
       "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "B/S thermal-control review complete",
+      "current_task_short": "Round-3 thermal coverage evidence ready",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T01:00:40+08:00",
+      "last_status_update": "2026-07-12T02:06:08+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "testing",
+      "pose_asset": "assets/agents/sprites/coder_testing.png",
+      "current_task_short": "Fresh-context review passed; reports ready",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T01:57:01+08:00",
+      "last_status_update": "2026-07-12T02:06:09+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "42899b02ab48c2d0"
+  "content_hash": "3ca2bfcfce1b8d57"
 }
