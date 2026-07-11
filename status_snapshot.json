@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T02:13:06+08:00",
-  "generated_at_epoch_ms": 1783793586000,
+  "generated_at": "2026-07-12T03:27:06+08:00",
+  "generated_at_epoch_ms": 1783798026000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Campaign-2 optimizer implementation",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T02:11:07+08:00",
+      "last_status_update": "2026-07-12T03:27:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "a8690310ccdbc100"
+  "content_hash": "cb49d80f936e4bc4"
 }
