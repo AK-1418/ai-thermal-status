@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T01:02:56+08:00",
-  "generated_at_epoch_ms": 1783789376000,
+  "generated_at": "2026-07-12T01:03:18+08:00",
+  "generated_at_epoch_ms": 1783789398000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "reviewing",
-      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Independent B/S gain-scheduler design review",
+      "status": "done",
+      "source_status": "done",
+      "visual_state": "done",
+      "pose_name": "done",
+      "pose_asset": "assets/agents/sprites/alan_ai_done.png",
+      "current_task_short": "Independent B/S design review complete",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:52:39+08:00",
+      "last_status_update": "2026-07-12T01:03:13+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "c3bb5a12d9d1a0fe"
+  "content_hash": "6431c54f08130a85"
 }
