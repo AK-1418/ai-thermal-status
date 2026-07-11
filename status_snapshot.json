@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T00:21:14+08:00",
-  "generated_at_epoch_ms": 1783786874000,
+  "generated_at": "2026-07-12T00:26:12+08:00",
+  "generated_at_epoch_ms": 1783787172000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -56,9 +56,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "coverage v2 package ready for Claude review",
+      "current_task_short": "final package ready; exposure gate failed honestly",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:21:09+08:00",
+      "last_status_update": "2026-07-12T00:26:07+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "testing",
       "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "coverage v2 implementation verified with 21 exposure gaps",
+      "current_task_short": "final coverage v2 evidence hashes verified; 21 gaps",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:21:09+08:00",
+      "last_status_update": "2026-07-12T00:26:07+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "863797dd54b2cf58"
+  "content_hash": "2661bc1c42be2c88"
 }
