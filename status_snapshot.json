@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T23:32:34+08:00",
-  "generated_at_epoch_ms": 1783783954000,
+  "generated_at": "2026-07-11T23:33:06+08:00",
+  "generated_at_epoch_ms": 1783783986000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "blocked",
-      "source_status": "blocked",
-      "visual_state": "blocked",
-      "pose_name": "blocked",
-      "pose_asset": "assets/agents/sprites/thermal_blocked.png",
-      "current_task_short": "coverage v2 oracle gaps",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "review locked section 7 machine oracles",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T23:29:25+08:00",
+      "last_status_update": "2026-07-11T23:33:05+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "inspect coverage runner and golden test seams",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T23:32:29+08:00",
+      "last_status_update": "2026-07-11T23:33:05+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "31b7451b46936a26"
+  "content_hash": "13c25b09230642f6"
 }
