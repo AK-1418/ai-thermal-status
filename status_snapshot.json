@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T00:26:12+08:00",
-  "generated_at_epoch_ms": 1783787172000,
+  "generated_at": "2026-07-12T00:33:06+08:00",
+  "generated_at_epoch_ms": 1783787586000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "final package ready; exposure gate failed honestly",
+      "current_task_short": "coverage_v2 S1-S4 controlled execution",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:26:07+08:00",
+      "last_status_update": "2026-07-12T00:32:34+08:00",
       "public_safe": true
     },
     {
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "section 7 oracle review complete no contradiction",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "coverage_v2 reachability classification",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T23:36:46+08:00",
+      "last_status_update": "2026-07-12T00:32:34+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "final coverage v2 evidence hashes verified; 21 gaps",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:26:07+08:00",
+      "last_status_update": "2026-07-12T00:33:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "2661bc1c42be2c88"
+  "content_hash": "b05e107b0dc93653"
 }
