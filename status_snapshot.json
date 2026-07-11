@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-11T18:35:06+08:00",
-  "generated_at_epoch_ms": 1783766106000,
+  "generated_at": "2026-07-11T18:55:06+08:00",
+  "generated_at_epoch_ms": 1783767306000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Thermal review warm-start and H2 band",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-10T21:51:01+08:00",
+      "last_status_update": "2026-07-11T18:54:32+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Stage 1 warm-start and H2 gate fixes",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-11T18:33:48+08:00",
+      "last_status_update": "2026-07-11T18:55:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "19aeff52ff7c40fe"
+  "content_hash": "1f0d565ae004f607"
 }
