@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T00:51:06+08:00",
-  "generated_at_epoch_ms": 1783788666000,
+  "generated_at": "2026-07-12T00:52:44+08:00",
+  "generated_at_epoch_ms": 1783788764000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Round-3 coverage_v2 orchestration",
+      "current_task_short": "Independent B/S gain-scheduler design review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T00:50:53+08:00",
+      "last_status_update": "2026-07-12T00:52:39+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "0c639f9d5a8b7549"
+  "content_hash": "25dabe84716700af"
 }
