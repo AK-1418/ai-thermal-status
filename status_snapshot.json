@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T20:27:20+08:00",
-  "generated_at_epoch_ms": 1783859240000,
+  "generated_at": "2026-07-12T20:27:28+08:00",
+  "generated_at_epoch_ms": 1783859248000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "reviewing",
-      "source_status": "reviewing",
-      "visual_state": "reviewing",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Review EMA official acceptance report",
+      "current_task_short": "EMA alpha official acceptance reported",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T20:22:26+08:00",
+      "last_status_update": "2026-07-12T20:27:23+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "665fb28ab1c4f72f"
+  "content_hash": "0f7c09a26c76ac0e"
 }
