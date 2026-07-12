@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T11:45:06+08:00",
-  "generated_at_epoch_ms": 1783827906000,
+  "generated_at": "2026-07-12T11:49:06+08:00",
+  "generated_at_epoch_ms": 1783828146000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: Codex Companion Task: --sandbox read-only --skip-git-repo-check <task> Pr...",
+      "current_task_short": "Codex active: Codex Companion Task: <task>Execute Campaign-3 Preflight + Stage-0 ONLY f...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T11:43:01+08:00",
+      "last_status_update": "2026-07-12T11:49:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "220a659a15081346"
+  "content_hash": "be43bfb1364d4946"
 }
