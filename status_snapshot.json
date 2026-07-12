@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T10:05:06+08:00",
-  "generated_at_epoch_ms": 1783821906000,
+  "generated_at": "2026-07-12T10:07:06+08:00",
+  "generated_at_epoch_ms": 1783822026000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "noDT official acceptance comparison",
+      "current_task_short": "noDT official comparison ready for Claude",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T09:49:25+08:00",
+      "last_status_update": "2026-07-12T10:05:39+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "reviewing",
-      "source_status": "reviewing",
-      "visual_state": "reviewing",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "testing",
       "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "verify noDT must-fix closure",
+      "current_task_short": "noDT artifacts self-review accepted",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T10:03:32+08:00",
+      "last_status_update": "2026-07-12T10:05:39+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "ce3010020644e829"
+  "content_hash": "b22f360b93f3b719"
 }
