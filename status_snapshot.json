@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T20:22:46+08:00",
-  "generated_at_epoch_ms": 1783858966000,
+  "generated_at": "2026-07-12T20:23:06+08:00",
+  "generated_at_epoch_ms": 1783858986000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Fresh-context EMA acceptance self-review",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T20:22:41+08:00",
+      "last_status_update": "2026-07-12T20:23:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "7906659eaf0c81d5"
+  "content_hash": "da84f3dbf217029e"
 }
