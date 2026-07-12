@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T11:53:06+08:00",
-  "generated_at_epoch_ms": 1783828386000,
+  "generated_at": "2026-07-12T11:54:23+08:00",
+  "generated_at_epoch_ms": 1783828463000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "noDT official comparison ready for Claude",
+      "current_task_short": "Campaign-3 Preflight + Stage-0 orchestration",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T10:05:39+08:00",
+      "last_status_update": "2026-07-12T11:54:18+08:00",
       "public_safe": true
     },
     {
@@ -90,7 +90,7 @@
       "pose_asset": "assets/agents/sprites/coder_coding.png",
       "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T11:53:01+08:00",
+      "last_status_update": "2026-07-12T11:54:18+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "9f81167b1a2dbdc1"
+  "content_hash": "691ef834e9c3eb47"
 }
