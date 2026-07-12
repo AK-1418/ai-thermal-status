@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T15:44:46+08:00",
-  "generated_at_epoch_ms": 1783842286000,
+  "generated_at": "2026-07-12T15:48:45+08:00",
+  "generated_at_epoch_ms": 1783842525000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Final gate verdict and R3 recommendation review",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "checking",
+      "pose_asset": "assets/agents/sprites/thermal_checking.png",
+      "current_task_short": "Stage-B thermal gate review accepted",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T15:44:41+08:00",
+      "last_status_update": "2026-07-12T15:48:40+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "88254cf5080e2e3b"
+  "content_hash": "045dbcb9a57d9dd5"
 }
