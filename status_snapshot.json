@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T09:19:06+08:00",
-  "generated_at_epoch_ms": 1783819146000,
+  "generated_at": "2026-07-12T09:23:06+08:00",
+  "generated_at_epoch_ms": 1783819386000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "audit official runner oracle and golden",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T09:18:01+08:00",
+      "last_status_update": "2026-07-12T09:23:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "8ff214bffd775510"
+  "content_hash": "1080c91e1079515d"
 }
