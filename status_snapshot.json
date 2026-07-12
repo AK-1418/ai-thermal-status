@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T16:43:06+08:00",
-  "generated_at_epoch_ms": 1783845786000,
+  "generated_at": "2026-07-12T16:43:38+08:00",
+  "generated_at_epoch_ms": 1783845818000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Stage-B complete: R4 gate FAIL; recommend R3",
+      "current_task_short": "23-scenario factor attribution orchestration",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T15:50:05+08:00",
+      "last_status_update": "2026-07-12T16:43:33+08:00",
       "public_safe": true
     },
     {
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Review reversal factor evidence and control interpretation",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T16:43:02+08:00",
+      "last_status_update": "2026-07-12T16:43:33+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "a93b63169fd49d39"
+  "content_hash": "f5a744fae4065ccd"
 }
