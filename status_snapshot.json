@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T15:37:06+08:00",
-  "generated_at_epoch_ms": 1783841826000,
+  "generated_at": "2026-07-12T15:43:07+08:00",
+  "generated_at_epoch_ms": 1783842187000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Stage-B resume gate and ablation ladder orchestration",
+      "current_task_short": "Running 7 remaining Stage-B configurations",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T15:24:46+08:00",
+      "last_status_update": "2026-07-12T15:42:55+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "f7f915679b6aeab2"
+  "content_hash": "8fb606107d9c6ff2"
 }
