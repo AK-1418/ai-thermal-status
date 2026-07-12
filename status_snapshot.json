@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T20:10:03+08:00",
-  "generated_at_epoch_ms": 1783858203000,
+  "generated_at": "2026-07-12T20:10:11+08:00",
+  "generated_at_epoch_ms": 1783858211000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Review EMA attribution predictions",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T19:01:01+08:00",
+      "last_status_update": "2026-07-12T20:10:06+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "1156b1178395ef36"
+  "content_hash": "889a61899a390b94"
 }
