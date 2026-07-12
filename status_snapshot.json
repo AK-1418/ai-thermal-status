@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-12T20:22:31+08:00",
-  "generated_at_epoch_ms": 1783858951000,
+  "generated_at": "2026-07-12T20:22:46+08:00",
+  "generated_at_epoch_ms": 1783858966000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "Official runner review complete",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "Fresh-context EMA acceptance self-review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-12T20:22:19+08:00",
+      "last_status_update": "2026-07-12T20:22:41+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "82aa1a747165e5fd"
+  "content_hash": "7906659eaf0c81d5"
 }
