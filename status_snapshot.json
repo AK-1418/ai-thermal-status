@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T00:57:06+08:00",
-  "generated_at_epoch_ms": 1784048226000,
+  "generated_at": "2026-07-15T01:17:06+08:00",
+  "generated_at_epoch_ms": 1784049426000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Delay-world Round-0 infra ready for Claude review",
+      "current_task_short": "Round 1 4s delay solve-or-prove-floor",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:56:38+08:00",
+      "last_status_update": "2026-07-15T01:16:00+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "Infra gates exact PASS; ready for Claude review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:56:36+08:00",
+      "last_status_update": "2026-07-15T01:17:02+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "44ba491055b6ff90"
+  "content_hash": "319713179b0b9826"
 }
