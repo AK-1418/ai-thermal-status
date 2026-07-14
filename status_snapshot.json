@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T23:35:06+08:00",
-  "generated_at_epoch_ms": 1784043306000,
+  "generated_at": "2026-07-14T23:37:06+08:00",
+  "generated_at_epoch_ms": 1784043426000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex Companion Task: Reply with exactly the [redacted] CODEX_OK and noth...",
+      "current_task_short": "Codex active: Codex Companion Task: HEADLESS READ-ONLY PRE-ALIGNMENT. No git, no writes...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-14T23:33:01+08:00",
+      "last_status_update": "2026-07-14T23:37:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "c80467acc438acfd"
+  "content_hash": "1cfb845506a58ca0"
 }
