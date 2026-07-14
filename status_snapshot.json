@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T01:26:48+08:00",
-  "generated_at_epoch_ms": 1784050008000,
+  "generated_at": "2026-07-15T01:29:05+08:00",
+  "generated_at_epoch_ms": 1784050145000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "Phase-aware floor proof boundary reviewed",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T01:26:36+08:00",
+      "last_status_update": "2026-07-15T01:29:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "e1ebcceabfa1af38"
+  "content_hash": "810daf6c3439ed6b"
 }
