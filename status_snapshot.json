@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T00:47:07+08:00",
-  "generated_at_epoch_ms": 1784047627000,
+  "generated_at": "2026-07-15T00:49:06+08:00",
+  "generated_at_epoch_ms": 1784047746000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "Delay semantics review complete; no dissent",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Post-implementation thermal sign-off",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:41:41+08:00",
+      "last_status_update": "2026-07-15T00:48:04+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Run official G1 and G2 infra gates",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:46:58+08:00",
+      "last_status_update": "2026-07-15T00:49:02+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "aaa08f6e5a2f57e6"
+  "content_hash": "5be82e07529a6e28"
 }
