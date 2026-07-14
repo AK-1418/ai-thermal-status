@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T00:55:06+08:00",
-  "generated_at_epoch_ms": 1784048106000,
+  "generated_at": "2026-07-15T00:57:06+08:00",
+  "generated_at_epoch_ms": 1784048226000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Delay-world infra orchestration",
+      "current_task_short": "Delay-world Round-0 infra ready for Claude review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:38:16+08:00",
+      "last_status_update": "2026-07-15T00:56:38+08:00",
       "public_safe": true
     },
     {
@@ -72,9 +72,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "checking",
       "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "Thermal post-sign-off accepted; no dissent",
+      "current_task_short": "Thermal sign-off accepted; ready for Claude review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:50:32+08:00",
+      "last_status_update": "2026-07-15T00:56:37+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Resolve provenance and rerun final gates",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "testing",
+      "pose_asset": "assets/agents/sprites/coder_testing.png",
+      "current_task_short": "Infra gates exact PASS; ready for Claude review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T00:54:15+08:00",
+      "last_status_update": "2026-07-15T00:56:36+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "435b39ecc195f69e"
+  "content_hash": "44ba491055b6ff90"
 }
