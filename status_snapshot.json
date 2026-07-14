@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T01:29:05+08:00",
-  "generated_at_epoch_ms": 1784050145000,
+  "generated_at": "2026-07-15T01:33:08+08:00",
+  "generated_at_epoch_ms": 1784050388000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Run cell-targeted delay-world search shards",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T01:26:43+08:00",
+      "last_status_update": "2026-07-15T01:33:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "810daf6c3439ed6b"
+  "content_hash": "164e37491a078539"
 }
