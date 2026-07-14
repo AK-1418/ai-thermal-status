@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T23:33:06+08:00",
-  "generated_at_epoch_ms": 1784043186000,
+  "generated_at": "2026-07-14T23:35:06+08:00",
+  "generated_at_epoch_ms": 1784043306000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Codex active: Codex Companion Task: HEADLESS READ-ONLY PRE-ALIGNMENT. No git, no writes...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-13T13:35:01+08:00",
+      "last_status_update": "2026-07-14T23:35:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "a9d066c836956bd6"
+  "content_hash": "c80467acc438acfd"
 }
