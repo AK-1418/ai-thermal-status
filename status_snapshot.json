@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T13:37:06+08:00",
-  "generated_at_epoch_ms": 1784007426000,
+  "generated_at": "2026-07-14T23:33:06+08:00",
+  "generated_at_epoch_ms": 1784043186000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Codex active: Codex Companion Task: Reply with exactly the [redacted] CODEX_OK and noth...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-14T13:37:01+08:00",
+      "last_status_update": "2026-07-14T23:33:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "d89ee3f36d00afea"
+  "content_hash": "a9d066c836956bd6"
 }
