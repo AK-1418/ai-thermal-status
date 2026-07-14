@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T01:19:44+08:00",
-  "generated_at_epoch_ms": 1784049584000,
+  "generated_at": "2026-07-15T01:21:06+08:00",
+  "generated_at_epoch_ms": 1784049666000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Build Round-1 ledger and floor diagnostics",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T01:19:39+08:00",
+      "last_status_update": "2026-07-15T01:21:02+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "69048fd2ef4fc96c"
+  "content_hash": "9156b8e81aee0289"
 }
