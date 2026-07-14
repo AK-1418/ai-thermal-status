@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-14T11:09:06+08:00",
-  "generated_at_epoch_ms": 1783998546000,
+  "generated_at": "2026-07-14T13:37:06+08:00",
+  "generated_at_epoch_ms": 1784007426000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: 排查 Claude Code 無法開啟",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-14T11:09:01+08:00",
+      "last_status_update": "2026-07-14T13:37:01+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "3dd894c0dcae7347"
+  "content_hash": "d89ee3f36d00afea"
 }
