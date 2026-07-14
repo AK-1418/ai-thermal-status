@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T01:49:05+08:00",
-  "generated_at_epoch_ms": 1784051345000,
+  "generated_at": "2026-07-15T01:49:13+08:00",
+  "generated_at_epoch_ms": 1784051353000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "reviewing",
+      "source_status": "reviewing",
+      "visual_state": "reviewing",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Round 1 4s delay solve-or-prove-floor",
+      "current_task_short": "Fresh-context audit of Round-1 floor proof",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T01:16:00+08:00",
+      "last_status_update": "2026-07-15T01:49:08+08:00",
       "public_safe": true
     },
     {
@@ -263,5 +263,5 @@
     "warning_count": 0,
     "active_agent_count": 4
   },
-  "content_hash": "b7b69ce51cf3d74c"
+  "content_hash": "928c071383313b21"
 }
