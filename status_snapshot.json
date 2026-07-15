@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T18:07:06+08:00",
-  "generated_at_epoch_ms": 1784110026000,
+  "generated_at": "2026-07-15T18:57:06+08:00",
+  "generated_at_epoch_ms": 1784113026000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -155,6 +155,7 @@
     }
   ],
   "warnings": [
+    ".agents/state/current-task.md: state is stale: updated_at is older than 14 days",
     ".agents/state/handoff-log.md: state is stale: updated_at is older than 14 days",
     ".agents/state/project-status.md: state is stale: updated_at is older than 14 days"
   ],
@@ -263,8 +264,8 @@
   "summary": {
     "agent_count": 4,
     "task_count": 6,
-    "warning_count": 2,
+    "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "9fbdcc99a54ed538"
+  "content_hash": "d7c9c4b4ca259753"
 }
