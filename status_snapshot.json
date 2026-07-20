@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-17T16:15:06+08:00",
-  "generated_at_epoch_ms": 1784276106000,
+  "generated_at": "2026-07-20T13:05:06+08:00",
+  "generated_at_epoch_ms": 1784523906000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex Companion Task: <task> Peer cross-check for Alan — READ-ONLY. Suppr...",
+      "current_task_short": "Codex active: Codex Companion Task: <task> Read and follow exactly the write handoff at...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-17T16:15:01+08:00",
+      "last_status_update": "2026-07-20T13:05:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "8e8c4e200edd656a"
+  "content_hash": "1f8979181cd4f1f0"
 }
