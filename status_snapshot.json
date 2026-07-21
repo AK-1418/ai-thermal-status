@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:22:42+08:00",
-  "generated_at_epoch_ms": 1784650962000,
+  "generated_at": "2026-07-22T00:23:06+08:00",
+  "generated_at_epoch_ms": 1784650986000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "CS9 R2 post-implementation thermal sign-off",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:22:38+08:00",
+      "last_status_update": "2026-07-22T00:23:01+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Fresh-context CS9 R2 implementation and artifact review",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:22:29+08:00",
+      "last_status_update": "2026-07-22T00:23:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "aa92f9e4ab59a21b"
+  "content_hash": "66d27e21ac250d8b"
 }
