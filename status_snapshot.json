@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:22:34+08:00",
-  "generated_at_epoch_ms": 1784650954000,
+  "generated_at": "2026-07-22T00:22:42+08:00",
+  "generated_at_epoch_ms": 1784650962000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "CS9 R2 thermal constraints and R3 discriminator reviewed",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "CS9 R2 post-implementation thermal sign-off",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:02:38+08:00",
+      "last_status_update": "2026-07-22T00:22:38+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "4589431b4692415b"
+  "content_hash": "aa92f9e4ab59a21b"
 }
