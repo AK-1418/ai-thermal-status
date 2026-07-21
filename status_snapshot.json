@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T23:21:06+08:00",
-  "generated_at_epoch_ms": 1784647266000,
+  "generated_at": "2026-07-21T23:55:06+08:00",
+  "generated_at_epoch_ms": 1784649306000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Round-1 bounded floor proof ready for Claude review",
+      "current_task_short": "Locate CS9 R2 repo and validate corrected handoff",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-15T02:00:25+08:00",
+      "last_status_update": "2026-07-21T23:54:44+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "090326d8572f9366"
+  "content_hash": "949c64d6569e9240"
 }
