@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:31:05+08:00",
-  "generated_at_epoch_ms": 1784651465000,
+  "generated_at": "2026-07-22T00:41:48+08:00",
+  "generated_at_epoch_ms": 1784652108000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "reviewing",
-      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Locate CS9 R2 repo and validate corrected handoff",
+      "status": "done",
+      "source_status": "done",
+      "visual_state": "done",
+      "pose_name": "done",
+      "pose_asset": "assets/agents/sprites/alan_ai_done.png",
+      "current_task_short": "CS9 R2 complete; ready for Alan final gate",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-21T23:54:44+08:00",
+      "last_status_update": "2026-07-22T00:41:44+08:00",
       "public_safe": true
     },
     {
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "CS9 R2 thermal signoff accepted; no blocker",
+      "status": "done",
+      "source_status": "done",
+      "visual_state": "done",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/thermal_idle.png",
+      "current_task_short": "CS9 R2 thermal review accepted; R3 boundary disclosed",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:30:08+08:00",
+      "last_status_update": "2026-07-22T00:41:43+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "CS9 R2 fix parity provenance and hold-context precision",
+      "status": "done",
+      "source_status": "done",
+      "visual_state": "done",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/coder_idle.png",
+      "current_task_short": "CS9 R2 code review accepted; evidence clean",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:31:01+08:00",
+      "last_status_update": "2026-07-22T00:41:43+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "7cb6796bcf122e29"
+  "content_hash": "4738cfd71b69ca1b"
 }
