@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T13:23:06+08:00",
-  "generated_at_epoch_ms": 1784611386000,
+  "generated_at": "2026-07-21T17:03:06+08:00",
+  "generated_at_epoch_ms": 1784624586000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex Companion Task: <task> Read and execute the write handoff at [local...",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-21T13:23:01+08:00",
+      "last_status_update": "2026-07-21T17:03:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "e9a6bc8a6ac8e1e7"
+  "content_hash": "faad2227650aa5c9"
 }
