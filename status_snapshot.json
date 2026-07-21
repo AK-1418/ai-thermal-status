@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:07:06+08:00",
-  "generated_at_epoch_ms": 1784650026000,
+  "generated_at": "2026-07-22T00:22:34+08:00",
+  "generated_at_epoch_ms": 1784650954000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "CS9 R2 controlled filter implementation and parity",
+      "current_task_short": "Fresh-context CS9 R2 implementation and artifact review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:05:07+08:00",
+      "last_status_update": "2026-07-22T00:22:29+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "90a1d09635eefd84"
+  "content_hash": "4589431b4692415b"
 }
