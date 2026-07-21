@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-21T22:15:06+08:00",
-  "generated_at_epoch_ms": 1784643306000,
+  "generated_at": "2026-07-21T22:23:06+08:00",
+  "generated_at_epoch_ms": 1784643786000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex Companion Task: CS9 campaign R1 EXECUTION — factor attribution. RET...",
+      "current_task_short": "Codex active: Codex Companion Task: CS9 campaign R1 EXECUTION — factor attribution. ENV...",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-21T22:15:02+08:00",
+      "last_status_update": "2026-07-21T22:23:02+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "8ca7d8533ef3a4ed"
+  "content_hash": "da29bbf9740a5192"
 }
