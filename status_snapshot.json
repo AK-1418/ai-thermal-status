@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:41:48+08:00",
-  "generated_at_epoch_ms": 1784652108000,
+  "generated_at": "2026-07-22T00:59:06+08:00",
+  "generated_at_epoch_ms": 1784653146000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "idle",
-      "pose_asset": "assets/agents/sprites/coder_idle.png",
-      "current_task_short": "CS9 R2 code review accepted; evidence clean",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:41:43+08:00",
+      "last_status_update": "2026-07-22T00:59:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "4738cfd71b69ca1b"
+  "content_hash": "88af0f1a091a5d86"
 }
