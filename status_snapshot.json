@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:30:13+08:00",
-  "generated_at_epoch_ms": 1784651413000,
+  "generated_at": "2026-07-22T00:31:05+08:00",
+  "generated_at_epoch_ms": 1784651465000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "CS9 R2 fix parity provenance and hold-context precision",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:23:01+08:00",
+      "last_status_update": "2026-07-22T00:31:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "ad6fb4b2d45595ef"
+  "content_hash": "7cb6796bcf122e29"
 }
