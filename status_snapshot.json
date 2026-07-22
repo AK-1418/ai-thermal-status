@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T21:00:42+08:00",
-  "generated_at_epoch_ms": 1784725242000,
+  "generated_at": "2026-07-22T21:15:06+08:00",
+  "generated_at_epoch_ms": 1784726106000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Codex active: 第一案: 虛擬辦公室",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T20:53:02+08:00",
+      "last_status_update": "2026-07-22T21:15:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 2
   },
-  "content_hash": "e1541c2a546b0ecd"
+  "content_hash": "7d4dae76d1251803"
 }
