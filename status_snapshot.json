@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T20:51:07+08:00",
-  "generated_at_epoch_ms": 1784724667000,
+  "generated_at": "2026-07-22T20:53:06+08:00",
+  "generated_at_epoch_ms": 1784724786000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "done",
-      "pose_asset": "assets/agents/sprites/alan_ai_done.png",
-      "current_task_short": "CS9 R2 complete; ready for Alan final gate",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
+      "current_task_short": "Codex active: 第一案: 虛擬辦公室",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:41:44+08:00",
+      "last_status_update": "2026-07-22T20:53:02+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 2
   },
-  "content_hash": "31c0df9a69176456"
+  "content_hash": "6c27ac2250afefa9"
 }
