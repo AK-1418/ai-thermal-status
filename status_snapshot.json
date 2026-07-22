@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T00:59:06+08:00",
-  "generated_at_epoch_ms": 1784653146000,
+  "generated_at": "2026-07-22T10:27:06+08:00",
+  "generated_at_epoch_ms": 1784687226000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "done",
-      "source_status": "done",
-      "visual_state": "done",
-      "pose_name": "idle",
-      "pose_asset": "assets/agents/sprites/thermal_idle.png",
-      "current_task_short": "CS9 R2 thermal review accepted; R3 boundary disclosed",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:41:43+08:00",
+      "last_status_update": "2026-07-22T10:27:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "88af0f1a091a5d86"
+  "content_hash": "add22e1c4a145f39"
 }
