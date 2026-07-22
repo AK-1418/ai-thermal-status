@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T10:27:06+08:00",
-  "generated_at_epoch_ms": 1784687226000,
+  "generated_at": "2026-07-22T20:40:51+08:00",
+  "generated_at_epoch_ms": 1784724051000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Virtual Office maintenance batch",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T00:59:01+08:00",
+      "last_status_update": "2026-07-22T20:40:46+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "add22e1c4a145f39"
+  "content_hash": "29cbc09bd372fbcf"
 }
