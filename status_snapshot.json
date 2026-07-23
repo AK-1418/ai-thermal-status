@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T23:03:06+08:00",
-  "generated_at_epoch_ms": 1784818986000,
+  "generated_at": "2026-07-23T23:23:07+08:00",
+  "generated_at_epoch_ms": 1784820187000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex sub-agent: round6 code review",
+      "status": "idle",
+      "source_status": "idle",
+      "visual_state": "idle",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/coder_idle.png",
+      "current_task_short": "Available - no active Codex session",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-23T23:03:02+08:00",
+      "last_status_update": "2026-07-23T23:23:02+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Codex sub-agent: round6 report review",
+      "status": "idle",
+      "source_status": "idle",
+      "visual_state": "idle",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/presentation_idle.png",
+      "current_task_short": "Available - no active Codex session",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-23T23:03:02+08:00",
+      "last_status_update": "2026-07-23T23:23:02+08:00",
       "public_safe": true
     }
   ],
@@ -265,7 +265,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 3,
-    "active_agent_count": 3
+    "active_agent_count": 1
   },
-  "content_hash": "8854e38376172088"
+  "content_hash": "492602b60649415b"
 }
