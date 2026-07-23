@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T19:03:05+08:00",
-  "generated_at_epoch_ms": 1784804585000,
+  "generated_at": "2026-07-23T19:25:06+08:00",
+  "generated_at_epoch_ms": 1784805906000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "reviewing",
-      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "status": "idle",
+      "source_status": "idle",
+      "visual_state": "idle",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/alan_ai_idle.png",
+      "current_task_short": "Available - no active Codex session",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-23T19:03:01+08:00",
+      "last_status_update": "2026-07-23T19:25:01+08:00",
       "public_safe": true
     },
     {
@@ -265,7 +265,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 3,
-    "active_agent_count": 1
+    "active_agent_count": 0
   },
-  "content_hash": "aad8b139b39f06a8"
+  "content_hash": "262dcadad03b0d19"
 }
