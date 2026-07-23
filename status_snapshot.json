@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-23T10:59:06+08:00",
-  "generated_at_epoch_ms": 1784775546000,
+  "generated_at": "2026-07-23T11:01:06+08:00",
+  "generated_at_epoch_ms": 1784775666000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "idle",
-      "source_status": "idle",
-      "visual_state": "idle",
-      "pose_name": "idle",
-      "pose_asset": "assets/agents/sprites/thermal_idle.png",
-      "current_task_short": "Available - no active Codex session",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex sub-agent: thermal semantics",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T20:51:02+08:00",
+      "last_status_update": "2026-07-23T11:01:01+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "testing",
-      "pose_asset": "assets/agents/sprites/coder_testing.png",
-      "current_task_short": "Virtual Office maintenance batch ready for review",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "coding",
+      "pose_asset": "assets/agents/sprites/coder_coding.png",
+      "current_task_short": "Codex sub-agent: coding audit",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T21:00:37+08:00",
+      "last_status_update": "2026-07-23T11:01:01+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "idle",
-      "source_status": "idle",
-      "visual_state": "idle",
-      "pose_name": "idle",
-      "pose_asset": "assets/agents/sprites/presentation_idle.png",
-      "current_task_short": "Available - no active Codex session",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/presentation_working.png",
+      "current_task_short": "Codex sub-agent: report audit",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-22T20:51:02+08:00",
+      "last_status_update": "2026-07-23T11:01:01+08:00",
       "public_safe": true
     }
   ],
@@ -265,7 +265,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 3,
-    "active_agent_count": 2
+    "active_agent_count": 4
   },
-  "content_hash": "28eab69622b4ba6b"
+  "content_hash": "9ae4e82ea9307ba7"
 }
