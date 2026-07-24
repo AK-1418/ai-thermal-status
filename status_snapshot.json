@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-24T09:59:06+08:00",
-  "generated_at_epoch_ms": 1784858346000,
+  "generated_at": "2026-07-24T10:17:06+08:00",
+  "generated_at_epoch_ms": 1784859426000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex sub-agent: thermal round8b review",
+      "status": "idle",
+      "source_status": "idle",
+      "visual_state": "idle",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/thermal_idle.png",
+      "current_task_short": "Available - no active Codex session",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-24T09:57:01+08:00",
+      "last_status_update": "2026-07-24T10:17:02+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Codex sub-agent: coding round8b review",
+      "status": "idle",
+      "source_status": "idle",
+      "visual_state": "idle",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/coder_idle.png",
+      "current_task_short": "Available - no active Codex session",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-24T09:57:01+08:00",
+      "last_status_update": "2026-07-24T10:17:02+08:00",
       "public_safe": true
     },
     {
@@ -265,7 +265,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 3,
-    "active_agent_count": 4
+    "active_agent_count": 2
   },
-  "content_hash": "40c718b05eeb93a9"
+  "content_hash": "384e449e9bb6bc96"
 }
