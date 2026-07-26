@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-26T14:23:06+08:00",
-  "generated_at_epoch_ms": 1785046986000,
+  "generated_at": "2026-07-26T14:25:06+08:00",
+  "generated_at_epoch_ms": 1785047106000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex sub-agent: firmware ambiguity review",
+      "current_task_short": "Codex sub-agent: control boundary review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-26T14:23:01+08:00",
+      "last_status_update": "2026-07-26T14:25:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 3
   },
-  "content_hash": "dafd66e16ef6a31c"
+  "content_hash": "84a44c3d6036022d"
 }
