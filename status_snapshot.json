@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T10:47:26+08:00",
-  "generated_at_epoch_ms": 1785120446000,
+  "generated_at": "2026-07-27T10:54:22+08:00",
+  "generated_at_epoch_ms": 1785120862000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Round 11 UI implementation and QA",
+      "current_task_short": "Codex sub-agent: round11 code",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T10:38:28+08:00",
+      "last_status_update": "2026-07-27T10:54:17+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "fdb0d05f3e177520"
+  "content_hash": "aba9f5076a35b8cb"
 }
