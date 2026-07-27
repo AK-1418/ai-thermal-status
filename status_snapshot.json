@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T11:53:06+08:00",
-  "generated_at_epoch_ms": 1785124386000,
+  "generated_at": "2026-07-27T11:55:06+08:00",
+  "generated_at_epoch_ms": 1785124506000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "ready_for_review",
-      "source_status": "ready_for_review",
-      "visual_state": "ready_for_review",
-      "pose_name": "checking",
-      "pose_asset": "assets/agents/sprites/thermal_checking.png",
-      "current_task_short": "Round 12 cache audit complete",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/thermal_working.png",
+      "current_task_short": "Codex sub-agent: round12 fresh review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:31:24+08:00",
+      "last_status_update": "2026-07-27T11:55:01+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "c5f3530d78d5f470"
+  "content_hash": "eaef52e3aaef8975"
 }
