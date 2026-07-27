@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T10:39:54+08:00",
-  "generated_at_epoch_ms": 1785119994000,
+  "generated_at": "2026-07-27T10:44:27+08:00",
+  "generated_at_epoch_ms": 1785120267000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -72,9 +72,9 @@
       "visual_state": "working",
       "pose_name": "working",
       "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Review Golden scenario anchor semantics",
+      "current_task_short": "Codex sub-agent: round11 thermal review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T10:39:49+08:00",
+      "last_status_update": "2026-07-27T10:44:22+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "2e283cb64d1cafff"
+  "content_hash": "c5258044b8098ec2"
 }
