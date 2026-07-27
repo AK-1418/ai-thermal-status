@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T12:03:06+08:00",
-  "generated_at_epoch_ms": 1785124986000,
+  "generated_at": "2026-07-27T12:13:06+08:00",
+  "generated_at_epoch_ms": 1785125586000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "reviewing",
-      "source_status": "reviewing",
-      "visual_state": "reviewing",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Round 12 final acceptance review",
+      "current_task_short": "Round 12 PENDING_CLAUDE_REVIEW",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:51:41+08:00",
+      "last_status_update": "2026-07-27T12:12:38+08:00",
       "public_safe": true
     },
     {
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "Codex sub-agent: round12 fresh review",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "checking",
+      "pose_asset": "assets/agents/sprites/thermal_checking.png",
+      "current_task_short": "Round 12 PENDING_CLAUDE_REVIEW",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:55:01+08:00",
+      "last_status_update": "2026-07-27T12:12:38+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Round 12 fresh-context re-review",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "testing",
+      "pose_asset": "assets/agents/sprites/coder_testing.png",
+      "current_task_short": "Round 12 PENDING_CLAUDE_REVIEW",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T12:01:45+08:00",
+      "last_status_update": "2026-07-27T12:12:38+08:00",
       "public_safe": true
     },
     {
@@ -104,9 +104,9 @@
       "visual_state": "ready_for_review",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/presentation_reviewing.png",
-      "current_task_short": "Round 12 UX review complete",
+      "current_task_short": "Round 12 PENDING_CLAUDE_REVIEW",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:31:24+08:00",
+      "last_status_update": "2026-07-27T12:12:38+08:00",
       "public_safe": true
     }
   ],
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "a002c6b652629497"
+  "content_hash": "a2a9f26a3a2bb000"
 }
