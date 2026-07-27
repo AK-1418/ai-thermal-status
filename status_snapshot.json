@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T10:56:50+08:00",
-  "generated_at_epoch_ms": 1785121010000,
+  "generated_at": "2026-07-27T11:04:18+08:00",
+  "generated_at_epoch_ms": 1785121458000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Round 11 offline browser QA",
+      "current_task_short": "Fresh-context Round 11 self-review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T10:56:45+08:00",
+      "last_status_update": "2026-07-27T11:04:13+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "dbe812b592db170b"
+  "content_hash": "c63f498ab96ba6d5"
 }
