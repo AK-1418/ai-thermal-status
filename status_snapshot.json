@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-28T07:29:06+08:00",
-  "generated_at_epoch_ms": 1785194946000,
+  "generated_at": "2026-07-28T07:49:06+08:00",
+  "generated_at_epoch_ms": 1785196146000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "reviewing",
-      "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Codex active: Codex Companion Task: <task> ROUND 8b -- a two-line correction to a singl...",
+      "status": "idle",
+      "source_status": "idle",
+      "visual_state": "idle",
+      "pose_name": "idle",
+      "pose_asset": "assets/agents/sprites/alan_ai_idle.png",
+      "current_task_short": "Available - no active Codex session",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-28T07:29:02+08:00",
+      "last_status_update": "2026-07-28T07:49:02+08:00",
       "public_safe": true
     },
     {
@@ -265,7 +265,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 3,
-    "active_agent_count": 2
+    "active_agent_count": 1
   },
-  "content_hash": "83d5f138bd226902"
+  "content_hash": "010b7aca2dd35b6c"
 }
