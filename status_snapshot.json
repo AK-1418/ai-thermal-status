@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T10:45:06+08:00",
-  "generated_at_epoch_ms": 1785120306000,
+  "generated_at": "2026-07-27T10:47:26+08:00",
+  "generated_at_epoch_ms": 1785120446000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "Review Round 11 workbench UX and wording",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/presentation_reviewing.png",
+      "current_task_short": "Round 11 workbench UX reviewed",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T10:39:49+08:00",
+      "last_status_update": "2026-07-27T10:47:21+08:00",
       "public_safe": true
     }
   ],
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "347e7deb5645403a"
+  "content_hash": "fdb0d05f3e177520"
 }
