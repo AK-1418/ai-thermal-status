@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T11:25:06+08:00",
-  "generated_at_epoch_ms": 1785122706000,
+  "generated_at": "2026-07-27T11:33:06+08:00",
+  "generated_at_epoch_ms": 1785123186000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -67,14 +67,14 @@
       "role": "Thermal Engineer",
       "room": "Thermal Desk",
       "avatar": "TH",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/thermal_working.png",
-      "current_task_short": "UI Round 12 council inspection",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "checking",
+      "pose_asset": "assets/agents/sprites/thermal_checking.png",
+      "current_task_short": "Round 12 cache audit complete",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:24:00+08:00",
+      "last_status_update": "2026-07-27T11:31:24+08:00",
       "public_safe": true
     },
     {
@@ -88,9 +88,9 @@
       "visual_state": "working",
       "pose_name": "coding",
       "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "UI Round 12 council inspection",
+      "current_task_short": "Round 12 controlled implementation",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:24:00+08:00",
+      "last_status_update": "2026-07-27T11:31:58+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "working",
-      "pose_asset": "assets/agents/sprites/presentation_working.png",
-      "current_task_short": "UI Round 12 council inspection",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "reviewing",
+      "pose_asset": "assets/agents/sprites/presentation_reviewing.png",
+      "current_task_short": "Round 12 UX review complete",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:24:00+08:00",
+      "last_status_update": "2026-07-27T11:31:24+08:00",
       "public_safe": true
     }
   ],
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "3e50c5f9cc63e24c"
+  "content_hash": "6f4fcd9400eab125"
 }
