@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T11:33:06+08:00",
-  "generated_at_epoch_ms": 1785123186000,
+  "generated_at": "2026-07-27T11:53:06+08:00",
+  "generated_at_epoch_ms": 1785124386000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -51,14 +51,14 @@
       "role": "Manager / Reviewer",
       "room": "Manager Room",
       "avatar": "AI",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
+      "status": "reviewing",
+      "source_status": "reviewing",
+      "visual_state": "reviewing",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "UI Round 12 council inspection",
+      "current_task_short": "Round 12 final acceptance review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:24:00+08:00",
+      "last_status_update": "2026-07-27T11:51:41+08:00",
       "public_safe": true
     },
     {
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Round 12 controlled implementation",
+      "status": "reviewing",
+      "source_status": "reviewing",
+      "visual_state": "reviewing",
+      "pose_name": "testing",
+      "pose_asset": "assets/agents/sprites/coder_testing.png",
+      "current_task_short": "Round 12 fresh-context self-review",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:31:58+08:00",
+      "last_status_update": "2026-07-27T11:51:41+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "6f4fcd9400eab125"
+  "content_hash": "c5f3530d78d5f470"
 }
