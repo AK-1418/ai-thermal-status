@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T11:09:06+08:00",
-  "generated_at_epoch_ms": 1785121746000,
+  "generated_at": "2026-07-27T11:12:49+08:00",
+  "generated_at_epoch_ms": 1785121969000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -83,14 +83,14 @@
       "role": "Coder / QA",
       "room": "Coding Desk",
       "avatar": "CD",
-      "status": "working",
-      "source_status": "working",
-      "visual_state": "working",
-      "pose_name": "coding",
-      "pose_asset": "assets/agents/sprites/coder_coding.png",
-      "current_task_short": "Fresh-context Round 11 self-review",
+      "status": "ready_for_review",
+      "source_status": "ready_for_review",
+      "visual_state": "ready_for_review",
+      "pose_name": "testing",
+      "pose_asset": "assets/agents/sprites/coder_testing.png",
+      "current_task_short": "Round 11 implementation and QA ready",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T11:04:13+08:00",
+      "last_status_update": "2026-07-27T11:12:44+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 4
   },
-  "content_hash": "a4c391a7d2d8ebd3"
+  "content_hash": "fad6f61cfd897c0d"
 }
