@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T21:55:06+08:00",
-  "generated_at_epoch_ms": 1785419706000,
+  "generated_at": "2026-07-30T22:15:25+08:00",
+  "generated_at_epoch_ms": 1785420925000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Codex active: Codex session activity",
+      "current_task_short": "Report verification [redacted]",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-30T21:55:01+08:00",
+      "last_status_update": "2026-07-30T22:15:20+08:00",
       "public_safe": true
     },
     {
@@ -267,5 +267,5 @@
     "warning_count": 3,
     "active_agent_count": 3
   },
-  "content_hash": "b771e7433bdff71b"
+  "content_hash": "b09beac6c3596557"
 }
