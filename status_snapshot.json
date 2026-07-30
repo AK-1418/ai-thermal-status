@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T22:48:51+08:00",
-  "generated_at_epoch_ms": 1785422931000,
+  "generated_at": "2026-07-30T22:49:17+08:00",
+  "generated_at_epoch_ms": 1785422957000,
   "timezone": "Asia/Taipei",
   "source": "local_virtual_office",
   "source_mode": "local_files",
@@ -56,9 +56,9 @@
       "visual_state": "working",
       "pose_name": "reviewing",
       "pose_asset": "assets/agents/sprites/alan_ai_reviewing.png",
-      "current_task_short": "Report verification [redacted]",
+      "current_task_short": "Codex active: Codex session activity",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-30T22:48:46+08:00",
+      "last_status_update": "2026-07-30T22:49:13+08:00",
       "public_safe": true
     },
     {
@@ -99,14 +99,14 @@
       "role": "Presentation Designer",
       "room": "Presentation Room",
       "avatar": "PR",
-      "status": "idle",
-      "source_status": "idle",
-      "visual_state": "idle",
-      "pose_name": "idle",
-      "pose_asset": "assets/agents/sprites/presentation_idle.png",
-      "current_task_short": "Available - no active Codex session",
+      "status": "working",
+      "source_status": "working",
+      "visual_state": "working",
+      "pose_name": "working",
+      "pose_asset": "assets/agents/sprites/presentation_working.png",
+      "current_task_short": "Codex sub-agent: verification [redacted]",
       "blocked_reason_short": "",
-      "last_status_update": "2026-07-27T20:33:01+08:00",
+      "last_status_update": "2026-07-30T22:49:13+08:00",
       "public_safe": true
     }
   ],
@@ -265,7 +265,7 @@
     "agent_count": 4,
     "task_count": 6,
     "warning_count": 3,
-    "active_agent_count": 3
+    "active_agent_count": 4
   },
-  "content_hash": "ab25b21f2688b405"
+  "content_hash": "3936a6222067d3ed"
 }
